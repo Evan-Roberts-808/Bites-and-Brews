@@ -1,6 +1,6 @@
 # Bites & Brews
 
-<h2>A fun interactive way to discover new recipes and cocktails</h2>
+## An interactive way to discover new recipes and cocktails
 
 <h3><a href="https://www.figma.com/file/feEfOUKVTLw6GFywQhmHqc/Bites%26Brews-Wireframes?type=design&node-id=0%3A1&t=KPvSMTOv4pPrTJad-1">Wireframes</a></h3>
 <img src="https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/wireframes/Home.png" width="300px"/>
@@ -9,9 +9,9 @@
 <img src="https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/wireframes/Favorites-Version.png" width="300px"/>
 <img src="https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/wireframes/Submit.png" width="300px"/>
 
-<h3>User Stories:</h3>
+### User Stories:
 
-Users will be able to...
+#### Users will be able to...
 
 1. View recipes and cocktails
 2. View 5 most recent
@@ -25,16 +25,25 @@ Users will be able to...
 10. Edit in their favorites
 11. Toggle between dark and light
 
-Stretch Goals
+#### Stretch Goals:
 1. Show random recipe when Random button is clicked
 2. Pairing functionality to pair recipes and cocktail suggestions
 3. Dietary Restrictions
+4. Vocie Search
 
-<h3>React Tree</h3>
+### React Tree:
 
 <img src="https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/wireframes/ReactTree.png" width="1000px" />
 
-<h3>API Routes</h3>
+### Example Data:
+
+<p float="left">
+<img src="https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/wireframes/Example-1.png" width="300px" />
+<img src="https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/wireframes/Example-2.png" width="300px" />
+<img src="https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/wireframes/Example-3.png" width="300px" />
+</p>
+  
+### API Routes:
 
 | API Route                                    | Request Method | Body        | Response                                                                                                                                      |
 |----------------------------------------------|----------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -47,7 +56,7 @@ Stretch Goals
 | /recipes?_sort= likes&_order=desc&_limit=5   |       GET      |             |                                                               [top five recipes]                                                              |
 | /cocktails?_sort= likes&_order=desc&_limit=5 |       GET      |             |                                                              [top five cocktails]                                                             |
 
-<h3>Client Side Routes</h3>
+### Client Side Routes:
 
 |     Client Route    | Component           |
 |:-------------------:|---------------------|
@@ -61,6 +70,6 @@ Stretch Goals
 | /favorites/:id/edit |     EditForm.js     |
 | /submit             | SubmitPage.js       |
 
-<h3>Trello</h3>
+### Trello:
 
 <img src="https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/wireframes/Trello.png" width="1000px" />
