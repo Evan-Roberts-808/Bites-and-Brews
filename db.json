@@ -1321,7 +1321,7 @@
       "id": 33,
       "name": "Chicken Picatta",
       "description": "Chicken Piccata is a flavorful Italian dish made with tender chicken breasts that are lightly coated in flour, pan-fried until golden, and served in a tangy lemon butter sauce. The chicken is typically seasoned with salt and pepper, dredged in flour, and sautéed in a combination of butter and olive oil until crispy and cooked through. The sauce is made by deglazing the pan with white wine and adding fresh lemon juice, capers, and chicken broth. The sauce is then simmered until slightly thickened, and the chicken is placed back in the pan to soak up the flavors. Chicken Piccata is often served with pasta or rice and garnished with fresh parsley. It's a delicious and elegant dish that showcases the bright flavors of lemon and capers.",
-      "image": "",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Chicken-Picatta.png",
       "source": "",
       "preptime": "10 minutes",
       "cooktime": "20 minutes",
@@ -2619,11 +2619,11 @@
         "Chopped cilantro, for garnish",
         "Crumbled queso fresco, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 64,
@@ -2660,12 +2660,11 @@
         "Tostadas or tortilla chips, for serving",
         "Cilantro leaves and lime wedges, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "Seafood",
-        "Appetizer",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 65,
@@ -2701,11 +2700,11 @@
         "Diced jalapeños or serrano peppers (optional, for spiciness)",
         "Tortilla chips, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "mexican",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 66,
@@ -2743,11 +2742,11 @@
         "1/2 cup granulated sugar",
         "1 teaspoon ground cinnamon"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Dessert"
-      ]
+      "cuisine": "mexican",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 67,
@@ -2787,11 +2786,11 @@
         "Cheese, crumbled (such as queso fresco or feta)",
         "Salsa, sour cream, or guacamole, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "chicken",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
     },
     {
       "id": 68,
@@ -2827,11 +2826,11 @@
         "Lime wedges, for garnish",
         "Fresh cilantro leaves, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "pork",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 69,
@@ -2878,12 +2877,11 @@
         "Warm tortillas, for serving",
         "Sesame seeds and fresh cilantro, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "chicken",
-        "turkey",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "turkey"],
+      "contains": []
     },
     {
       "id": 70,
@@ -2918,11 +2916,11 @@
         "1/4 cup crumbled cotija or feta cheese",
         "Fresh cilantro, for garnish (optional)"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "mexican",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 71,
@@ -2956,12 +2954,11 @@
         "Fresh cilantro, for garnish",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Appetizer",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 72,
@@ -2998,11 +2995,11 @@
         "Fresh cilantro, for garnish",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 73,
@@ -3046,12 +3043,11 @@
         "Pomegranate seeds, for garnish",
         "Chopped fresh parsley, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "beef",
-        "pork",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef", "pork"],
+      "contains": ["dairy", "nuts"]
     },
     {
       "id": 74,
@@ -3089,14 +3085,11 @@
         "Filling of your choice (shredded chicken, pork, beef, cheese, or vegetables)",
         "Salsa, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "chicken",
-        "pork",
-        "beef",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["chicken", "pork", "beef"],
+      "contains": []
     },
     {
       "id": 75,
@@ -3132,11 +3125,11 @@
         "1 teaspoon vanilla extract",
         "1/4 teaspoon salt"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Dessert"
-      ]
+      "cuisine": "mexican",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 76,
@@ -3176,11 +3169,11 @@
         "Avocado or guacamole, for serving",
         "Crumbled cheese, such as queso fresco or feta, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 77,
@@ -3218,11 +3211,11 @@
         "1 teaspoon ground cumin",
         "1/2 teaspoon ground cinnamon"
       ],
-      "categories": [
-        "Mexican",
-        "pork",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 78,
@@ -3265,11 +3258,11 @@
         "Salt and pepper, to taste",
         "Shredded lettuce, sliced radishes, diced onions, chopped cilantro, and lime wedges, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "Meat",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 79,
@@ -3302,12 +3295,11 @@
         "2 tablespoons butter",
         "Chopped parsley or cilantro, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "Seafood",
-        "Appetizer",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 80,
@@ -3351,11 +3343,11 @@
         "1 cup shredded cheese (such as cheddar or Mexican blend)",
         "Optional toppings: chopped cilantro, sliced avocado, sour cream"
       ],
-      "categories": [
-        "Mexican",
-        "Vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 81,
@@ -3398,11 +3390,11 @@
         "2 tablespoons all-purpose flour",
         "2 tablespoons butter"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "pork"],
+      "contains": []
     },
     {
       "id": 82,
@@ -3438,10 +3430,11 @@
         "Salt and pepper, to taste",
         "Crusty bread, for serving"
       ],
-      "categories": [
-        "French",
-        "Appetizer"
-      ]
+      "cuisine": "french",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["snails"],
+      "contains": []
     },
     {
       "id": 83,
@@ -3476,11 +3469,11 @@
         "1 cup milk",
         "Salt, pepper, and nutmeg, to taste"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "pork"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": ["dairy"]
     },
     {
       "id": 84,
@@ -3520,11 +3513,11 @@
         "2 bay leaves",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 85,
@@ -3568,11 +3561,11 @@
         "Fresh herbs (such as parsley) for garnish",
         "Crusty bread and rouille sauce, for serving"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 86,
@@ -3606,11 +3599,11 @@
         "1/2 cup granulated sugar",
         "6 teaspoons granulated sugar (for caramelizing)"
       ],
-      "categories": [
-        "French",
-        "Dessert",
-        "Vegetarian"
-      ]
+      "cuisine": "french",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 87,
@@ -3645,10 +3638,11 @@
         "1/4 teaspoon nutmeg",
         "1 cup shredded Gruyère or Swiss cheese"
       ],
-      "categories": [
-        "French",
-        "Main Course"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": ["dairy"]
     },
     {
       "id": 88,
@@ -3686,12 +3680,11 @@
         "Salt and pepper to taste",
         "Fresh parsley for garnish"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "pork",
-        "duck"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork", "duck"],
+      "contains": []
     },
     {
       "id": 89,
@@ -3735,12 +3728,11 @@
         "1 clove garlic, minced",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "French",
-        "Appetizer",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "french",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 90,
@@ -3781,11 +3773,11 @@
         "2 tablespoons all-purpose flour",
         "Fresh parsley for garnish"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "beef"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 91,
@@ -3822,11 +3814,11 @@
         "Salt and pepper to taste",
         "Fresh parsley for garnish"
       ],
-      "categories": [
-        "French",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": ["dairy"]
     },
     {
       "id": 92,
@@ -3856,11 +3848,11 @@
         "Salt and pepper to taste",
         "Herbs (such as thyme and rosemary) for seasoning"
       ],
-      "categories": [
-        "Main Course",
-        "duck",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["duck"],
+      "contains": []
     },
     {
       "id": 93,
@@ -3904,11 +3896,11 @@
         "Salt and pepper to taste",
         "8 ounces (225g) mushrooms, sliced"
       ],
-      "categories": [
-        "Main Course",
-        "duck",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["lamb"],
+      "contains": []
     },
     {
       "id": 94,
@@ -3947,11 +3939,11 @@
         "1 cup (100g) grated Gruyere cheese",
         "Fresh thyme for garnish (optional)"
       ],
-      "categories": [
-        "Appetizer",
-        "Vegetarian",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": ["vegetarian"],
+      "contains": []
     },
     {
       "id": 95,
@@ -3991,11 +3983,11 @@
         "Pinch of salt",
         "2 cups (480ml) whole milk"
       ],
-      "categories": [
-        "Dessert",
-        "Vegetarian",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 96,
@@ -4036,11 +4028,11 @@
         "2 tablespoons olive oil",
         "Butter or cooking spray for greasing"
       ],
-      "categories": [
-        "Side Dish",
-        "Vegetarian",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "side",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 97,
@@ -4084,11 +4076,11 @@
         "1/4 teaspoon black pepper",
         "1/4 cup (60ml) extra-virgin olive oil"
       ],
-      "categories": [
-        "Main Course",
-        "Seafood",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 98,
@@ -4119,11 +4111,12 @@
         "4-5 large apples (such as Granny Smith), peeled, cored, and thinly sliced",
         "1 sheet of puff pastry, thawed if frozen"
       ],
-      "categories": [
-        "Dessert",
-        "Vegetarian",
-        "French"
-      ]
+      "cuisine": "french",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
+
     },
     {
       "id": 99,
@@ -4163,10 +4156,11 @@
         "French bread slices",
         "Shredded Gruyere cheese"
       ],
-      "categories": [
-        "French",
-        "Vegetarian"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 100,
@@ -4208,11 +4202,11 @@
         "1/4 cup chopped fresh parsley",
         "Juice of 1 lemon"
       ],
-      "categories": [
-        "French",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "french",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 101,
@@ -4250,10 +4244,11 @@
         "2 green onions, sliced",
         "Steamed rice, for serving"
       ],
-      "categories": [
-        "Chinese",
-        "chicken"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 102,
@@ -4294,10 +4289,11 @@
         "2 green onions, sliced",
         "Steamed rice, for serving"
       ],
-      "categories": [
-        "Chinese",
-        "pork"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 103,
@@ -4336,11 +4332,11 @@
         "2 green onions, sliced",
         "Steamed rice, for serving"
       ],
-      "categories": [
-        "Chinese",
-        "seafood",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 104,
@@ -4378,11 +4374,11 @@
         "Water, for sealing",
         "Soy sauce or dipping sauce, for serving"
       ],
-      "categories": [
-        "Chinese",
-        "pork",
-        "appetizer"
-      ]
+      "cuisine": "chinese",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 105,
@@ -4422,11 +4418,11 @@
         "1/4 teaspoon black pepper",
         "2 green onions, chopped (for garnish)"
       ],
-      "categories": [
-        "Chinese",
-        "vegetarian",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "side",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 106,
@@ -4467,11 +4463,11 @@
         "1 bell pepper, thinly sliced",
         "2 green onions, sliced (for garnish)"
       ],
-      "categories": [
-        "Chinese",
-        "beef",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 107,
@@ -4514,11 +4510,11 @@
         "Sliced green onions, for garnish",
         "Steamed broccoli and rice, for serving"
       ],
-      "categories": [
-        "Chinese",
-        "chicken",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 108,
@@ -4560,11 +4556,11 @@
         "Vegetable oil, for frying",
         "Dipping sauce of your choice"
       ],
-      "categories": [
-        "Chinese",
-        "vegetarian",
-        "appetizer"
-      ]
+      "cuisine": "chinese",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 109,
@@ -4606,14 +4602,11 @@
         "Salt, to taste",
         "Steamed rice or noodles, for serving"
       ],
-      "categories": [
-        "Chinese",
-        "beef",
-        "chicken",
-        "seafood",
-        "pork",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "seafood", "pork", "beef"],
+      "contains": []
     },
     {
       "id": 110,
@@ -4659,12 +4652,11 @@
         "White pepper, to taste",
         "Chopped green onions and cilantro, for garnish"
       ],
-      "categories": [
-        "Chinese",
-        "soup",
-        "appetizer",
-        "vegetarian"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 111,
@@ -4705,13 +4697,11 @@
         "Chopped peanuts, for topping",
         "Sliced cucumber, for topping"
       ],
-      "categories": [
-        "Chinese",
-        "main course",
-        "pork",
-        "chicken",
-        "beef"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "pork", "beef"],
+      "contains": []
     },
     {
       "id": 112,
@@ -4747,11 +4737,11 @@
         "1 teaspoon minced ginger",
         "Chopped green onions and sesame seeds for garnish (optional)"
       ],
-      "categories": [
-        "Chinese",
-        "main course",
-        "vegetarian"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 113,
@@ -4786,11 +4776,11 @@
         "1/2 teaspoon paprika",
         "Vegetable oil for frying"
       ],
-      "categories": [
-        "Chinese",
-        "appetizer",
-        "seafood"
-      ]
+      "cuisine": "chinese",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 114,
@@ -4829,11 +4819,11 @@
         "4 cups mixed vegetables (bok choy, bell peppers, carrots, bean sprouts, etc.)",
         "Chopped green onions for garnish"
       ],
-      "categories": [
-        "Chinese",
-        "main course",
-        "vegetarian"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 115,
@@ -4875,10 +4865,11 @@
         "Your choice of protein (diced chicken, shrimp, tofu, etc.)",
         "Chopped green onions for garnish"
       ],
-      "categories": [
-        "Chinese",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "side",
+      "vegetarian": false,
+      "meat": ["chicken", "seafood"],
+      "contains": []
     },
     {
       "id": 116,
@@ -4926,11 +4917,11 @@
         "1/2 teaspoon sesame oil",
         "1/2 teaspoon minced ginger"
       ],
-      "categories": [
-        "Chinese",
-        "appetizer",
-        "seafood"
-      ]
+      "cuisine": "chinese",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 117,
@@ -4975,15 +4966,11 @@
         "Chili oil",
         "Peanut sauce"
       ],
-      "categories": [
-        "Chinese",
-        "main course",
-        "seafood",
-        "chicken",
-        "beef",
-        "lamb",
-        "vegetarian"
-      ]
+      "cuisine": "chinese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["chicken", "seafood", "beef", "lamb"],
+      "contains": []
     },
     {
       "id": 118,
@@ -5019,11 +5006,11 @@
         "1/4 cup water",
         "Fresh mango slices or mint leaves for garnish"
       ],
-      "categories": [
-        "Chinese",
-        "dessert",
-        "vegetarian"
-      ]
+      "cuisine": "chinese",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 119,
@@ -5061,11 +5048,11 @@
         "1/2 cup chopped almonds",
         "24 whole almonds for decoration"
       ],
-      "categories": [
-        "Chinese",
-        "dessert",
-        "vegetarian"
-      ]
+      "cuisine": "chinese",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["nuts"]
     },
     {
       "id": 120,
@@ -5105,11 +5092,11 @@
         "Filling of your choice (e.g., pork, beef, chicken, vegetables, mushrooms)",
         "Spices and sauces for seasoning"
       ],
-      "categories": [
-        "Chinese",
-        "appetizer",
-        "main course"
-      ]
+      "cuisine": "chinese",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": ["pork", "beef", "chicken"],
+      "contains": []
     },
     {
       "id": 121,
@@ -5145,11 +5132,11 @@
         "1/2 teaspoon salt",
         "1/4 teaspoon black pepper"
       ],
-      "categories": [
-        "Mediterranean",
-        "main course",
-        "chicken"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 122,
@@ -5186,11 +5173,11 @@
         "1 teaspoon dried oregano",
         "Salt and black pepper to taste"
       ],
-      "categories": [
-        "Mediterranean",
-        "appetizer",
-        "vegetarian"
-      ]
+      "cuisine": "mediterranean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 123,
@@ -5229,11 +5216,11 @@
         "Juice of 1 lemon",
         "Salt and black pepper to taste"
       ],
-      "categories": [
-        "Mediterranean",
-        "main course",
-        "vegetarian"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 124,
@@ -5268,12 +5255,11 @@
         "1/2 teaspoon salt",
         "1/4 teaspoon black pepper"
       ],
-      "categories": [
-        "Mediterranean",
-        "seafood",
-        "appetizer",
-        "main course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 125,
@@ -5318,11 +5304,11 @@
         "1/4 cup sliced black olives",
         "Lemon wedges, for serving"
       ],
-      "categories": [
-        "Mediterranean",
-        "vegetarian",
-        "main course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 126,
@@ -5360,11 +5346,11 @@
         "2 tablespoons olive oil",
         "Additional lemon juice and olive oil, for seasoning"
       ],
-      "categories": [
-        "Mediterranean",
-        "vegetarian",
-        "appetizer"
-      ]
+      "cuisine": "mediterranean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 127,
@@ -5403,11 +5389,11 @@
         "2 tablespoons chopped fresh parsley",
         "1/4 cup crumbled feta cheese (optional)"
       ],
-      "categories": [
-        "Mediterranean",
-        "vegetarian",
-        "salad"
-      ]
+      "cuisine": "mediterranean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 128,
@@ -5449,11 +5435,11 @@
         "2 cups shredded mozzarella cheese",
         "Fresh basil leaves, for garnish (optional)"
       ],
-      "categories": [
-        "Mediterranean",
-        "vegetarian",
-        "main course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 129,
@@ -5493,11 +5479,11 @@
         "Salt and pepper, to taste",
         "2 tablespoons chopped fresh parsley, plus more for garnish"
       ],
-      "categories": [
-        "Mediterranean",
-        "vegetarian",
-        "main course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 130,
@@ -5528,11 +5514,11 @@
         "Salt and black pepper to taste",
         "Lemon wedges for serving"
       ],
-      "categories": [
-        "Mediterranean",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 131,
@@ -5565,11 +5551,11 @@
         "Salt and black pepper to taste",
         "Tzatziki sauce and pita bread for serving"
       ],
-      "categories": [
-        "Mediterranean",
-        "lamb",
-        "Main Course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["lamb"],
+      "contains": []
     },
     {
       "id": 132,
@@ -5606,12 +5592,11 @@
         "Salt and black pepper to taste",
         "Hummus, sliced tomatoes, sliced cucumbers, sliced red onions, tahini sauce, and tortillas for serving"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Appetizer",
-        "Main Course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 133,
@@ -5646,11 +5631,11 @@
         "2 tablespoons chopped fresh parsley",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "mediterranean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 134,
@@ -5682,11 +5667,11 @@
         "1/2 teaspoon dried thyme",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 135,
@@ -5720,11 +5705,11 @@
         "Salt and pepper to taste",
         "Fresh herbs and lemon slices for garnish"
       ],
-      "categories": [
-        "Mediterranean",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 136,
@@ -5761,12 +5746,11 @@
         "1 teaspoon dried oregano",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Main Course",
-        "Salad"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
     },
     {
       "id": 137,
@@ -5803,12 +5787,11 @@
         "3 tablespoons extra-virgin olive oil",
         "1/4 cup chopped fresh parsley"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Main Course",
-        "Side Dish"
-      ]
+      "cuisine": "mediterranean",
+      "course": "side",
+      "vegetarian": true,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 138,
@@ -5852,11 +5835,11 @@
         "1/4 cup chopped Kalamata olives",
         "Crumbled feta cheese for garnish"
       ],
-      "categories": [
-        "Mediterranean",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": ["dairy"]
     },
     {
       "id": 139,
@@ -5901,11 +5884,11 @@
         "Vegetable broth, as needed",
         "Lemon wedges for garnish"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "mediterranean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 140,
@@ -5939,11 +5922,11 @@
         "Water, as needed",
         "Olive oil and paprika for garnish"
       ],
-      "categories": [
-        "Mediterranean",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "mediterranean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 141,
@@ -5977,11 +5960,11 @@
         "Toasted sesame seeds for garnish",
         "Thinly sliced green onions for garnish"
       ],
-      "categories": [
-        "Korean",
-        "beef",
-        "Main Course"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 142,
@@ -6020,11 +6003,11 @@
         "1 package soft tofu (sundubu)",
         "Steamed rice and kimchi for serving"
       ],
-      "categories": [
-        "Korean",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 143,
@@ -6063,10 +6046,11 @@
         "2 green onions, thinly sliced",
         "Toasted sesame seeds for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 144,
@@ -6097,10 +6081,11 @@
         "2 green onions, chopped",
         "2 tablespoons vegetable oil"
       ],
-      "categories": [
-        "Korean",
-        "Appetizer"
-      ]
+      "cuisine": "korean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 145,
@@ -6136,11 +6121,11 @@
         "1/2 green bell pepper, sliced",
         "Chopped green onions and sesame seeds for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "pork"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 146,
@@ -6176,11 +6161,11 @@
         "1/2 green bell pepper, sliced",
         "Chopped green onions and sesame seeds for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 147,
@@ -6217,11 +6202,11 @@
         "1 tablespoon vegetable oil",
         "Soy dipping sauce for serving"
       ],
-      "categories": [
-        "Korean",
-        "Appetizer",
-        "seafood"
-      ]
+      "cuisine": "korean",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 148,
@@ -6254,11 +6239,11 @@
         "Sesame seeds for garnish",
         "Sliced green onions for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "beef"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 149,
@@ -6294,11 +6279,11 @@
         "1 teaspoon minced garlic",
         "Toppings: sliced cucumber, kimchi, fried egg"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 150,
@@ -6335,12 +6320,11 @@
         "Dumpling wrappers",
         "Dipping sauce: soy sauce, vinegar, sesame oil"
       ],
-      "categories": [
-        "Korean",
-        "Appetizer",
-        "beef",
-        "pork"
-      ]
+      "cuisine": "korean",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["beef", "pork"],
+      "contains": []
     },
     {
       "id": 151,
@@ -6373,11 +6357,11 @@
         "Chopped green onions (for garnish)",
         "Black pepper (for garnish)"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 152,
@@ -6411,11 +6395,11 @@
         "1/2 bell pepper, sliced",
         "1 tablespoon vegetable oil"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 153,
@@ -6451,11 +6435,11 @@
         "1 cup assorted vegetables (carrots, peas, bell peppers)",
         "Chopped green onions, for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 154,
@@ -6487,11 +6471,11 @@
         "Sliced green onions, for garnish",
         "Toasted sesame seeds, for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 155,
@@ -6527,11 +6511,11 @@
         "2 tablespoons gochujang (Korean red pepper paste)",
         "Chopped green onions, for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 156,
@@ -6562,11 +6546,11 @@
         "1 teaspoon grated ginger",
         "1/2 teaspoon black pepper"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "pork"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 157,
@@ -6600,11 +6584,11 @@
         "1 bell pepper, sliced",
         "Sliced green onions and additional sesame seeds for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "beef"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 158,
@@ -6641,11 +6625,11 @@
         "Toasted sesame seeds",
         "Sliced green onions"
       ],
-      "categories": [
-        "Korean",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 159,
@@ -6685,10 +6669,11 @@
         "1 tablespoon sesame oil",
         "1 tablespoon honey"
       ],
-      "categories": [
-        "Korean",
-        "Seafood"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 160,
@@ -6730,11 +6715,12 @@
         "1 tablespoon water",
         "Chopped green onions for garnish"
       ],
-      "categories": [
-        "Korean",
-        "Vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "korean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
+
     },
     {
       "id": 161,
@@ -6772,11 +6758,11 @@
         "1 teaspoon salt",
         "1/2 teaspoon black pepper"
       ],
-      "categories": [
-        "Caribbean",
-        "chicken",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 162,
@@ -6814,11 +6800,11 @@
         "1/4 cup water",
         "2 tablespoons oil"
       ],
-      "categories": [
-        "Caribbean",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 163,
@@ -6855,11 +6841,11 @@
         "1 can (14 ounces) crushed tomatoes",
         "1 cup beef broth"
       ],
-      "categories": [
-        "Caribbean",
-        "beef",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 164,
@@ -6899,11 +6885,11 @@
         "1 tablespoon hot sauce",
         "Vegetable oil, for frying"
       ],
-      "categories": [
-        "Caribbean",
-        "Seafood",
-        "Appetizer"
-      ]
+      "cuisine": "caribbean",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 165,
@@ -6932,11 +6918,11 @@
         "1/4 cup pork cracklings",
         "2 tablespoons oil"
       ],
-      "categories": [
-        "Caribbean",
-        "Vegetarian",
-        "Side Dish"
-      ]
+      "cuisine": "caribbean",
+      "course": "side",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 166,
@@ -6968,11 +6954,11 @@
         "1 teaspoon black pepper",
         "Vegetable oil, for frying"
       ],
-      "categories": [
-        "Caribbean",
-        "pork",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 167,
@@ -7008,11 +6994,11 @@
         "1 sprig thyme",
         "2 tablespoons butter"
       ],
-      "categories": [
-        "Caribbean",
-        "Seafood",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 168,
@@ -7052,11 +7038,11 @@
         "2 tablespoons tomato paste",
         "Water, as needed"
       ],
-      "categories": [
-        "Caribbean",
-        "goat",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["goat"],
+      "contains": []
     },
     {
       "id": 169,
@@ -7093,11 +7079,11 @@
         "Salt and black pepper, to taste",
         "Sour cream, chopped onions, and fresh cilantro, for garnish"
       ],
-      "categories": [
-        "Caribbean",
-        "Vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 170,
@@ -7132,12 +7118,11 @@
         "1/2 cup coconut milk (optional)",
         "Salt and black pepper, to taste"
       ],
-      "categories": [
-        "Caribbean",
-        "Vegetarian",
-        "Side Dish",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "side",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 171,
@@ -7172,12 +7157,11 @@
         "1 pound shrimp, peeled and deveined",
         "Oil, for frying"
       ],
-      "categories": [
-        "Caribbean",
-        "Seafood",
-        "Appetizer",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 172,
@@ -7220,11 +7204,11 @@
         "1 1/2 pounds bone-in, skin-on chicken pieces (such as thighs and drumsticks)",
         "Chopped fresh cilantro or parsley, for garnish"
       ],
-      "categories": [
-        "Caribbean",
-        "chicken",
-        "Main Course"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 173,
@@ -7255,11 +7239,12 @@
         "Oil, for frying",
         "Salt, to taste"
       ],
-      "categories": [
-        "Caribbean",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "caribbean",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
+
     },
     {
       "id": 174,
@@ -7302,10 +7287,11 @@
         "1/2 teaspoon ground nutmeg",
         "1/2 teaspoon ground allspice"
       ],
-      "categories": [
-        "Caribbean",
-        "Dessert"
-      ]
+      "cuisine": "caribbean",
+      "course": "dessert",
+      "vegetarian": false,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 175,
@@ -7350,11 +7336,11 @@
         "2 cups long-grain rice",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Caribbean",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 176,
@@ -7391,11 +7377,11 @@
         "1/4 teaspoon nutmeg",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Caribbean",
-        "Side Dish",
-        "Vegetarian"
-      ]
+      "cuisine": "caribbean",
+      "course": "side",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 177,
@@ -7436,12 +7422,11 @@
         "1 tablespoon bouillon powder",
         "6 cups water or broth"
       ],
-      "categories": [
-        "Caribbean",
-        "Main Course",
-        "chicken",
-        "seafood"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "seafood"],
+      "contains": []
     },
     {
       "id": 178,
@@ -7475,11 +7460,11 @@
         "Thyme to taste",
         "Scotch bonnet pepper (optional, for extra heat)"
       ],
-      "categories": [
-        "Caribbean",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 179,
@@ -7518,11 +7503,11 @@
         "Water, as needed",
         "Oil, for frying"
       ],
-      "categories": [
-        "Caribbean",
-        "Appetizer",
-        "Seafood"
-      ]
+      "cuisine": "caribbean",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 180,
@@ -7562,11 +7547,11 @@
         "Black pepper, to taste",
         "Hot pepper sauce, to taste"
       ],
-      "categories": [
-        "Caribbean",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "caribbean",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 181,
@@ -7605,11 +7590,11 @@
         "1 tablespoon lime juice",
         "Fresh basil leaves, for garnish"
       ],
-      "categories": [
-        "Thai",
-        "Main Course",
-        "Chicken"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 182,
@@ -7650,11 +7635,11 @@
         "Fresh cilantro, for garnish",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Thai",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 183,
@@ -7693,12 +7678,11 @@
         "Fresh cilantro leaves, chopped",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Thai",
-        "Appetizer",
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "thai",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 184,
@@ -7729,11 +7713,11 @@
         "2 ripe mangoes, sliced",
         "Toasted sesame seeds, for garnish"
       ],
-      "categories": [
-        "Thai",
-        "Dessert",
-        "Vegetarian"
-      ]
+      "cuisine": "thai",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 185,
@@ -7771,14 +7755,11 @@
         "Fresh cilantro, for garnish",
         "Steamed rice, for serving"
       ],
-      "categories": [
-        "Thai",
-        "Soup",
-        "Main Course",
-        "Chicken",
-        "Seafood",
-        "Vegetarian"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["chicken", "seafood"],
+      "contains": []
     },
     {
       "id": 186,
@@ -7818,15 +7799,11 @@
         "Fresh cilantro, for garnish",
         "Steamed rice or noodles, for serving"
       ],
-      "categories": [
-        "Thai",
-        "Main Course",
-        "Curry",
-        "Beef",
-        "Chicken",
-        "Seafood",
-        "Vegetarian"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["chicken", "seafood", "beef"],
+      "contains": ["nuts"]
     },
     {
       "id": 187,
@@ -7869,16 +7846,11 @@
         "1 cup fresh Thai basil leaves",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Thai",
-        "Main Course",
-        "Stir-Fry",
-        "Chicken",
-        "Beef",
-        "Shrimp",
-        "Seafood",
-        "Vegetarian"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["chicken", "beef", "seafood"],
+      "contains": []
     },
     {
       "id": 188,
@@ -7913,11 +7885,11 @@
         "2 tablespoons chopped fresh cilantro",
         "Oil, for frying"
       ],
-      "categories": [
-        "Thai",
-        "Appetizer",
-        "Seafood"
-      ]
+      "cuisine": "thai",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 189,
@@ -7959,11 +7931,11 @@
         "1 tablespoon oyster sauce",
         "2 green onions, chopped"
       ],
-      "categories": [
-        "thai",
-        "chicken",
-        "seafood"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "seafood"],
+      "contains": []
     },
     {
       "id": 190,
@@ -8002,11 +7974,11 @@
         "1 lime, juiced",
         "Steamed jasmine rice, for serving"
       ],
-      "categories": [
-        "thai",
-        "seafood",
-        "main course"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 191,
@@ -8047,11 +8019,11 @@
         "Fresh cilantro, for garnish",
         "Steamed jasmine rice, for serving"
       ],
-      "categories": [
-        "thai",
-        "vegetarian",
-        "main course"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 192,
@@ -8089,12 +8061,11 @@
         "1/2 teaspoon shrimp paste",
         "Sticky rice, for serving"
       ],
-      "categories": [
-        "thai",
-        "vegetarian",
-        "appetizer",
-        "salad"
-      ]
+      "cuisine": "thai",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": [],
+      "contains": ["nuts"]
     },
     {
       "id": 193,
@@ -8133,11 +8104,11 @@
         "1 teaspoon cornstarch",
         "2 tablespoons oil"
       ],
-      "categories": [
-        "thai",
-        "vegetarian",
-        "main course"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 194,
@@ -8173,11 +8144,11 @@
         "1 teaspoon sugar",
         "Fresh cilantro leaves, for garnish"
       ],
-      "categories": [
-        "thai",
-        "seafood",
-        "appetizer"
-      ]
+      "cuisine": "thai",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 195,
@@ -8210,11 +8181,11 @@
         "1/4 cup roasted peanuts",
         "Cilantro leaves, for garnish"
       ],
-      "categories": [
-        "thai",
-        "vegetarian",
-        "appetizer"
-      ]
+      "cuisine": "thai",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["nuts"]
     },
     {
       "id": 196,
@@ -8250,11 +8221,11 @@
         "Handful of Thai basil leaves",
         "Steamed rice, for serving"
       ],
-      "categories": [
-        "thai",
-        "beef",
-        "main course"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 197,
@@ -8296,11 +8267,11 @@
         "Salt and pepper, to taste",
         "Vegetable oil, for frying"
       ],
-      "categories": [
-        "thai",
-        "vegetarian",
-        "appetizer"
-      ]
+      "cuisine": "thai",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 198,
@@ -8346,11 +8317,11 @@
         "Chopped green onions, for garnish",
         "Chopped cilantro, for garnish"
       ],
-      "categories": [
-        "thai",
-        "main course",
-        "seafood"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 199,
@@ -8391,11 +8362,11 @@
         "2 tablespoons water",
         "Fresh basil leaves and sliced red chili peppers for garnish"
       ],
-      "categories": [
-        "thai",
-        "main course",
-        "chicken"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 200,
@@ -8441,11 +8412,11 @@
         "Salt to taste",
         "Fresh cilantro leaves for garnish"
       ],
-      "categories": [
-        "thai",
-        "main course",
-        "vegetarian"
-      ]
+      "cuisine": "thai",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 201,
@@ -8493,13 +8464,11 @@
         "Salt, to taste",
         "Lemon wedges and fresh parsley for garnish"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "chicken",
-        "rabbit",
-        "Seafood"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken", "rabbit", "seafood"],
+      "contains": []
     },
     {
       "id": 202,
@@ -8535,11 +8504,11 @@
         "Diced cucumber and bell pepper, for garnish",
         "Extra-virgin olive oil, for drizzling"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer",
-        "Vegetarian"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 203,
@@ -8572,11 +8541,11 @@
         "Salt and pepper, to taste",
         "2-3 tablespoons olive oil"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 204,
@@ -8630,10 +8599,11 @@
         "Vegetable oil, for frying",
         "Chopped parsley, for garnish"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 205,
@@ -8674,10 +8644,11 @@
         "1/2 cup heavy cream",
         "1 cup chocolate chips"
       ],
-      "categories": [
-        "Spanish",
-        "Dessert"
-      ]
+      "cuisine": "spanish",
+      "course": "dessert",
+      "vegetarian": false,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 206,
@@ -8710,11 +8681,11 @@
         "1 lemon",
         "2 tablespoons chopped parsley"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer",
-        "Seafood"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 207,
@@ -8752,11 +8723,11 @@
         "1/2 teaspoon dried thyme",
         "2 tablespoons chopped parsley"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 208,
@@ -8793,12 +8764,11 @@
         "2 hard-boiled eggs, sliced",
         "Fresh parsley, for garnish"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer",
-        "Main Course",
-        "vegetarian"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 209,
@@ -8830,12 +8800,11 @@
         "2 tablespoons olive oil",
         "1 tablespoon sweet paprika"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "Appetizer",
-        "seafood"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 210,
@@ -8872,10 +8841,11 @@
         "1/2 teaspoon ground cinnamon",
         "Granulated sugar, for caramelizing"
       ],
-      "categories": [
-        "Spanish",
-        "Dessert"
-      ]
+      "cuisine": "spanish",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 211,
@@ -8908,11 +8878,11 @@
         "Salt and pepper to taste",
         "Chopped vegetables for garnish (optional)"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer",
-        "Vegetarian"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 213,
@@ -8957,11 +8927,11 @@
         "1 bay leaf",
         "Fresh parsley, for garnish"
       ],
-      "categories": [
-        "Main Course",
-        "beef",
-        "Spanish"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 214,
@@ -9007,13 +8977,11 @@
         "Fresh parsley, for garnish",
         "Olive oil, for cooking"
       ],
-      "categories": [
-        "Main Course",
-        "lamb",
-        "rabbit",
-        "pork",
-        "Spanish"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["lamb", "rabbit", "pork"],
+      "contains": []
     },
     {
       "id": 215,
@@ -9047,11 +9015,11 @@
         "Salt and pepper, to taste",
         "1/2 teaspoon paprika"
       ],
-      "categories": [
-        "Spanish",
-        "Vegetarian",
-        "Main Course"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 216,
@@ -9090,11 +9058,11 @@
         "1 teaspoon paprika",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 217,
@@ -9130,11 +9098,11 @@
         "1/2 teaspoon salt",
         "Chopped fresh herbs (such as parsley or basil), for garnish"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer",
-        "Vegetarian"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 218,
@@ -9177,11 +9145,11 @@
         "Salt and pepper, to taste",
         "Chopped parsley or cilantro, for garnish"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "beef"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 219,
@@ -9224,11 +9192,11 @@
         "1 1/2 cups breadcrumbs",
         "Vegetable oil, for frying"
       ],
-      "categories": [
-        "Spanish",
-        "Appetizer",
-        "pork"
-      ]
+      "cuisine": "spanish",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": ["dairy"]
     },
     {
       "id": 220,
@@ -9261,11 +9229,11 @@
         "6 eggs",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Spanish",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "spanish",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 221,
@@ -9299,11 +9267,11 @@
         "Pickles",
         "Condiments (ketchup, mustard, mayonnaise)"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "Beef"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 222,
@@ -9344,12 +9312,11 @@
         "Salt and pepper to taste",
         "Celery sticks, for serving"
       ],
-      "categories": [
-        "Appetizer",
-        "Main Course",
-        "American",
-        "Chicken"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 223,
@@ -9388,11 +9355,12 @@
         "3 cups shredded mozzarella cheese",
         "Your favorite pizza toppings"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "Vegetarian"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
+
     },
     {
       "id": 224,
@@ -9431,11 +9399,11 @@
         "2 tablespoons butter",
         "2 cups milk"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "beef"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": ["dairy"]
     },
     {
       "id": 225,
@@ -9468,11 +9436,11 @@
         "4 hot dog buns",
         "Butter, for spreading"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "Seafood"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 226,
@@ -9510,12 +9478,11 @@
         "Black pepper, to taste",
         "1 cup heavy cream"
       ],
-      "categories": [
-        "Appetizer",
-        "Main Course",
-        "American",
-        "Seafood"
-      ]
+      "cuisine": "american",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 227,
@@ -9545,11 +9512,11 @@
         "Your favorite barbecue rub",
         "Barbecue sauce"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "Meat"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 228,
@@ -9582,12 +9549,11 @@
         "1 teaspoon Worcestershire sauce",
         "1/2 teaspoon anchovy paste"
       ],
-      "categories": [
-        "Appetizer",
-        "Salad",
-        "American",
-        "Vegetarian"
-      ]
+      "cuisine": "american",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": ["dairy"]
     },
     {
       "id": 229,
@@ -9622,10 +9588,12 @@
         "4 large egg yolks",
         "Whipped cream and lime zest for garnish"
       ],
-      "categories": [
-        "Dessert",
-        "American"
-      ]
+      "cuisine": "american",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
+
     },
     {
       "id": 230,
@@ -9656,11 +9624,11 @@
         "4 slices of provolone or American cheese",
         "4 hoagie rolls, split"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "beef"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": ["dairy"]
     },
     {
       "id": 231,
@@ -9702,11 +9670,11 @@
         "Waffle batter (prepare according to the manufacturer's instructions)",
         "Maple syrup for serving"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "Meat"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
     },
     {
       "id": 232,
@@ -9744,11 +9712,11 @@
         "1/2 cup breadcrumbs",
         "2 tablespoons melted butter"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "Vegetarian"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 233,
@@ -9785,11 +9753,11 @@
         "2 tablespoons chopped fresh parsley",
         "Lemon wedges (for garnish, optional)"
       ],
-      "categories": [
-        "Main Course",
-        "Seafood",
-        "American"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 234,
@@ -9832,11 +9800,11 @@
         "1/2 cup frozen peas",
         "1/2 cup frozen corn"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "chicken"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
     },
     {
       "id": 235,
@@ -9880,10 +9848,12 @@
         "8 small flour tortillas",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Main Course",
-        "Seafood"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": ["dairy"]
+
     },
     {
       "id": 236,
@@ -9922,11 +9892,12 @@
         "1/2 teaspoon garlic powder",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Main Course",
-        "Salad",
-        "american"
-      ]
+      "cuisine": "american",
+      "course": "appetizzer",
+      "vegetarian": false,
+      "meat": ["pork", "chicken"],
+      "contains": ["dairy"]
+
     },
     {
       "id": 237,
@@ -9965,10 +9936,12 @@
         "Vanilla ice cream",
         "Whipped cream"
       ],
-      "categories": [
-        "Dessert",
-        "american"
-      ]
+      "cuisine": "american",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
+
     },
     {
       "id": 238,
@@ -10014,11 +9987,11 @@
         "Shredded cheese, diced onions, and sour cream, for garnish",
         "Cornbread or crackers, for serving"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "beef"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": ["dairy"]
     },
     {
       "id": 239,
@@ -10060,11 +10033,12 @@
         "- 1/4 cup grated Parmesan cheese",
         "- Fresh basil leaves for garnish"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "chicken"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
+
     },
     {
       "id": 240,
@@ -10096,11 +10070,11 @@
         "- 1/2 cup sauerkraut, drained",
         "- Butter for grilling"
       ],
-      "categories": [
-        "Main Course",
-        "American",
-        "beef"
-      ]
+      "cuisine": "american",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": ["dairy"]
     }
   ],
   "cocktails": [
@@ -10132,10 +10106,8 @@
         "1 1/2 fluid ounces white rum",
         "1/2 cup club soda, or as needed"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 2,
@@ -10165,10 +10137,8 @@
         "1 cup white rum",
         "8 cups ice cubes"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 3,
@@ -10197,10 +10167,8 @@
         "1 splash club soda",
         "1 wedge fresh pineapple"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 4,
@@ -10229,10 +10197,8 @@
         "2 cups ice cubes, or as needed",
         "1 cup club soda, or as needed"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 5,
@@ -10262,11 +10228,8 @@
         "1 fluid ounce silver rum",
         "2 fluid ounces club soda"
       ],
-      "categories": [
-        "mojito",
-        "rum",
-        "vodka"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum", "vodka"]
     },
     {
       "id": 6,
@@ -10293,10 +10256,8 @@
         "1 dragon fruit, halved and flesh removed",
         "1 liter chilled club soda"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 7,
@@ -10328,10 +10289,8 @@
         "3 cups cold water, or more to taste",
         "1 cup light rum, or more to taste"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 8,
@@ -10364,10 +10323,8 @@
         "ice",
         "club soda, or as needed"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 9,
@@ -10398,10 +10355,8 @@
         "3 fluid ounces unsweetended guava nectar",
         "2 fluid ounces club soda, or as needed"
       ],
-      "categories": [
-        "mojito",
-        "rum"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 10,
@@ -10428,10 +10383,8 @@
         "3 lime wedges",
         "1/4 cup club soda, or as needed"
       ],
-      "categories": [
-        "mojito",
-        "tequila"
-      ]
+      "drink-type": "mojito",
+      "alcohol-type": ["tequila"]
     },
     {
       "id": 11,
@@ -10457,10 +10410,8 @@
         "1 cup ice cubes",
         "3 small olives"
       ],
-      "categories": [
-        "martini",
-        "vodka"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 12,
@@ -10488,11 +10439,8 @@
         "1 pinch ground cinnamon",
         "1 pinch ground nutmeg"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 13,
@@ -10518,11 +10466,8 @@
         "1 fluid ounce brewed espresso",
         "1 cup ice"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 14,
@@ -10549,11 +10494,8 @@
         "1 fluid ounce cointreau or other orange liqueur",
         "1/2 fluid ounce lemon juice"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 15,
@@ -10581,11 +10523,8 @@
         "1/2 fluid ounce dry vermouth",
         "1 tablespoon cranberries"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 16,
@@ -10612,11 +10551,8 @@
         "1 fluid ounce vodka",
         "1 fluid ounce triple sec"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 17,
@@ -10644,10 +10580,8 @@
         "1 ounce sweet and sour mix",
         "1 cup crushed ice"
       ],
-      "categories": [
-        "martini",
-        "vodka"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 18,
@@ -10677,11 +10611,8 @@
         "2 tablespoons simple syrup",
         "1 lime, juiced"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "schnapps"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "schnapps"]
     },
     {
       "id": 19,
@@ -10708,11 +10639,8 @@
         "1 ounce lime juice",
         "1 ounce triple sec"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 20,
@@ -10739,11 +10667,8 @@
         "1 fluid ounce pineapple juice",
         "1 dash grenadine syrup"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "rum"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "rum"]
     },
     {
       "id": 21,
@@ -10767,11 +10692,8 @@
         "1 lime wedge",
         "1 maraschino cherry"
       ],
-      "categories": [
-        "martini",
-        "vodka",
-        "schnapps"
-      ]
+      "drink-type": "martini",
+      "alcohol-type": ["vodka", "schnapps"]
     },
     {
       "id": 22,
@@ -10802,11 +10724,8 @@
         "1 thinly sliced jalapeno slice, plus more for garnish",
         "1 watermelon wedge"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 23,
@@ -10836,10 +10755,8 @@
         "1 lime, halved",
         "1 tablespoon white sugar or as needed"
       ],
-      "categories": [
-        "margarita",
-        "tequila"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila"]
     },
     {
       "id": 24,
@@ -10865,11 +10782,8 @@
         "6 fluid ounces tequila",
         "2 fluid ounces triple sec"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 25,
@@ -10896,11 +10810,8 @@
         "1/2 lime, juiced",
         "ice cubes"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 26,
@@ -10931,11 +10842,8 @@
         "2 lime wedges",
         "pineapple wedge fir garnish (optional)"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 27,
@@ -10962,11 +10870,8 @@
         "8 ounces frozen sliced strawberries",
         "4 fluid ounces frozen limeade concentrate"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 28,
@@ -10994,11 +10899,8 @@
         "1 fluid ounce lime juice",
         "1 fluid ounce prickly pear syrup"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 29,
@@ -11028,11 +10930,8 @@
         "1/2 jalapeño pepper, seeded and diced",
         "1 lime, cut into wedges"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 30,
@@ -11066,11 +10965,8 @@
         "ice, as needed",
         "4 slices cucumber"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 31,
@@ -11094,11 +10990,8 @@
         "1 fluid ounce blue curacao",
         "1/2 fluid ounce lime juice"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "curacao"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "curacao"]
     },
     {
       "id": 32,
@@ -11127,10 +11020,8 @@
         "1/4 cup lemon-lime flavored carbonated beverage",
         "6 cups ice, or as needed"
       ],
-      "categories": [
-        "daiquiri",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 33,
@@ -11160,10 +11051,8 @@
         "2 tablespoons lime juice",
         "3 cups white rum"
       ],
-      "categories": [
-        "daiquiri",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 34,
@@ -11191,11 +11080,8 @@
         "1/2 lime, juiced",
         "2 cups ice cubes, or as desired"
       ],
-      "categories": [
-        "daiquiri",
-        "rum",
-        "liqueur"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum", "liqueur"]
     },
     {
       "id": 35,
@@ -11223,10 +11109,8 @@
         "1 tray of ice",
         "4 maraschino cherries, garnish"
       ],
-      "categories": [
-        "daiquiri",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 36,
@@ -11250,10 +11134,8 @@
         "12 fluid ounces rum",
         "1 tray of ice"
       ],
-      "categories": [
-        "daiquiri",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 37,
@@ -11280,11 +11162,8 @@
         "1 teaspoon white sugar, or to taste",
         "1 cup ice cubes"
       ],
-      "categories": [
-        "daiquiri",
-        "rum",
-        "liqueur"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum", "liqueur"]
     },
     {
       "id": 38,
@@ -11311,10 +11190,8 @@
         "3/4 ounce simple syrup",
         "Garnish: lime wheel"
       ],
-      "categories": [
-        "daiquiri",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 39,
@@ -11341,10 +11218,8 @@
         "1/2 ounce grapefruit juice, freshly squeezed",
         "Garnish: lime wheel"
       ],
-      "categories": [
-        "daiquiri",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 40,
@@ -11374,11 +11249,8 @@
         "1 dash Fee Brothers Aztec chocolate bitters",
         "pineapple wedge"
       ],
-      "categories": [
-        "daiquiri",
-        "liqueur",
-        "rum"
-      ]
+      "drink-type": "daquiri",
+      "alcohol-type": ["rum", "liqueur"]
     },
     {
       "id": 41,
@@ -11413,9 +11285,8 @@
         "1 very large ice cube",
         "1 pear wedge for garnish"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 42,
@@ -11444,9 +11315,8 @@
         "1 slice orange",
         "1 maraschino cherry"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 43,
@@ -11477,9 +11347,8 @@
         "1 lemon slice",
         "1 maraschino cherry"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 44,
@@ -11508,9 +11377,8 @@
         "ice, as needed",
         "1 1/2 parts Maker's Mark® Bourbon"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 45,
@@ -11540,9 +11408,8 @@
         "1 (6 ounce) can frozen orange juice concentrate",
         "1 (2 liter) bottle lemon-lime flavored carbonated beverage"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 46,
@@ -11568,9 +11435,8 @@
         "1 maraschino cherry",
         "1/2 cup ice"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 47,
@@ -11601,9 +11467,8 @@
         "1 large egg white",
         "ice cubes as needed"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 48,
@@ -11630,9 +11495,8 @@
         "1/4 cup hot water",
         "1 twist lemon peel"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 49,
@@ -11660,9 +11524,8 @@
         "1 1/2 fluid ounce bourbon, or more to taste",
         "4 ice cubes, or as desired"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 50,
@@ -11691,9 +11554,8 @@
         "6 ounces bourbon",
         "1/4 cup lemon juice"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 51,
@@ -11720,9 +11582,8 @@
         "ice, for seving",
         "orange peel for garnish"
       ],
-      "categories": [
-        "bourbon"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["bourbon"]
     },
     {
       "id": 52,
@@ -11750,11 +11611,8 @@
         "1 cup ice",
         "1 lime wedge for garnish"
       ],
-      "categories": [
-        "cosmopolitan",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "cosmopolitan",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 53,
@@ -11780,10 +11638,8 @@
         "4 cubes ice, or as needed",
         "1 dash lime juice"
       ],
-      "categories": [
-        "cosmopolitan",
-        "vodka"
-      ]
+      "drink-type": "cosmopolitan",
+      "alcohol-type": ["vodka", "liqueur"]
     },
     {
       "id": 54,
@@ -11811,11 +11667,8 @@
         "1 tablespoon peach schnapps",
         "1 teaspoon fresh lime juice"
       ],
-      "categories": [
-        "cosmopolitan",
-        "vodka",
-        "schnapps"
-      ]
+      "drink-type": "cosmopolitan",
+      "alcohol-type": ["vodka", "schnapps"]
     },
     {
       "id": 55,
@@ -11847,11 +11700,8 @@
         "1 orange, sliced into rounds",
         "1 maraschino cherry"
       ],
-      "categories": [
-        "hurricane",
-        "rum",
-        "liqueur"
-      ]
+      "drink-type": "hurricane",
+      "alcohol-type": ["rum", "liqueur"]
     },
     {
       "id": 56,
@@ -11887,13 +11737,8 @@
         "1 lime slice",
         "1 maraschino cherry"
       ],
-      "categories": [
-        "hurricane",
-        "rum",
-        "gin",
-        "vodka",
-        "liqueur"
-      ]
+      "drink-type": "hurricane",
+      "alcohol-type": ["rum", "gin", "vodka", "liqueur"]
     },
     {
       "id": 57,
@@ -11921,10 +11766,8 @@
         "1 cup ice",
         "1 lime wedge"
       ],
-      "categories": [
-        "moscow mule",
-        "vodka"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 58,
@@ -11954,11 +11797,8 @@
         "salt (optional)",
         "1 grapefruit wedge"
       ],
-      "categories": [
-        "margarita",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila", "liqueur"]
     },
     {
       "id": 59,
@@ -11985,10 +11825,8 @@
         "1 1/2 fluid ounces Campari",
         "1 orange twist"
       ],
-      "categories": [
-        "negroni",
-        "gin"
-      ]
+      "drink-type": "negroni",
+      "alcohol-type": ["gin"]
     },
     {
       "id": 60,
@@ -12016,10 +11854,8 @@
         "1 pineapple wedge",
         "1 cherry"
       ],
-      "categories": [
-        "piña colada",
-        "rum"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 61,
@@ -12046,10 +11882,8 @@
         "4 fluid ounces ginger beer",
         "1 lime wedge"
       ],
-      "categories": [
-        "moscow mule",
-        "vodka"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 62,
@@ -12081,10 +11915,8 @@
         "1 celery stalk",
         "1 green olive"
       ],
-      "categories": [
-        "bloody mary",
-        "vodka"
-      ]
+      "drink-type": "bloody mary",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 63,
@@ -12110,10 +11942,8 @@
         "4 fluid ounces tonic water",
         "1 lime wedge"
       ],
-      "categories": [
-        "gin and tonic",
-        "gin"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["gin"]
     },
     {
       "id": 64,
@@ -12141,10 +11971,8 @@
         "1/2 fluid ounce triple sec",
         "1 lime wheel, for garnish"
       ],
-      "categories": [
-        "margarita",
-        "tequila"
-      ]
+      "drink-type": "margarita",
+      "alcohol-type": ["tequila"]
     },
     {
       "id": 65,
@@ -12174,10 +12002,8 @@
         "3 allspice berries",
         "3 whole cloves"
       ],
-      "categories": [
-        "apple cider",
-        "rum"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["rum"]
     },
     {
       "id": 66,
@@ -12208,13 +12034,8 @@
         "1 fluid ounce cola, or to taste",
         "1 lemon slice"
       ],
-      "categories": [
-        "vodka",
-        "rum",
-        "gin",
-        "tequila",
-        "liqueur"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["vodka", "rum", "gin", "tequila", "liqueur"]
     },
     {
       "id": 67,
@@ -12243,10 +12064,8 @@
         "5 ounces giner beer",
         "1 thin lemon slice (optional)"
       ],
-      "categories": [
-        "moscow mule",
-        "vodka"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 68,
@@ -12269,9 +12088,8 @@
         "1 1/2 fluid oucnes vodka",
         "1 1/2 cups ice cubes"
       ],
-      "categories": [
-        "vodka"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["vodka"]
     },
     {
       "id": 69,
@@ -12299,10 +12117,8 @@
         "orange peel slice for garnish",
         "2 maraschino cherries for garnish"
       ],
-      "categories": [
-        "vodka",
-        "schnapps"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["vodka", "schnapps"]
     },
     {
       "id": 70,
@@ -12325,9 +12141,8 @@
         "1/4 cup orange juice",
         "3/4 cup champagne, chilled"
       ],
-      "categories": [
-        "champagne"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["champagne"]
     },
     {
       "id": 71,
@@ -12357,10 +12172,9 @@
         "5 fluid ounces brut champagne, chilled",
         "1 slice lemon"
       ],
-      "categories": [
-        "champagne",
-        "gin"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["champagne", "gin"]
+
     },
     {
       "id": 72,
@@ -12387,10 +12201,8 @@
         "1 1/2 cups chilled sparkling wine",
         "3 large strawberries"
       ],
-      "categories": [
-        "wine",
-        "brandy"
-      ]
+      "drink-type": "bellini",
+      "alcohol-type": ["wine", "brandy"]
     },
     {
       "id": 75,
@@ -12424,10 +12236,8 @@
         "1/4 cup Campari",
         "4 slices pineapple , orange slices, for garnish"
       ],
-      "categories": [
-        "wine",
-        "Campari"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["wine", "campari"]
     },
     {
       "id": 76,
@@ -12459,10 +12269,8 @@
         "1 fresh cranberry",
         "1 sprig fresh rosemary"
       ],
-      "categories": [
-        "wine",
-        "gin"
-      ]
+      "drink-type": "cocktail",
+      "alcohol-type": ["wine", "gin"]
     },
     {
       "id": 77,
@@ -12492,10 +12300,8 @@
         "1/2 cup triple sec liqueur",
         "1 (750 milliliter) bottle sparkling white wine, chilled"
       ],
-      "categories": [
-        "wine",
-        "liqueur"
-      ]
+      "drink-type": "sangria",
+      "alcohol-type": ["wine", "liqueur"]
     }
   ],
   "favorites": []

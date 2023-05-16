@@ -1,4 +1,5 @@
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './stylesheets/styles.css'
 import Header from './components/Header';
 
 function App() {

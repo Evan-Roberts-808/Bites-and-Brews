@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+
+:root {
+  --light-grey: #EFEFEF;
+  --grey: #A9A9A9;
+  --dark-grey: #252525;
+  --watermelon-red: #FF3B3F;
+  --watermelon-red-hovered: #D62F32;
+}
+
+* {
+  font-family: "Nunito";
+}
+
+body {
+  background-color: var(--light-grey)
+}
+
+.custom-header .nav-link {
+    color: var(--grey);
+}
+
+.custom-header .nav-link:hover {
+  color: var(--watermelon-red-hovered);
+}
