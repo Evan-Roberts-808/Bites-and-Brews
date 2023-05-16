@@ -28,10 +28,11 @@
         "1/2 cup sliced mushrooms",
         "1/4 cup chopped green onions"
       ],
-      "categories": [
-        "Japanese",
-        "Vegetarian"
-      ]
+      "cuisine": "japanese",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [""],
+      "contains": []
     },
     {
       "id": 2,
@@ -63,10 +64,11 @@
         "1 garlic clove, minced",
         "2 boneless, skinless chicken breasts"
       ],
-      "categories": [
-        "Japanese",
-        "Chicken"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 3,
@@ -99,10 +101,11 @@
         "Vegetable oil, for frying",
         "Dipping sauce (soy sauce, mirin, grated daikon radish)"
       ],
-      "categories": [
-        "Japanese",
-        "seafood"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 4,
@@ -135,11 +138,11 @@
         "Sheets of seaweed (nori)",
         "Soy sauce, wasabi, and pickled ginger for serving"
       ],
-      "categories": [
-        "Japanese",
-        "seafood",
-        "vegetarian"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 5,
@@ -175,10 +178,11 @@
         "Skewers (bamboo or metal)",
         "Optional: scallions or bell peppers for skewering"
       ],
-      "categories": [
-        "Japanese",
-        "Chicken"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 6,
@@ -213,13 +217,11 @@
         "Optional: sliced pork belly, shrimp, squid, green onions, pickled ginger",
         "Okonomiyaki sauce, mayonnaise, dried seaweed flakes, bonito flakes for topping"
       ],
-      "categories": [
-        "Japanese",
-        "seafood",
-        "pork",
-        "chicken",
-        "beef"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood", "beef", "pork", "chicken"],
+      "contains": []
     },
     {
       "id": 7,
@@ -256,10 +258,11 @@
         "Steamed rice, for serving",
         "Tonkatsu sauce, for serving"
       ],
-      "categories": [
-        "Japanese",
-        "Pork"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 8,
@@ -300,10 +303,11 @@
         "2 tablespoons oil for frying",
         "Soy sauce, for serving"
       ],
-      "categories": [
-        "Japanese",
-        "Pork"
-      ]
+      "cuisine": "japanese",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 9,
@@ -333,10 +337,11 @@
         "1 cup milk",
         "Sweetener (optional), such as honey or sugar"
       ],
-      "categories": [
-        "Japanese",
-        "Beverage"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 10,
@@ -375,11 +380,11 @@
         "2 tablespoons mirin",
         "1 tablespoon sugar"
       ],
-      "categories": [
-        "Japanese",
-        "Stew",
-        "beef"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 11,
@@ -428,13 +433,11 @@
         "Steamed rice, for serving",
         "Pickled ginger, for garnish (optional)"
       ],
-      "categories": [
-        "Japanese",
-        "pork",
-        "beef",
-        "chicken",
-        "seafood"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork", "chicken", "beef", "seafood"],
+      "contains": []
     },
     {
       "id": 12,
@@ -478,10 +481,11 @@
         "8 ounces udon noodles",
         "Sliced green onions, for garnish"
       ],
-      "categories": [
-        "Japanese",
-        "Beef"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": []
     },
     {
       "id": 14,
@@ -516,10 +520,11 @@
         "1 tablespoon rice vinegar",
         "Optional toppings: sliced green onions, grated ginger, shichimi togarashi (Japanese seven spice)"
       ],
-      "categories": [
-        "Japanese",
-        "Vegetarian"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 15,
@@ -560,10 +565,11 @@
         "Bonito flakes",
         "Chopped green onions"
       ],
-      "categories": [
-        "Japanese",
-        "seafood"
-      ]
+      "cuisine": "japanese",
+      "course": "appetizer",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 16,
@@ -600,11 +606,12 @@
         "Thinly sliced mushrooms",
         "Cooked shrimp",
         "Chopped green onions"
-      ],
-      "categories": [
-        "Japanese",
-        "vegetarian"
-      ]
+      ],      
+      "cuisine": "japanese",
+      "course": "dessert",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
     },
     {
       "id": 17,
@@ -640,10 +647,11 @@
         "Chopped green onions, for garnish",
         "Shredded nori seaweed, for garnish"
       ],
-      "categories": [
-        "Japanese",
-        "vegetarian"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 18,
@@ -683,10 +691,11 @@
         "Chopped green onions, for garnish",
         "Mayonnaise or citrus wedges, for serving"
       ],
-      "categories": [
-        "Japanese",
-        "chicken"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 19,
@@ -716,10 +725,11 @@
         "Soy sauce",
         "Bonito flakes"
       ],
-      "categories": [
-        "Japanese",
-        "Vegetarian"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 20,
@@ -757,10 +767,12 @@
         "Sesame seeds, for garnish",
         "Pickles, for serving"
       ],
-      "categories": [
-        "Japanese",
-        "Seafood"
-      ]
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["seafood"],
+      "contains": []
+
     },
     {
       "id": 21,
@@ -802,10 +814,11 @@
         "Salt",
         "Fresh basil leaves"
       ],
-      "categories": [
-        "Italian",
-        "Vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 22,
@@ -841,10 +854,11 @@
         "Optional: cherry tomatoes, grilled chicken, cooked shrimp",
         "Fresh basil leaves and grated Parmesan cheese, for garnish"
       ],
-      "categories": [
-        "Italian",
-        "Vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["seafood"],
+      "contains": ["dairy"]
     },
     {
       "id": 23,
@@ -884,10 +898,11 @@
         "24 ladyfingers",
         "Cocoa powder, for dusting"
       ],
-      "categories": [
-        "Italian",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 24,
@@ -920,10 +935,11 @@
         "Balsamic glaze",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Italian",
-        "Vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 25,
@@ -972,10 +988,11 @@
         "Lasagna noodles",
         "1 cup shredded mozzarella cheese"
       ],
-      "categories": [
-        "Italian",
-        "beef"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": ["dairy"]
     },
     {
       "id": 26,
@@ -1017,9 +1034,11 @@
         "1/2 cup grated Parmesan cheese, plus extra for garnish",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Italian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 27,
@@ -1067,11 +1086,11 @@
         "1/2 teaspoon dried rosemary",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Italian",
-        "beef",
-        "pork"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef", "pork"],
+      "contains": []
     },
     {
       "id": 28,
@@ -1108,11 +1127,11 @@
         "Salt and pepper, to taste",
         "Optional toppings: mozzarella cheese, prosciutto, avocado"
       ],
-      "categories": [
-        "Italian",
-        "Appetizer",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 29,
@@ -1147,11 +1166,11 @@
         "1 cup heavy cream",
         "Flavorings of your choice (e.g., fruit puree, chocolate, nuts)"
       ],
-      "categories": [
-        "Italian",
-        "Dessert",
-        "Vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 30,
@@ -1199,11 +1218,11 @@
         "Optional: Chocolate chips or candied fruit for filling",
         "Powdered sugar"
       ],
-      "categories": [
-        "Italian",
-        "Dessert",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 31,
@@ -1248,11 +1267,11 @@
         "Grated Parmesan cheese, for serving",
         "Crusty bread, for serving"
       ],
-      "categories": [
-        "Italian",
-        "Soup",
-        "Vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 32,
@@ -1292,10 +1311,11 @@
         "Breadcrumbs",
         "Vegetable oil, for frying"
       ],
-      "categories": [
-        "Italian",
-        "Appetizer"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef"],
+      "contains": ["dairy"]
     },
     {
       "id": 33,
@@ -1333,11 +1353,11 @@
         "Pasta or rice, for serving",
         "Fresh parsley, for garnish"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 34,
@@ -1371,11 +1391,11 @@
         "8 ounces fresh mozzarella cheese",
         "Handful of fresh basil leaves, chopped"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 35,
@@ -1415,11 +1435,11 @@
         "2 cups tomato sauce",
         "Fresh basil or parsley, for garnish"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 36,
@@ -1459,11 +1479,11 @@
         "4 slices mozzarella cheese",
         "Fresh basil or parsley, for garnish"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "chicken"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
     },
     {
       "id": 37,
@@ -1507,11 +1527,11 @@
         "½ cup grated Parmesan cheese",
         "Fresh basil or parsley, for garnish"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "Vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 38,
@@ -1549,11 +1569,11 @@
         "Salt and pepper, to taste",
         "Chopped fresh parsley, for garnish"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 39,
@@ -1588,10 +1608,11 @@
         "1 teaspoon vanilla extract",
         "Fruit sauce or caramel sauce, for serving"
       ],
-      "categories": [
-        "Italian",
-        "Dessert"
-      ]
+      "cuisine": "italian",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 40,
@@ -1625,11 +1646,11 @@
         "1 cup finely grated Pecorino Romano cheese",
         "Salt, to taste"
       ],
-      "categories": [
-        "Italian",
-        "Main Course",
-        "vegetarian"
-      ]
+      "cuisine": "italian",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 41,
@@ -1674,11 +1695,11 @@
         "1/2 pound phyllo pastry sheets, thawed if frozen",
         "Melted butter or olive oil, for brushing"
       ],
-      "categories": [
-        "Greek",
-        "Appetizer",
-        "Vegetarian"
-      ]
+      "cuisine": "greek",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 42,
@@ -1731,12 +1752,12 @@
         "1/2 cup grated Parmesan cheese",
         "1/4 teaspoon ground nutmeg"
       ],
-      "categories": [
-        "Greek",
-        "Main Course",
-        "lamb",
-        "beef"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef", "lamb"],
+      "contains": ["dairy"]
+
     },
     {
       "id": 43,
@@ -1773,12 +1794,11 @@
         "Tzatziki sauce, for serving",
         "Greek salad or side dishes, for serving"
       ],
-      "categories": [
-        "Greek",
-        "Pork",
-        "Chicken",
-        "Lamb"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": ["pork", "chicken", "lamb"],
+      "contains": ["dairy"]
     },
     {
       "id": 44,
@@ -1816,11 +1836,12 @@
         "Lemon juice, for serving",
         "Dipping sauce (such as tzatziki or yogurt sauce), for serving"
       ],
-      "categories": [
-        "Greek",
-        "Vegetarian",
-        "Appetizer"
-      ]
+      "cuisine": "greek",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
+
     },
     {
       "id": 45,
@@ -1853,11 +1874,11 @@
         "Fresh lemon juice, to taste",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Greek",
-        "Salad",
-        "Vegetarian"
-      ]
+      "cuisine": "greek",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 46,
@@ -1893,11 +1914,11 @@
         "1/4 teaspoon black pepper",
         "Fresh herbs, lemon wedges, and olives for garnish"
       ],
-      "categories": [
-        "Greek",
-        "Main Dish",
-        "chicken"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 47,
@@ -1939,10 +1960,11 @@
         "1 teaspoon grated orange zest",
         "Additional chopped nuts for garnish (optional)"
       ],
-      "categories": [
-        "Greek",
-        "Dessert"
-      ]
+      "cuisine": "greek",
+      "course": "dessert",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["nuts"]
     },
     {
       "id": 48,
@@ -1974,11 +1996,11 @@
         "1 tablespoon extra-virgin olive oil",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Greek",
-        "Sauce",
-        "Condiment"
-      ]
+      "cuisine": "greek",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 49,
@@ -2018,13 +2040,11 @@
         "1 teaspoon dried oregano",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Greek",
-        "Main Course",
-        "Mezze",
-        "beef",
-        "lamb"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef", "lamb"],
+      "contains": []
     },
     {
       "id": 50,
@@ -2060,10 +2080,11 @@
         "1 teaspoon dried thyme",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Greek",
-        "Side Dish"
-      ]
+      "cuisine": "greek",
+      "course": "side",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 51,
@@ -2103,11 +2124,11 @@
         "1 cup sliced cucumbers",
         "Tzatziki sauce for serving"
       ],
-      "categories": [
-        "Greek",
-        "Main Dish",
-        "chicken"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 52,
@@ -2152,12 +2173,11 @@
         "Salt and pepper to taste",
         "Pinch of nutmeg"
       ],
-      "categories": [
-        "Greek",
-        "Main Dish",
-        "beef",
-        "lamb"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["beef", "lamb"],
+      "contains": ["dairy"]
     },
     {
       "id": 53,
@@ -2194,11 +2214,11 @@
         "1 tablespoon chopped fresh dill",
         "Salt and pepper to taste"
       ],
-      "categories": [
-        "Greek",
-        "Main Dish",
-        "Vegetarian"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 54,
@@ -2227,13 +2247,11 @@
         "2 tablespoons olive oil",
         "Juice of 1 lemon"
       ],
-      "categories": [
-        "Greek",
-        "Salad",
-        "Appetizer",
-        "Side Dish",
-        "Vegetarian"
-      ]
+      "cuisine": "greek",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 55,
@@ -2268,11 +2286,11 @@
         "1 pound boneless, skinless chicken breasts, cut into bite-sized pieces",
         "Skewers, soaked in water if wooden"
       ],
-      "categories": [
-        "Greek",
-        "Chicken",
-        "Main Course"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 56,
@@ -2307,11 +2325,11 @@
         "Salt and pepper, to taste",
         "2 tablespoons olive oil"
       ],
-      "categories": [
-        "Greek",
-        "Chicken",
-        "Main Course"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": ["dairy"]
     },
     {
       "id": 57,
@@ -2346,11 +2364,11 @@
         "1/4 teaspoon black pepper",
         "Skewers (metal or wooden, soaked in water)"
       ],
-      "categories": [
-        "Greek",
-        "Main Dish",
-        "Lamb"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["lamb"],
+      "contains": []
     },
     {
       "id": 58,
@@ -2391,11 +2409,11 @@
         "1/2 teaspoon salt",
         "1 cup vegetable broth or water"
       ],
-      "categories": [
-        "Greek",
-        "Main Dish",
-        "Vegetarian"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 59,
@@ -2429,11 +2447,11 @@
         "Salt and pepper, to taste",
         "Fresh chopped parsley, for garnish (optional)"
       ],
-      "categories": [
-        "Greek",
-        "Soup",
-        "Main Course"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": [],
+      "contains": []
     },
     {
       "id": 60,
@@ -2466,10 +2484,11 @@
         "2 tablespoons chopped fresh mint",
         "Salt and pepper, to taste"
       ],
-      "categories": [
-        "Greek",
-        "Appetizer"
-      ]
+      "cuisine": "greek",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": ["dairy"]
     },
     {
       "id": 61,
@@ -2511,11 +2530,11 @@
         "Diced onions, for garnish",
         "Lime wedges, for serving"
       ],
-      "categories": [
-        "Mexican",
-        "Main Course",
-        "Pork"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["pork"],
+      "contains": []
     },
     {
       "id": 62,
@@ -2558,11 +2577,11 @@
         "Mexican crema, for garnish",
         "Fresh cilantro, for garnish"
       ],
-      "categories": [
-        "Mexican",
-        "Chicken",
-        "Main Course"
-      ]
+      "cuisine": "mexican",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": ["chicken"],
+      "contains": []
     },
     {
       "id": 63,
