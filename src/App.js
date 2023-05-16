@@ -1,10 +1,25 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import './stylesheets/styles.css'
-import Header from './components/Header';
+import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "./stylesheets/styles.css";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import RecipesPage from "./components/RecipesPage";
+import CocktailsPage from "./components/CocktailsPage";
+import FavoritesPage from "./components/FavoritesPage";
+import SubmitRecipe from "./components/SubmitRecipe";
 
 function App() {
   return (
-  <Header />
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="recipes" element={<RecipesPage />} />
+        <Route path="cocktails" element={<CocktailsPage />} />
+        <Route path="favorites" element={<FavoritesPage />} />
+        <Route path="submit" element={<SubmitRecipe />} />
+      </Routes>
+    </>
   );
 }
 
