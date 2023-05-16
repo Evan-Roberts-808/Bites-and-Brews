@@ -13,7 +13,7 @@ function Slideshow() {
   const mappedRecipes = [...recipesArray].map((el) => {
     return (
       <Carousel.Item key={el.id}>
-        <img className="d-block w-50" src={el.image} alt={el.name} />
+        <img className="d-block w-100" src={el.image} alt={el.name} />
         <Carousel.Caption>
           <h3>{el.name}</h3>
           <p>{el.description}</p>
