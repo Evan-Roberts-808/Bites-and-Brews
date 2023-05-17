@@ -8,6 +8,7 @@ import CocktailsPage from "./components/CocktailsPage";
 import FavoritesPage from "./components/FavoritesPage";
 import SubmitRecipe from "./components/SubmitRecipe";
 import RecipesDetails from "./components/RecipesDetails";
+import CocktailsDetails from "./components/CocktailsDetails";
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path="favorites" element={<FavoritesPage />} />
         <Route path="submit" element={<SubmitRecipe />} />
         <Route path="recipes/:id" element={<RecipesDetails />} />
-        <Route path="cocktails/:id" element={<RecipesDetails />} />
+        <Route path="cocktails/:id" element={<CocktailsDetails />} />
       </Routes>
     </>
   );
