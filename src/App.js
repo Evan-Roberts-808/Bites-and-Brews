@@ -7,6 +7,8 @@ import RecipesPage from "./components/RecipesPage";
 import CocktailsPage from "./components/CocktailsPage";
 import FavoritesPage from "./components/FavoritesPage";
 import SubmitRecipe from "./components/SubmitRecipe";
+import RecipesDetails from "./components/RecipesDetails";
+
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="cocktails" element={<CocktailsPage />} />
         <Route path="favorites" element={<FavoritesPage />} />
         <Route path="submit" element={<SubmitRecipe />} />
+        <Route path="recipes/:id" element={<RecipesDetails />} />
+        <Route path="cocktails/:id" element={<RecipesDetails />} />
       </Routes>
     </>
   );
