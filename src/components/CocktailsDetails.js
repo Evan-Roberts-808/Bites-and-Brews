@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 
@@ -54,10 +55,19 @@ function CockatilsDetails() {
       });
   };
 
+    function handleFavorite(){
+    fetch('http://localhost:3001/favorites', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(cocktailDetails)
+    })
+  }
+
   return (
     <Container>
       <img src={cocktailDetails.image} alt={cocktailDetails.name} />
       <h2>{cocktailDetails.name}</h2>
+      <FontAwesomeIcon icon={faHeart} style={{color: "#ff3b3f",}} onClick={handleFavorite}/>
       <FontAwesomeIcon
         icon={faThumbsUp}
         onClick={handleLikeClick}
