@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import RecipesDetails from "./RecipesDetails";
 
 function Cards({ data }) {
+
   const cards = data.map((data) => {
+    const url = data.type === "recipes" ? `/recipes/${data.id}` : `/cocktails/${data.id}`;
     return (
       <Card className="col-sm-3 offset-sm-1" key={data.id}>
         <Card.Img variant="top" src={data.image} />
@@ -13,7 +13,7 @@ function Cards({ data }) {
           <Card.Title>{data.name}</Card.Title>
           <Card.Subtitle>{data.pick}</Card.Subtitle>
           <Card.Text className="text-truncate">{data.description}</Card.Text>
-          <Link to={`/recipes/${data.id}`}>
+          <Link to={url}>
             <button>View Recipe</button>
           </Link>
         </Card.Body>
