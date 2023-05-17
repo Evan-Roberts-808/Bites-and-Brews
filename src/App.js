@@ -9,6 +9,7 @@ import FavoritesPage from "./components/FavoritesPage";
 import SubmitRecipe from "./components/SubmitRecipe";
 import RecipesDetails from "./components/RecipesDetails";
 import CocktailsDetails from "./components/CocktailsDetails";
+import FavoritesDetails from "./components/FavoritesDetails"; 
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="submit" element={<SubmitRecipe />} />
         <Route path="recipes/:id" element={<RecipesDetails />} />
         <Route path="cocktails/:id" element={<CocktailsDetails />} />
+        <Route path="favorites/:id" element={<FavoritesDetails />} />
       </Routes>
     </>
   );

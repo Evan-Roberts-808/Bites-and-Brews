@@ -257,7 +257,7 @@
       "totaltime": "40 minutes",
       "servings": 2,
       "comments": [],
-      "likes": 0,
+      "likes": 2,
       "instructions": [
         "Pound 2 boneless pork loin chops until they are about 1/4 inch thick. Season them with salt and pepper.",
         "Prepare three shallow bowls: one with all-purpose flour, one with beaten eggs, and one with panko breadcrumbs.",
@@ -10806,7 +10806,7 @@
       "totaltime": "15 mins",
       "servings": 8,
       "comments": [],
-      "likes": 0,
+      "likes": 1,
       "instructions": [
         "Pour about 1/2 inch of sugar onto a small, shallow plate. Run a lime wedge around the rims of 8 cocktail glasses, then dip the rims into sugar to coat; set aside.",
         "Squeeze all of the lime wedges into a sturdy glass pitcher. Toss juiced limes into the pitcher along with mint, strawberries, and 1 cup sugar. Crush with a muddler to release strawberry juice and mint oil. Stir in club soda and rum until sugar has dissolved.",
@@ -13401,5 +13401,80 @@
       ]
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "id": 5,
+      "type": "recipes",
+      "name": "Yakitori",
+      "description": "Flavorful Japanese skewered grilled chicken with a delicious glaze.",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Yakitori.png",
+      "source": "",
+      "preptime": "15 minutes",
+      "waittime": "1 hour",
+      "cooktime": "10 minutes",
+      "totaltime": "1 hour 25 minutes",
+      "servings": 4,
+      "comments": [],
+      "likes": 0,
+      "instructions": [
+        "In a bowl, combine 1/4 cup soy sauce, 2 tablespoons mirin, 1 tablespoon sake, 1 tablespoon honey, and 1 minced garlic clove to make the yakitori sauce.",
+        "Cut 2 boneless, skinless chicken breasts into bite-sized pieces.",
+        "Place the chicken pieces in a bowl and pour the yakitori sauce over them. Mix well to ensure the chicken is coated evenly. Let it marinate in the refrigerator for at least 1 hour.",
+        "Preheat a grill or grill pan over medium heat.",
+        "Thread the marinated chicken pieces onto skewers, alternating with pieces of scallions or bell peppers if desired.",
+        "Grill the skewers for about 4-5 minutes per side, brushing them with the remaining yakitori sauce while cooking.",
+        "Continue grilling until the chicken is cooked through and has a nice char.",
+        "Serve the yakitori hot with steamed rice and a side of salad or pickles.",
+        "Enjoy the delicious skewered grilled chicken!"
+      ],
+      "ingredients": [
+        "1/4 cup soy sauce",
+        "2 tablespoons mirin",
+        "1 tablespoon sake",
+        "1 tablespoon honey",
+        "1 garlic clove, minced",
+        "2 boneless, skinless chicken breasts",
+        "Skewers (bamboo or metal)",
+        "Optional: scallions or bell peppers for skewering"
+      ],
+      "cuisine": "japanese",
+      "course": "main course",
+      "vegetarian": false,
+      "meat": [
+        "chicken"
+      ],
+      "contains": []
+    },
+    {
+      "id": 6,
+      "type": "cocktail",
+      "name": "Dragon Fruit Mojito",
+      "description": "Experience the exotic flavor of dragon fruit with this refreshing Dragon Fruit Mojito recipe, perfect for sipping on a warm summer day!",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/Dragon-Fruit-Mojito.png",
+      "source": "https://www.allrecipes.com/recipe/274341/dragon-fruit-mojito/",
+      "preptime": "5 mins",
+      "waittime": "",
+      "cooktime": "",
+      "totaltime": "5 mins",
+      "servings": 4,
+      "comments": [],
+      "likes": 0,
+      "instructions": [
+        "Mix 2 tablespoons plus 2 teaspoons sugar with mint in the bottom of a highball glass.",
+        "Combine rum and dragon fruit flesh in a blender; blend until smooth. Pour rum mixture over the muddled mint mixture. Stir to incorporate.",
+        "Divide mixture between 4 double old-fashioned glasses. Top each drink with equal amounts of club soda."
+      ],
+      "ingredients": [
+        "2 teaspoons white sugar",
+        "16 leaves fresh mint",
+        "1 cup light rum",
+        "1 dragon fruit, halved and flesh removed",
+        "1 liter chilled club soda"
+      ],
+      "drink-type": "mojito",
+      "alcohol-type": [
+        "rum"
+      ]
+    }
+  ]
 }
