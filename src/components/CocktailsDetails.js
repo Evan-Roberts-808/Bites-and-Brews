@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 
 function CockatilsDetails() {
   const { id } = useParams();
@@ -12,6 +13,18 @@ function CockatilsDetails() {
   const [instructions, setInstructions] = useState([]);
   const [likeCount, setLikeCount] = useState(0);
 
+  //**PAIRING**/
+  const [recipeData, setRecipeData] = useState([]);
+  const [recipeCuisine, setRecipeCuisine] = useState("");
+  const [displayRecommendation, setDisplayRecommendation] = useState(false);
+  const [recommendedBite, setRecommendedBite] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/recipes")
+      .then((r) => r.json())
+      .then((data) => setRecipeData(data));
+  }, []);
+  //**PAIRING**/
 
   // setting cocktailDetails state
   useEffect(() => {
@@ -21,7 +34,7 @@ function CockatilsDetails() {
         setcocktailDetails(data);
         setIngredients(data.ingredients);
         setInstructions(data.instructions);
-        setLikeCount(data.likes)
+        setLikeCount(data.likes);
       });
   }, [id]);
 
@@ -55,19 +68,91 @@ function CockatilsDetails() {
       });
   };
 
-    function handleFavorite(){
-    fetch('http://localhost:3001/favorites', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify(cocktailDetails)
-    })
+  function handleFavorite() {
+    fetch("http://localhost:3001/favorites", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cocktailDetails),
+    });
   }
+
+  //*** PAIRING ***/
+
+  function findRecipe(cuisine) {
+    const filteredRecipes = recipeData.filter(
+      (el) => el["cuisine"] && el["cuisine"].includes(cuisine)
+    );
+    const randomIndex = Math.floor(Math.random() * filteredRecipes.length);
+    const randomRecipe = filteredRecipes[randomIndex];
+    return randomRecipe ? randomRecipe : null;
+  }
+
+  let recommendedRecipe = null;
+
+  function getRecipePairing() {
+    const drinkType = cocktailDetails["drink-type"];
+
+    switch (drinkType) {
+      case "margarita":
+        recommendedRecipe = findRecipe("mexican");
+        break;
+      case "cocktail":
+        recommendedRecipe = findRecipe("japanese");
+        break;
+      case "cocktail":
+        recommendedRecipe = findRecipe("chinese");
+        break;
+      case "cocktail":
+        recommendedRecipe = findRecipe("korean");
+        break;
+      case "cocktail":
+        recommendedRecipe = findRecipe("thai");
+        break;
+      case "sangria":
+        recommendedRecipe = findRecipe("italian");
+        break;
+      case "daiquri":
+        recommendedRecipe = findRecipe("greek");
+        break;
+      case "mojito":
+        recommendedRecipe = findRecipe("mediterranean");
+        break;
+      case "mojito":
+        recommendedRecipe = findRecipe("spanish");
+        break;
+      case "martini":
+        recommendedRecipe = findRecipe("french");
+        break;
+      case "daiquiri":
+        recommendedRecipe = findRecipe("caribbean");
+        break;
+      case "cocktail":
+        recommendedRecipe = findRecipe("american");
+        break;
+      default:
+        console.log("no recommendation found");
+        break;
+    }
+    setRecommendedBite(recommendedRecipe);
+    setDisplayRecommendation((prev) => !prev);
+  }
+
+  const url = `/recipes/${recommendedBite.id}`;
+
+  /** Pairing **/
 
   return (
     <Container>
       <img src={cocktailDetails.image} alt={cocktailDetails.name} />
       <h2>{cocktailDetails.name}</h2>
-      <FontAwesomeIcon icon={faHeart} style={{color: "#ff3b3f",}} onClick={handleFavorite}/>
+      <FontAwesomeIcon
+        icon={faHeart}
+        style={{ color: "#ff3b3f" }}
+        onClick={handleFavorite}
+      />
       <FontAwesomeIcon
         icon={faThumbsUp}
         onClick={handleLikeClick}
@@ -83,6 +168,14 @@ function CockatilsDetails() {
       <p>Cook Time: {cocktailDetails.cooktime}</p>
       <p>Additional Time: {cocktailDetails.waittime}</p>
       <p>Total Time: {cocktailDetails.totaltime}</p>
+
+      <button onClick={getRecipePairing}>Recommend a bite?</button>
+
+      <Link to={url}>
+        <p display={displayRecommendation ? "" : "none"}>
+          {recommendedBite.name}
+        </p>
+      </Link>
 
       <h2>Ingredients</h2>
       <ul>{mappedIngredients}</ul>
