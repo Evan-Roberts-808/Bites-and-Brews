@@ -13475,6 +13475,43 @@
       "alcohol-type": [
         "rum"
       ]
+    },
+    {
+      "id": 1,
+      "type": "recipes",
+      "name": "Miso Soup",
+      "description": "Traditional Japanese soup made with soybean paste and various ingredients.",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Miso-Soup.png",
+      "source": "",
+      "preptime": "10 minutes",
+      "waittime": "5 minutes",
+      "cooktime": "15 minutes",
+      "totaltime": "30 minutes",
+      "servings": 4,
+      "comments": [],
+      "likes": 0,
+      "instructions": [
+        "In a pot, bring 4 cups of water to a boil.",
+        "Add 2 tablespoons of miso paste to a small bowl and gradually whisk in a ladleful of hot water to create a smooth mixture.",
+        "Pour the miso mixture into the boiling water and reduce the heat to low.",
+        "Add 1 cup of diced tofu, 1/2 cup of sliced mushrooms, and 1/4 cup of chopped green onions to the pot.",
+        "Simmer for 5 minutes until the tofu and mushrooms are cooked through.",
+        "Serve the miso soup hot and garnish with additional chopped green onions if desired."
+      ],
+      "ingredients": [
+        "4 cups water",
+        "2 tablespoons miso paste",
+        "1 cup diced tofu",
+        "1/2 cup sliced mushrooms",
+        "1/4 cup chopped green onions"
+      ],
+      "cuisine": "japanese",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [
+        ""
+      ],
+      "contains": []
     }
   ]
 }
