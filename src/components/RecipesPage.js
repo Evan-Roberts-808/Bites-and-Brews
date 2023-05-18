@@ -49,6 +49,20 @@ function RecipesPage() {
     return searchMatch && filterMatch;
   });
 
+  //random recipe
+
+  function getRandomRecipe() {
+    const filteredRecipes = allRecipes.filter((el) => {
+      const totalTime = parseInt(el.totaltime);
+      return totalTime <=30;
+    });
+
+    const randomIndex = Math.floor(Math.random()  * filteredRecipes.length)
+    const randomRecipe = filteredRecipes[randomIndex]
+
+    console.log(randomRecipe)
+  }
+
   return (
     <Container>
       <Offcanvas show={show} onHide={handleClose}>
@@ -87,6 +101,7 @@ function RecipesPage() {
             type="submit"
           />
         </form>
+        <button onClick={getRandomRecipe}>Show random recipe!</button>
         <button onClick={toggleShow}>Filter</button>
       </div>
       <Cards data={searchedRecipes} />

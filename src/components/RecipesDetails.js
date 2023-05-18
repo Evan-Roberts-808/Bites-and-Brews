@@ -5,12 +5,25 @@ import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Container from "react-bootstrap/Container";
 
+
 function RecipesDetails() {
   const { id } = useParams();
   const [recipeDetails, setRecipeDetails] = useState([]);
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
   const [likeCount, setLikeCount] = useState(0);
+
+  //**COCKTAIL PAIRING */
+  const [cocktailData, setCocktailData] = useState([])
+  const [recipeCuisine, setRecipeCuisine] = useState('')
+
+  useEffect(() => {
+    fetch('http://localhost:3001/cocktails')
+      .then((r) => r.json())
+      .then((data) => setCocktailData(data))
+  }, [])
+  //**COCKTAIL PAIRING */
+
 
   // setting RecipeDetails state
   useEffect(() => {
@@ -21,6 +34,7 @@ function RecipesDetails() {
         setLikeCount(data.likes);
         setIngredients(data.ingredients);
         setInstructions(data.instructions);
+        setRecipeCuisine(data.cuisine)
       });
   }, [id]);
 
@@ -81,8 +95,10 @@ function RecipesDetails() {
       <p>Cook Time: {recipeDetails.cooktime}</p>
       <p>Additional Time: {recipeDetails.waittime}</p>
       <p>Total Time: {recipeDetails.totaltime}</p>
+      <p>Recommend a brew?</p>
       <h2>Ingredients</h2>
-      <ul>{mappedIngredients}</ul>
+      <ul>{mappedIngredients}
+      </ul>
       <h2>Instructions</h2>
       <ul>{mappedInstructions}</ul>
     </Container>
