@@ -113,7 +113,7 @@ function CocktailsDetails() {
       case "sangria":
         recommendedRecipe = findRecipe("italian");
         break;
-      case "daiquri":
+      case "daquiri":
         recommendedRecipe = findRecipe("greek");
         break;
       case "mojito":
@@ -125,7 +125,7 @@ function CocktailsDetails() {
       case "martini":
         recommendedRecipe = findRecipe("french");
         break;
-      case "daiquiri":
+      case "daquiri":
         recommendedRecipe = findRecipe("caribbean");
         break;
       case "cocktail":

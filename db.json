@@ -13512,6 +13512,43 @@
         ""
       ],
       "contains": []
+    },
+    {
+      "id": 134,
+      "type": "recipes",
+      "name": "Mediterranean Grilled Vegetable Skewers",
+      "description": "Colorful and flavorful vegetable skewers with Mediterranean seasonings, perfect for grilling.",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Mediterranean-Grilled-Vegetable-Skewers.png",
+      "source": "",
+      "preptime": "15 minutes",
+      "cooktime": "10 minutes",
+      "totaltime": "25 minutes",
+      "servings": 4,
+      "comments": [],
+      "likes": 0,
+      "instructions": [
+        "Preheat the grill to medium-high heat.",
+        "Cut your favorite Mediterranean vegetables into bite-sized pieces, such as bell peppers, zucchini, red onions, cherry tomatoes, and mushrooms.",
+        "In a bowl, combine 2 tablespoons of olive oil, 2 minced garlic cloves, 1 teaspoon of dried oregano, 1/2 teaspoon of dried thyme, salt, and pepper.",
+        "Thread the vegetables onto skewers, alternating between different types of vegetables.",
+        "Brush the vegetable skewers with the olive oil mixture to coat them evenly.",
+        "Place the skewers on the preheated grill and cook for about 10 minutes, turning occasionally, until the vegetables are tender and lightly charred.",
+        "Remove from the grill and serve the Mediterranean grilled vegetable skewers as a side dish or main course.",
+        "Enjoy the delicious flavors of grilled vegetables!"
+      ],
+      "ingredients": [
+        "Assorted Mediterranean vegetables (bell peppers, zucchini, red onions, cherry tomatoes, mushrooms)",
+        "2 tablespoons olive oil",
+        "2 cloves garlic, minced",
+        "1 teaspoon dried oregano",
+        "1/2 teaspoon dried thyme",
+        "Salt and pepper to taste"
+      ],
+      "cuisine": "mediterranean",
+      "course": "main course",
+      "vegetarian": true,
+      "meat": [],
+      "contains": []
     }
   ]
 }
