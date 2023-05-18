@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Cards from "./Cards";
 import Container from "react-bootstrap/Container";
+import Pagination from "react-bootstrap/Pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -9,8 +10,9 @@ function CocktailsPage() {
   const [allCocktails, setAllCocktails] = useState([]);
   const [form, setForm] = useState("");
   const [search, setSearch] = useState("");
-
   const [alcoholFilter, setAlcoholFilter] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [cocktailsPerPage] = useState(6); // Number of cocktails to display per page
 
   //offCanvas states
   const [show, setShow] = useState(false);
@@ -25,7 +27,6 @@ function CocktailsPage() {
 
   function handleChange(e) {
     setForm(e.target.value);
-    console.log(form);
   }
 
   function handleSubmit(e) {
@@ -35,17 +36,137 @@ function CocktailsPage() {
 
   function handleSearch(newSearch) {
     setSearch(newSearch);
+    setCurrentPage(1); // Reset to the first page when the search query changes
   }
 
   function handleAlcoholFilter(e) {
     setAlcoholFilter(e.target.value);
+    setCurrentPage(1); // Reset to the first page when the alcohol filter changes
   }
 
-  const searchedCocktails = [...allCocktails].filter((el) => {
+  const searchedCocktails = allCocktails.filter((el) => {
     const searchMatch = el.name.toLowerCase().includes(search.toLowerCase());
-    const filterMatch = alcoholFilter === el['drink-type'] || alcoholFilter === "";
+    const filterMatch =
+      alcoholFilter === el["drink-type"] || alcoholFilter === "";
     return searchMatch && filterMatch;
   });
+
+  // Pagination logic
+  const indexOfLastCocktail = currentPage * cocktailsPerPage;
+  const indexOfFirstCocktail = indexOfLastCocktail - cocktailsPerPage;
+  const currentCocktails = searchedCocktails.slice(
+    indexOfFirstCocktail,
+    indexOfLastCocktail
+  );
+
+  const totalPages = Math.ceil(searchedCocktails.length / cocktailsPerPage);
+
+  function handlePageChange(pageNumber) {
+    setCurrentPage(pageNumber);
+  }
+
+  function renderPageNumbers() {
+    const pageNumbers = [];
+    const limit = 2; // Number of page numbers to display on each side of the current page
+
+    if (totalPages > 1) {
+      if (currentPage <= limit + 1) {
+        for (let i = 1; i <= Math.min(totalPages, limit * 2 + 1); i++) {
+          pageNumbers.push(
+            <Pagination.Item
+              key={i}
+              active={i === currentPage}
+              onClick={() => handlePageChange(i)}
+            >
+              {i}
+            </Pagination.Item>
+          );
+        }
+        if (totalPages > limit * 2 + 1) {
+          pageNumbers.push(<Pagination.Ellipsis key="ellipsis1" />);
+          pageNumbers.push(
+            <Pagination.Item
+              key={totalPages}
+              active={totalPages === currentPage}
+              onClick={() => handlePageChange(totalPages)}
+            >
+              {totalPages}
+            </Pagination.Item>
+          );
+        }
+      } else if (currentPage >= totalPages - limit) {
+        pageNumbers.push(
+          <Pagination.Item
+            key={1}
+            active={1 === currentPage}
+            onClick={() => handlePageChange(1)}
+          >
+            1
+          </Pagination.Item>
+        );
+        if (totalPages > limit * 2 + 1) {
+          pageNumbers.push(<Pagination.Ellipsis key="ellipsis1" />);
+        }
+        for (
+          let i = Math.max(1, totalPages - limit * 2);
+          i <= totalPages;
+          i++
+        ) {
+          pageNumbers.push(
+            <Pagination.Item
+              key={i}
+              active={i === currentPage}
+              onClick={() => handlePageChange(i)}
+            >
+              {i}
+            </Pagination.Item>
+          );
+        }
+      } else {
+        pageNumbers.push(
+          <Pagination.Item
+            key={1}
+            active={1 === currentPage}
+            onClick={() => handlePageChange(1)}
+          >
+            1
+          </Pagination.Item>
+        );
+        if (totalPages > limit * 2 + 1) {
+          pageNumbers.push(<Pagination.Ellipsis key="ellipsis1" />);
+        }
+        for (
+          let i = currentPage - limit;
+          i <= currentPage + limit;
+          i++
+        ) {
+          pageNumbers.push(
+            <Pagination.Item
+              key={i}
+              active={i === currentPage}
+              onClick={() => handlePageChange(i)}
+            >
+              {i}
+            </Pagination.Item>
+          );
+        }
+        if (totalPages > limit * 2 + 1) {
+          pageNumbers.push(<Pagination.Ellipsis key="ellipsis2" />);
+          pageNumbers.push(
+            <Pagination.Item
+              key={totalPages}
+              active={totalPages === currentPage}
+              onClick={() => handlePageChange(totalPages)}
+            >
+              {totalPages}
+            </Pagination.Item>
+          );
+        }
+      }
+    }
+
+    return pageNumbers;
+  }
 
   return (
     <Container>
@@ -93,7 +214,10 @@ function CocktailsPage() {
           </button>
         </div>
       </div>
-      <Cards data={searchedCocktails} />
+      <Cards data={currentCocktails} />
+      <div className="pagination-container d-flex justify-content-center">
+        <Pagination>{renderPageNumbers()}</Pagination>
+      </div>
     </Container>
   );
 }

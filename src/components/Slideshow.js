@@ -27,7 +27,9 @@ function Slideshow() {
     );
   });
 
-  return <Carousel fade>{mappedRecipes}</Carousel>;
+  return (
+    <Carousel fade>{mappedRecipes}</Carousel>
+  );
 }
 
 export default Slideshow;

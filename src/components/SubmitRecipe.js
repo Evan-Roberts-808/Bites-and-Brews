@@ -66,7 +66,7 @@ function SubmitRecipe() {
   return (
     <Container>
     <h2 class="page-headings">Submit a Recipe</h2>
-      <form className="row d-lex justify-content-center" onSubmit={handlePOST}>
+      <form className="row d-flex justify-content-center" onSubmit={handlePOST}>
         <div className="col-sm-3">
           <label htmlFor="name">Recipe Name:</label>
           <input

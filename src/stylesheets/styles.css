@@ -140,6 +140,20 @@ form svg:hover {
   padding-bottom: 20px;
 }
 
+.page-link {
+  color: var(--watermelon-red);
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: var(--watermelon-red-hovered)
+}
+
+.page-link-active, .active > .page-link {
+  background-color: var(--watermelon-red);
+  border-color: var(--watermelon-red)
+}
+
 /* Details Page */
 
 /* Table */
