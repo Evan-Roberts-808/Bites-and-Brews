@@ -34,6 +34,16 @@ body {
   padding-bottom: 20px;
 }
 
+#darkModeButton {
+  background-color: transparent;
+  border: none;
+  color: var(--grey);
+}
+
+#darkModeButton:hover {
+  color: var(--watermelon-red-hovered)
+}
+
 /* Nav */
 
 .custom-header .nav-link {
@@ -108,7 +118,12 @@ body {
 .card button {
   display: block;
   margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
 }
+
 
 /* Pages */
 
@@ -155,6 +170,15 @@ form svg:hover {
 }
 
 /* Details Page */
+
+#heartIcon {
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+#heartIcon.active {
+  color: #ff3b3f;
+}
 
 /* Table */
 .custom-table {
