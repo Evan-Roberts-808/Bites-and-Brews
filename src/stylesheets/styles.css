@@ -149,3 +149,47 @@ form svg:hover {
   background-color: var(--watermelon-red);
   color: #fff;
 }
+
+/* Submission Form */
+
+form {
+  background-color: #e2e2e2;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.textarea-container {
+  position: relative;
+}
+
+.textarea-container textarea.resizable {
+  resize: vertical;
+  height: auto;
+  min-height: 38px;
+  overflow: hidden;
+}
+
+.textarea-container textarea.resizable:focus {
+  overflow: auto;
+}
+
+.submit-btn {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  width: 20%;
+}
+
+.submit-btn:hover {
+  background-color: var(--watermelon-red-hovered);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--watermelon-red);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--watermelon-red-hovered);
+
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
 
 function SubmitRecipe() {
   const initialForm = {
@@ -18,7 +19,7 @@ function SubmitRecipe() {
     cuisine: "",
     course: "",
     vegetarian: false,
-    meat: [""],
+    meat: [],
     contains: [],
   };
 
@@ -33,7 +34,7 @@ function SubmitRecipe() {
       },
       body: JSON.stringify({
         name: formData.name,
-        type: 'recipes',
+        type: "recipes",
         description: formData.description,
         image: formData.image,
         source: formData.source,
@@ -52,7 +53,7 @@ function SubmitRecipe() {
         meat: formData.meat,
         contains: formData.contains,
       }),
-    })
+    });
   }
 
   function handleChange(e) {
@@ -63,158 +64,140 @@ function SubmitRecipe() {
   }
 
   return (
-    <form onSubmit={handlePOST}>
-      <label>
-        Recipe Name:
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Enter recipe name"
-        />
-      </label>
-      <label>
-        Description:
-        <textarea
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          placeholder="Enter recipe description"
-        />
-      </label>
-      <label>
-        Image URL:
-        <input
-          type="text"
-          name="image"
-          value={formData.image}
-          onChange={handleChange}
-          placeholder="Enter image URL"
-        />
-      </label>
-      <label>
-        Prep Time:
-        <input
-          type="text"
-          name="preptime"
-          value={formData.preptime}
-          onChange={handleChange}
-          placeholder="Enter prep time"
-        />
-      </label>
-      <label>
-        Wait Time:
-        <input
-          type="text"
-          name="waittime"
-          value={formData.waittime}
-          onChange={handleChange}
-          placeholder="Enter wait time"
-        />
-      </label>
-      <label>
-        Cook Time:
-        <input
-          type="text"
-          name="cooktime"
-          value={formData.cooktime}
-          onChange={handleChange}
-          placeholder="Enter cook time"
-        />
-      </label>
-      <label>
-        Total Time:
-        <input
-          type="text"
-          name="totaltime"
-          value={formData.totaltime}
-          onChange={handleChange}
-          placeholder="Enter total time"
-        />
-      </label>
-      <label>
-        Serving:
-        <input
-          type="number"
-          name="servings"
-          value={formData.servings}
-          onChange={handleChange}
-          placeholder="Enter servings"
-        />
-      </label>
-      <label>
-        Ingredients:
-        <ul>
-          {formData.ingredients.map((ingredient, index) => (
-            <li key={index}>
-              <input
-                type="text"
-                value={ingredient}
-                onChange={(e) => {
-                  const updatedIngredients = [...formData.ingredients];
-                  updatedIngredients[index] = e.target.value;
+    <Container>
+    <h2 class="page-headings">Submit a Recipe</h2>
+      <form className="row d-lex justify-content-center" onSubmit={handlePOST}>
+        <div className="col-sm-3">
+          <label htmlFor="name">Recipe Name:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter recipe name"
+          />
+          <label htmlFor="image">Image URL:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="image"
+            name="image"
+            value={formData.image}
+            onChange={handleChange}
+            placeholder="Enter image URL"
+          />
+          <label htmlFor="preptime">Prep Time:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="preptime"
+            name="preptime"
+            value={formData.preptime}
+            onChange={handleChange}
+            placeholder="Enter prep time"
+          />
+          <label htmlFor="cooktime">Cook Time:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="cooktime"
+            name="cooktime"
+            value={formData.cooktime}
+            onChange={handleChange}
+            placeholder="Enter cook time"
+          />
+          <div className="text-area-container">
+            <label htmlFor="description">Description:</label>
+            <textarea
+              className="form-control resizable"
+              id="description"
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              placeholder="Enter recipe description"
+            />
+          </div>
+        </div>
+
+        <div className="col-sm-3 offset-sm-1">
+          <label htmlFor="servings">Serving:</label>
+          <input
+            type="number"
+            className="form-control"
+            id="servings"
+            name="servings"
+            value={formData.servings}
+            onChange={handleChange}
+            placeholder="Enter servings"
+          />
+          <label htmlFor="waittime">Wait Time:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="waittime"
+            name="waittime"
+            value={formData.waittime}
+            onChange={handleChange}
+            placeholder="Enter wait time"
+          />
+          <label htmlFor="totaltime">Total Time:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="totaltime"
+            name="totaltime"
+            value={formData.totaltime}
+            onChange={handleChange}
+            placeholder="Enter total time"
+          />
+           <label>Contains:</label>
+          <ul>
+            {formData.contains.map((item, index) => (
+              <li key={index}>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={item}
+                  onChange={(e) => {
+                    const updatedContains = [...formData.contains];
+                    updatedContains[index] = e.target.value;
+                    setFormData((prevData) => ({
+                      ...prevData,
+                      contains: updatedContains,
+                    }));
+                  }}
+                />
+              </li>
+            ))}
+            <li>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() =>
                   setFormData((prevData) => ({
                     ...prevData,
-                    ingredients: updatedIngredients,
-                  }));
-                }}
-              />
+                    contains: [...prevData.contains, ""],
+                  }))
+                }
+              >
+                Add Item
+              </button>
             </li>
-          ))}
-          <li>
-            <button
-              type="button"
-              onClick={() =>
-                setFormData((prevData) => ({
-                  ...prevData,
-                  ingredients: [...prevData.ingredients, ""],
-                }))
-              }
-            >
-              Add Ingredient
-            </button>
-          </li>
-        </ul>
-      </label>
-      <label>
-        Instructions:
-        <ol>
-          {formData.instructions.map((instruction, index) => (
-            <li key={index}>
-              <input
-                type="text"
-                value={instruction}
-                onChange={(e) => {
-                  const updatedInstructions = [...formData.instructions];
-                  updatedInstructions[index] = e.target.value;
-                  setFormData((prevData) => ({
-                    ...prevData,
-                    instructions: updatedInstructions,
-                  }));
-                }}
-              />
-            </li>
-          ))}
-          <li>
-            <button
-              type="button"
-              onClick={() =>
-                setFormData((prevData) => ({
-                  ...prevData,
-                  instructions: [...prevData.instructions, ""],
-                }))
-              }
-            >
-              Add Instruction
-            </button>
-          </li>
-        </ol>
-      </label>
-      <label>
-        Cuisine:
-        <select name="cuisine" value={formData.cuisine} onChange={handleChange}>
-        <option value="">Select by cuisine</option>
+          </ul>
+        </div>
+
+        <div className="offset-sm-1 col-sm-3">
+          <label htmlFor="cuisine">Cuisine:</label>
+          <select
+            className="form-control"
+            id="cuisine"
+            name="cuisine"
+            value={formData.cuisine}
+            onChange={handleChange}
+          >
+            <option value="">Select by cuisine</option>
             <option value="japanese">Japanese</option>
             <option value="chinese">Chinese</option>
             <option value="korean">Korean</option>
@@ -227,99 +210,142 @@ function SubmitRecipe() {
             <option value="french">French</option>
             <option value="caribbean">Caribbean</option>
             <option value="american">American</option>
-        </select>
-      </label>
-      <label>
-        Course:
-        <select name="course" value={formData.course} onChange={handleChange}>
-          <option value="">Select a course</option>
-          <option value="appetizer">Appetizer</option>
-          <option value="main_course">Main Course</option>
-          <option value="dessert">Dessert</option>
-          <option value="side">Side</option>
-        </select>
-      </label>
-      <label>
-        Vegetarian:
-        <select
-          name="vegetarian"
-          value={formData.vegetarian}
-          onChange={handleChange}
-        >
-          <option value={true}>Yes</option>
-          <option value={false}>No</option>
-        </select>
-      </label>
-      <label>
-        Meat:
-        <ul>
-          {formData.meat.map((meat, index) => (
-            <li key={index}>
-              <input
-                type="text"
-                value={meat}
-                onChange={(e) => {
-                  const updatedMeat = [...formData.meat];
-                  updatedMeat[index] = e.target.value;
+          </select>
+          <label htmlFor="vegetarian">Vegetarian:</label>
+          <select
+            className="form-control"
+            id="vegetarian"
+            name="vegetarian"
+            value={formData.vegetarian}
+            onChange={handleChange}
+          >
+            <option value={true}>Yes</option>
+            <option value={false}>No</option>
+          </select>
+          <label htmlFor="course">Course:</label>
+          <select
+            className="form-control"
+            id="course"
+            name="course"
+            value={formData.course}
+            onChange={handleChange}
+          >
+            <option value="">Select a course</option>
+            <option value="appetizer">Appetizer</option>
+            <option value="main_course">Main Course</option>
+            <option value="dessert">Dessert</option>
+            <option value="side">Side</option>
+          </select>
+          <label>Meat:</label>
+          <ul>
+            {formData.meat.map((meat, index) => (
+              <li key={index}>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={meat}
+                  onChange={(e) => {
+                    const updatedMeat = [...formData.meat];
+                    updatedMeat[index] = e.target.value;
+                    setFormData((prevData) => ({
+                      ...prevData,
+                      meat: updatedMeat,
+                    }));
+                  }}
+                />
+              </li>
+            ))}
+            <li>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() =>
                   setFormData((prevData) => ({
                     ...prevData,
-                    meat: updatedMeat,
-                  }));
-                }}
-              />
+                    meat: [...prevData.meat, ""],
+                  }))
+                }
+              >
+                Add Meat
+              </button>
             </li>
-          ))}
-          <li>
-            <button
-              type="button"
-              onClick={() =>
-                setFormData((prevData) => ({
-                  ...prevData,
-                  meat: [...prevData.meat, ""],
-                }))
-              }
-            >
-              Add Meat
-            </button>
-          </li>
-        </ul>
-      </label>
-      <label>
-        Contains:
-        <ul>
-          {formData.contains.map((item, index) => (
-            <li key={index}>
-              <input
-                type="text"
-                value={item}
-                onChange={(e) => {
-                  const updatedContains = [...formData.contains];
-                  updatedContains[index] = e.target.value;
+          </ul>
+          <label>Ingredients:</label>
+          <ul>
+            {formData.ingredients.map((ingredient, index) => (
+              <li key={index}>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={ingredient}
+                  onChange={(e) => {
+                    const updatedIngredients = [...formData.ingredients];
+                    updatedIngredients[index] = e.target.value;
+                    setFormData((prevData) => ({
+                      ...prevData,
+                      ingredients: updatedIngredients,
+                    }));
+                  }}
+                />
+              </li>
+            ))}
+            <li>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() =>
                   setFormData((prevData) => ({
                     ...prevData,
-                    contains: updatedContains,
-                  }));
-                }}
-              />
+                    ingredients: [...prevData.ingredients, ""],
+                  }))
+                }
+              >
+                Add Ingredient
+              </button>
             </li>
-          ))}
-          <li>
-            <button
-              type="button"
-              onClick={() =>
-                setFormData((prevData) => ({
-                  ...prevData,
-                  contains: [...prevData.contains, ""],
-                }))
-              }
-            >
-              Add Item
-            </button>
-          </li>
-        </ul>
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+          </ul>
+          <label>Instructions:</label>
+          <ol>
+            {formData.instructions.map((instruction, index) => (
+              <li key={index}>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={instruction}
+                  onChange={(e) => {
+                    const updatedInstructions = [...formData.instructions];
+                    updatedInstructions[index] = e.target.value;
+                    setFormData((prevData) => ({
+                      ...prevData,
+                      instructions: updatedInstructions,
+                    }));
+                  }}
+                />
+              </li>
+            ))}
+            <li>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() =>
+                  setFormData((prevData) => ({
+                    ...prevData,
+                    instructions: [...prevData.instructions, ""],
+                  }))
+                }
+              >
+                Add Instruction
+              </button>
+            </li>
+          </ol>
+        </div>
+        <div className="col-sm-12 text-center">
+        <button type="submit" className="btn submit-btn">
+          Submit
+        </button>
+        </div>
+      </form>
+    </Container>
   );
 }
 
