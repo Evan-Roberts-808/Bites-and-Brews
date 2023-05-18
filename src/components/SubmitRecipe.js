@@ -152,7 +152,7 @@ function SubmitRecipe() {
             onChange={handleChange}
             placeholder="Enter total time"
           />
-           <label>Contains:</label>
+           <label>Allergens:</label>
           <ul>
             {formData.contains.map((item, index) => (
               <li key={index}>

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import Container from "react-bootstrap/Container";
 import Figure from "react-bootstrap/Figure";
 import Table from "react-bootstrap/Table";
@@ -16,6 +16,7 @@ function RecipesDetails() {
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
   const [likeCount, setLikeCount] = useState(0);
+  const [isFavorite, setIsFavorite] = useState(false)
 
   //**COCKTAIL PAIRING */
   const [cocktailData, setCocktailData] = useState([]);
@@ -72,6 +73,7 @@ function RecipesDetails() {
   };
 
   function handleFavorite() {
+    setIsFavorite(prevIsFavorite => !prevIsFavorite)
     fetch("http://localhost:3001/favorites", {
       method: "POST",
       headers: {
@@ -152,8 +154,10 @@ function RecipesDetails() {
             {recipeDetails.name + " "}
             <FontAwesomeIcon
               icon={faHeart}
-              style={{ color: "#ff3b3f" }}
+              style={{ color: isFavorite ? "#ff3b3f" : "#A9A9A9" }}
               onClick={handleFavorite}
+              id="heartIcon"
+              className={isFavorite ? "active" : ""}
             />
           </h2>
           <h4>{recipeDetails.description}</h4>
