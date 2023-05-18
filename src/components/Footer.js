@@ -8,7 +8,7 @@ function Footer() {
         <div className="row justify-content-center">
           <div className="col-sm-4">
             <h5>About Us</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida consectetur risus, ut luctus leo eleifend at.</p>
+            <p>Bites & Brews started in the spring of 2023. Our vision: to provide a deliciously, interactive cooking experience for all cooking levels. We offer 300+ food and drink recipes, from a variety of cuisines.</p>
           </div>
           <div className="col-sm-4">
             <h5>Links</h5>

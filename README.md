@@ -29,7 +29,7 @@
 1. Show random recipe when Random button is clicked
 2. Pairing functionality to pair recipes and cocktail suggestions
 3. Dietary Restrictions
-4. Vocie Search
+4. Voice Search
 
 ### React Tree:
 

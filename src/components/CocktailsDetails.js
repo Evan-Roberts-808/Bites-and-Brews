@@ -9,7 +9,7 @@ import Table from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
 import { ListGroup } from "react-bootstrap";
 
-function CockatilsDetails() {
+function CocktailsDetails() {
   const { id } = useParams();
   const [cocktailDetails, setcocktailDetails] = useState([]);
   const [ingredients, setIngredients] = useState([]);
@@ -133,4 +133,4 @@ function CockatilsDetails() {
   );
 }
 
-export default CockatilsDetails;
+export default CocktailsDetails;
