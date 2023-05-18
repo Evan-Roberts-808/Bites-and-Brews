@@ -91,7 +91,9 @@ function CocktailsDetails() {
     const randomRecipe = filteredRecipes[randomIndex];
     return randomRecipe ? randomRecipe : null;
   }
+
   let recommendedRecipe = null;
+
   function getRecipePairing() {
     const drinkType = cocktailDetails["drink-type"];
     switch (drinkType) {
@@ -99,16 +101,18 @@ function CocktailsDetails() {
         recommendedRecipe = findRecipe("mexican");
         break;
       case "cocktail":
-        recommendedRecipe = findRecipe("japanese");
-        break;
-      case "cocktail":
-        recommendedRecipe = findRecipe("chinese");
-        break;
-      case "cocktail":
-        recommendedRecipe = findRecipe("korean");
-        break;
-      case "cocktail":
-        recommendedRecipe = findRecipe("thai");
+        const cocktailCuisines = [
+          "japanese",
+          "chinese",
+          "korean",
+          "thai",
+          "american",
+        ];
+        const randomCocktailIndex = Math.floor(
+          Math.random() * cocktailCuisines.length
+        );
+        const randomCocktailCuisine = cocktailCuisines[randomCocktailIndex];
+        recommendedRecipe = findRecipe(randomCocktailCuisine);
         break;
       case "sangria":
         recommendedRecipe = findRecipe("italian");
@@ -117,10 +121,12 @@ function CocktailsDetails() {
         recommendedRecipe = findRecipe("greek");
         break;
       case "mojito":
-        recommendedRecipe = findRecipe("mediterranean");
-        break;
-      case "mojito":
-        recommendedRecipe = findRecipe("spanish");
+        const mojitoCuisines = ["mediterranean", "spanish"];
+        const randomMojitoIndex = Math.floor(
+          Math.random() * mojitoCuisines.length
+        );
+        const randomMojitoCuisine = mojitoCuisines[randomMojitoIndex];
+        recommendedRecipe = findRecipe(randomMojitoCuisine);
         break;
       case "martini":
         recommendedRecipe = findRecipe("french");
@@ -128,9 +134,23 @@ function CocktailsDetails() {
       case "daquiri":
         recommendedRecipe = findRecipe("caribbean");
         break;
-      case "cocktail":
+
+      case "cosmopolitan":
         recommendedRecipe = findRecipe("american");
         break;
+      case "hurricane":
+        recommendedRecipe = findRecipe("caribbean");
+        break;
+      case "negroni":
+        recommendedRecipe = findRecipe("italian");
+        break;
+      case "bloody mary":
+        recommendedRecipe = findRecipe("american");
+        break;
+      case "bellini":
+        recommendedRecipe = findRecipe("italian");
+        break;
+
       default:
         console.log("no recommendation found");
         break;
