@@ -116,7 +116,7 @@ function RecipesDetails() {
         recommendedCocktail = findCocktail("sangria");
         break;
       case "greek":
-        recommendedCocktail = findCocktail("daiquri");
+        recommendedCocktail = findCocktail("daquiri");
         break;
       case "mediterranean":
         recommendedCocktail = findCocktail("mojito");
@@ -128,7 +128,7 @@ function RecipesDetails() {
         recommendedCocktail = findCocktail("martini");
         break;
       case "caribbean":
-        recommendedCocktail = findCocktail("daiquiri");
+        recommendedCocktail = findCocktail("daquiri");
         break;
       case "american":
         recommendedCocktail = findCocktail("cocktail");
