@@ -3,7 +3,7 @@
 :root {
   --light-grey: #EFEFEF;
   --grey: #A9A9A9;
-  --dark-grey: #252525;
+  --dark-mode-body: #1D1D1D;
   --watermelon-red: #FF3B3F;
   --watermelon-red-hovered: #D62F32;
 }
@@ -14,17 +14,20 @@
   font-family: "Nunito";
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .App {
   background-color: var(--light-grey)
 }
 
 .AppDark {
-  background-color: var(--dark-grey)
+  background-color: var(--dark-mode-body);
+  color: var(--grey)
 }
-
-/* body {
-  background-color: var(--light-grey)
-} */
 
 .page-headings {
   padding-top: 20px;
@@ -59,21 +62,43 @@
 
 .carousel-caption p {
   margin-bottom: 2rem;
+  width: 60%;
+  margin: 0 auto; 
 }
 
 .carousel-indicators {
   border-bottom: 0px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: 95%;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
 }
 
 /* Cards */
 
 .card {
   margin-bottom: 20px;
+  border-radius:20px;
+  border: none;
 }
 
 .card-body {
   background-color: var(--watermelon-red);
   color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .row {
@@ -200,4 +225,28 @@ form {
 .btn-secondary:hover {
   background-color: var(--watermelon-red-hovered);
 
+}
+
+/* Footer */
+
+footer {
+  position: abosolute;
+  bottom: 0;
+  padding-top: 20px;
+  background-color: var(--watermelon-red);
+  flex: 1;
+  margin-top: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--light-grey)
+}
+
+footer .col-sm-4 {
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
 }

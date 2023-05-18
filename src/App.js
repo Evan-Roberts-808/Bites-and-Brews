@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./stylesheets/styles.css";
@@ -10,8 +11,7 @@ import SubmitRecipe from "./components/SubmitRecipe";
 import RecipesDetails from "./components/RecipesDetails";
 import CocktailsDetails from "./components/CocktailsDetails";
 import FavoritesDetails from "./components/FavoritesDetails"; 
-import React, {useState} from 'react'
-
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -31,6 +31,7 @@ function App() {
         <Route path="cocktails/:id" element={<CocktailsDetails />} />
         <Route path="favorites/:id" element={<FavoritesDetails />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
