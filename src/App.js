@@ -10,12 +10,17 @@ import SubmitRecipe from "./components/SubmitRecipe";
 import RecipesDetails from "./components/RecipesDetails";
 import CocktailsDetails from "./components/CocktailsDetails";
 import FavoritesDetails from "./components/FavoritesDetails"; 
+import React, {useState} from 'react'
 
 
 function App() {
+
+  //DARK MODE
+  const [darkMode, setDarkMode] = useState(false)
+
   return (
-    <>
-      <Header />
+    <div className={darkMode ? 'AppDark' : 'App'}>
+      <Header darkMode={darkMode} updateDarkMode={() => setDarkMode((prev) => !prev)}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="recipes" element={<RecipesPage />} />
@@ -26,7 +31,7 @@ function App() {
         <Route path="cocktails/:id" element={<CocktailsDetails />} />
         <Route path="favorites/:id" element={<FavoritesDetails />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

@@ -14,9 +14,17 @@
   font-family: "Nunito";
 }
 
-body {
+.App {
   background-color: var(--light-grey)
 }
+
+.AppDark {
+  background-color: var(--dark-grey)
+}
+
+/* body {
+  background-color: var(--light-grey)
+} */
 
 .page-headings {
   padding-top: 20px;
