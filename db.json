@@ -4610,7 +4610,7 @@
       "totaltime": "35 minutes",
       "servings": 4,
       "comments": [],
-      "likes": 0,
+      "likes": 3,
       "instructions": [
         "In a small bowl, mix together the cornstarch, water, vinegar, ketchup, sugar, and soy sauce. Set aside.",
         "Heat oil in a wok or large skillet over medium-high heat. Add the shrimp and stir-fry for about 3-4 minutes until cooked and pink. Remove from the wok and set aside.",
@@ -10806,7 +10806,7 @@
       "totaltime": "15 mins",
       "servings": 8,
       "comments": [],
-      "likes": 3,
+      "likes": 4,
       "instructions": [
         "Pour about 1/2 inch of sugar onto a small, shallow plate. Run a lime wedge around the rims of 8 cocktail glasses, then dip the rims into sugar to coat; set aside.",
         "Squeeze all of the lime wedges into a sturdy glass pitcher. Toss juiced limes into the pitcher along with mint, strawberries, and 1 cup sugar. Crush with a muddler to release strawberry juice and mint oil. Stir in club soda and rum until sugar has dissolved.",
@@ -11688,7 +11688,7 @@
       "type": "cocktail",
       "name": "Jalapeño Margaritas",
       "description": "Spice up your happy hour with these Jalapeño Margaritas!",
-      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/jalapeno-margarita.png",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/Jalapeno-Margarita.png",
       "source": "https://www.allrecipes.com/recipe/218313/jalapeno-margaritas/",
       "preptime": "10 mins",
       "waittime": "",
@@ -11723,7 +11723,7 @@
       "type": "cocktail",
       "name": "Jalapeño and Cucumber Margarita",
       "description": "Cool down this summer with a Jalapeño and Cucumber Margarita! Infused with spicy jalapeño and crisp cucumber, this refreshing cocktail is perfect for sipping on a hot day.",
-      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/jalapeno-cucumber-margarita.png",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/Jalapeno-Cucumber-Margarita.png",
       "source": "https://www.allrecipes.com/recipe/234881/jalapeno-and-cucumber-margarita/",
       "preptime": "5 mins",
       "waittime": "1 hrs",
@@ -11824,7 +11824,7 @@
       "type": "cocktail",
       "name": "Mixed Fruit Daiquiri",
       "description": "Escape to the tropics with every sip of this Mixed Fruit Daiquiri. A refreshing blend of frozen strawberry daiquiri mixer, fresh apple, juicy pineapple, sweet mango, and tangy orange, all mixed with white rum and a splash of lime juice. Perfect for a summer afternoon or a relaxing evening by the pool.",
-      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/Mixed-Fruit-Daiquiri.png",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/Mixed-Fruit-Daquiri.png",
       "source": "https://www.allrecipes.com/recipe/237867/mixed-fruit-daiquiri/",
       "preptime": "15 mins",
       "waittime": "",
@@ -12262,7 +12262,7 @@
       "totaltime": "5 mins",
       "servings": 1,
       "comments": [],
-      "likes": 0,
+      "likes": 5,
       "instructions": [
         "Place ice into a shaker.",
         "Pour bourbon and vermouth over ice; shake well.",
@@ -13475,80 +13475,7 @@
       "alcohol-type": [
         "rum"
       ]
-    },
-    {
-      "id": 1,
-      "type": "recipes",
-      "name": "Miso Soup",
-      "description": "Traditional Japanese soup made with soybean paste and various ingredients.",
-      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Miso-Soup.png",
-      "source": "",
-      "preptime": "10 minutes",
-      "waittime": "5 minutes",
-      "cooktime": "15 minutes",
-      "totaltime": "30 minutes",
-      "servings": 4,
-      "comments": [],
-      "likes": 0,
-      "instructions": [
-        "In a pot, bring 4 cups of water to a boil.",
-        "Add 2 tablespoons of miso paste to a small bowl and gradually whisk in a ladleful of hot water to create a smooth mixture.",
-        "Pour the miso mixture into the boiling water and reduce the heat to low.",
-        "Add 1 cup of diced tofu, 1/2 cup of sliced mushrooms, and 1/4 cup of chopped green onions to the pot.",
-        "Simmer for 5 minutes until the tofu and mushrooms are cooked through.",
-        "Serve the miso soup hot and garnish with additional chopped green onions if desired."
-      ],
-      "ingredients": [
-        "4 cups water",
-        "2 tablespoons miso paste",
-        "1 cup diced tofu",
-        "1/2 cup sliced mushrooms",
-        "1/4 cup chopped green onions"
-      ],
-      "cuisine": "japanese",
-      "course": "appetizer",
-      "vegetarian": true,
-      "meat": [
-        ""
-      ],
-      "contains": []
-    },
-    {
-      "id": 134,
-      "type": "recipes",
-      "name": "Mediterranean Grilled Vegetable Skewers",
-      "description": "Colorful and flavorful vegetable skewers with Mediterranean seasonings, perfect for grilling.",
-      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Mediterranean-Grilled-Vegetable-Skewers.png",
-      "source": "",
-      "preptime": "15 minutes",
-      "cooktime": "10 minutes",
-      "totaltime": "25 minutes",
-      "servings": 4,
-      "comments": [],
-      "likes": 0,
-      "instructions": [
-        "Preheat the grill to medium-high heat.",
-        "Cut your favorite Mediterranean vegetables into bite-sized pieces, such as bell peppers, zucchini, red onions, cherry tomatoes, and mushrooms.",
-        "In a bowl, combine 2 tablespoons of olive oil, 2 minced garlic cloves, 1 teaspoon of dried oregano, 1/2 teaspoon of dried thyme, salt, and pepper.",
-        "Thread the vegetables onto skewers, alternating between different types of vegetables.",
-        "Brush the vegetable skewers with the olive oil mixture to coat them evenly.",
-        "Place the skewers on the preheated grill and cook for about 10 minutes, turning occasionally, until the vegetables are tender and lightly charred.",
-        "Remove from the grill and serve the Mediterranean grilled vegetable skewers as a side dish or main course.",
-        "Enjoy the delicious flavors of grilled vegetables!"
-      ],
-      "ingredients": [
-        "Assorted Mediterranean vegetables (bell peppers, zucchini, red onions, cherry tomatoes, mushrooms)",
-        "2 tablespoons olive oil",
-        "2 cloves garlic, minced",
-        "1 teaspoon dried oregano",
-        "1/2 teaspoon dried thyme",
-        "Salt and pepper to taste"
-      ],
-      "cuisine": "mediterranean",
-      "course": "main course",
-      "vegetarian": true,
-      "meat": [],
-      "contains": []
     }
-  ]
+      ]
+
 }

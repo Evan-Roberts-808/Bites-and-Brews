@@ -15,16 +15,18 @@ function FavoritesCards({ data, onDelete}) {
   }
 
     return (
-      <Card className="col-sm-3 offset-sm-1" key={data.id}>
+      <Card id="favorites" className="col-sm-3 offset-sm-1" key={data.id}>
         <Card.Img variant="top" src={data.image} />
         <Card.Body>
           <Card.Title>{data.name}</Card.Title>
           <Card.Subtitle>{data.pick}</Card.Subtitle>
           <Card.Text className="text-truncate">{data.description}</Card.Text>
+          <div className="favoritesCardButtons">
           <Link to={`/favorites/${data.id}`} style={{textDecoration: 'none'}}>
             <button>View Recipe</button>
           </Link>
           <button onClick={handleDelete}>Delete</button>
+          </div>
         </Card.Body>
       </Card>
     );
