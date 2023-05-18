@@ -21,7 +21,7 @@ function FavoritesCards({ data, onDelete}) {
           <Card.Title>{data.name}</Card.Title>
           <Card.Subtitle>{data.pick}</Card.Subtitle>
           <Card.Text className="text-truncate">{data.description}</Card.Text>
-          <Link to={`/favorites/${data.id}`}>
+          <Link to={`/favorites/${data.id}`} style={{textDecoration: 'none'}}>
             <button>View Recipe</button>
           </Link>
           <button onClick={handleDelete}>Delete</button>

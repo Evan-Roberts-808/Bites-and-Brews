@@ -13,7 +13,7 @@ function Cards({ data }) {
           <Card.Title>{data.name}</Card.Title>
           <Card.Subtitle>{data.pick}</Card.Subtitle>
           <Card.Text className="text-truncate">{data.description}</Card.Text>
-          <Link to={url}>
+          <Link to={url} style={{textDecoration: 'none'}}>
             <button>View Recipe</button>
           </Link>
         </Card.Body>

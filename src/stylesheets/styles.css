@@ -63,6 +63,133 @@ body {
   margin-bottom: 20px;
 }
 
+.card-body {
+  background-color: var(--watermelon-red);
+  color: #fff;
+}
+
 .row {
   --bs-gutter-x: 0;
+}
+
+.card button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Pages */
+
+form svg {
+  background-color: var(--watermelon-red);
+  border-radius: 100%;
+  padding: 10px;
+}
+
+form svg:hover {
+  background-color: var(--watermelon-red-hovered);
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.filter-button {
+  margin-left: 20px;
+  background-color: var(--watermelon-red);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+.filter-button:hover {
+  background-color: var(--watermelon-red-hovered);
+}
+
+.search-filter-row {
+  padding-bottom: 20px;
+}
+
+/* Details Page */
+
+/* Table */
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.custom-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.custom-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.custom-table tbody td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.custom-table tbody td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.custom-table th {
+  background-color: var(--watermelon-red);
+  color: #fff;
+}
+
+/* Ingredients Card */
+
+#ingredients .card-header {
+  background-color: var(--watermelon-red);
+  color: #fff;
+}
+
+/* Submission Form */
+
+form {
+  background-color: #e2e2e2;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.textarea-container {
+  position: relative;
+}
+
+.textarea-container textarea.resizable {
+  resize: vertical;
+  height: auto;
+  min-height: 38px;
+  overflow: hidden;
+}
+
+.textarea-container textarea.resizable:focus {
+  overflow: auto;
+}
+
+.submit-btn {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  width: 20%;
+}
+
+.submit-btn:hover {
+  background-color: var(--watermelon-red-hovered);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--watermelon-red);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--watermelon-red-hovered);
+
 }
