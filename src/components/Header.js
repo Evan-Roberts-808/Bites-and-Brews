@@ -5,7 +5,8 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 
-function Header() {
+function Header({ updateDarkMode }) {
+
   return (
     <Navbar expand="lg">
       <Container>
@@ -29,6 +30,7 @@ function Header() {
             <Nav.Link as={Link} to='cocktails'>Cocktails</Nav.Link>
             <Nav.Link as={Link} to='favorites'>Favorites</Nav.Link>
             <Nav.Link as={Link} to='submit'>Submit Your Recipe</Nav.Link>
+            <button onClick={updateDarkMode}>Toggle Mode</button>
           </Nav>
         </Navbar.Collapse>
       </Container>

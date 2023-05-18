@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 function Slideshow() {
   const [recipesArray, setRecipesArray] = useState([]);
@@ -11,9 +12,13 @@ function Slideshow() {
   }, []);
 
   const mappedRecipes = [...recipesArray].map((el) => {
+
+
     return (
       <Carousel.Item key={el.id}>
-        <img className="d-block w-100" src={el.image} alt={el.name} />
+        <Link to={`/recipes/${el.id}`}>
+          <img className="d-block w-100" src={el.image} alt={el.name} />
+        </Link>
         <Carousel.Caption>
           <h3>{el.name}</h3>
           <p>{el.description}</p>
