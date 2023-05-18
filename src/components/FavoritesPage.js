@@ -40,20 +40,25 @@ function FavoritesPage() {
 
   return (
     <Container>
-      <div className="row">
         <h2>Favorites</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            onChange={(e) => handleChange(e)}
-          />
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            style={{ color: "#FF3B3F" }}
-            type="submit"
-          />
-        </form>
+        <div className="row justify-content-center search-filter-row">
+        <div className="col-sm-12 d-flex justify-content-center">
+          {" "}
+          <form onSubmit={handleSubmit} className="d-flex">
+            <input
+              type="text"
+              placeholder="Search..."
+              onChange={(e) => handleChange(e)}
+              className="form-control mr-2"
+            />
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              style={{ color: "#EFEFEF" }}
+              type="submit"
+              className="my-auto"
+            />
+          </form>
+        </div>
       </div>
       <FavoritesCards data={searchedFavorites} onDelete={handleDelete}/>
     </Container>

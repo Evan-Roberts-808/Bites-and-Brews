@@ -41,8 +41,6 @@ function RecipesPage() {
     setCuisineFilter(e.target.value);
   }
 
-  console.log(allRecipes);
-
   const searchedRecipes = [...allRecipes].filter((el) => {
     const searchMatch = el.name.toLowerCase().includes(search.toLowerCase());
     const filterMatch = cuisineFilter === el.cuisine || cuisineFilter === "";
@@ -51,7 +49,7 @@ function RecipesPage() {
 
   return (
     <Container>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas show={show} onHide={handleClose} scroll backdrop={false}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Filter</Offcanvas.Title>
         </Offcanvas.Header>
@@ -73,21 +71,28 @@ function RecipesPage() {
           </select>
         </Offcanvas.Body>
       </Offcanvas>
-      <div className="row">
-        <h2>Recipes</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            onChange={(e) => handleChange(e)}
-          />
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            style={{ color: "#FF3B3F" }}
-            type="submit"
-          />
-        </form>
-        <button onClick={toggleShow}>Filter</button>
+      <h2>Recipes</h2>
+      <div className="row justify-content-center search-filter-row">
+        <div className="col-sm-12 d-flex justify-content-center">
+          {" "}
+          <form onSubmit={handleSubmit} className="d-flex">
+            <input
+              type="text"
+              placeholder="Search..."
+              onChange={(e) => handleChange(e)}
+              className="form-control mr-2"
+            />
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              style={{ color: "#EFEFEF" }}
+              type="submit"
+              className="my-auto"
+            />
+          </form>
+          <button className="filter-button ml-2" onClick={toggleShow}>
+            Filter
+          </button>
+        </div>
       </div>
       <Cards data={searchedRecipes} />
     </Container>

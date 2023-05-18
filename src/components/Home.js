@@ -15,13 +15,13 @@ function Home() {
   }, [])
 // Popular Recipes
   useEffect(() => {
-    fetch('http://localhost:3001/recipes?_sort=likes&_order=desc&_limit=5')
+    fetch('http://localhost:3001/recipes?_sort=likes&_order=desc&_limit=3')
     .then((response) => response.json())
     .then((data) => setPopularRecipes(data))
   }, [])
 // Popular Cocktails
   useEffect(() => {
-    fetch('http://localhost:3001/cocktails?_sort=likes&_order=desc&_limit=5')
+    fetch('http://localhost:3001/cocktails?_sort=likes&_order=desc&_limit=3')
     .then((response) => response.json())
     .then((data) => setPopularCocktails(data))
   }, [])
