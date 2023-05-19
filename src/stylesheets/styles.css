@@ -2,8 +2,10 @@
 
 :root {
   --light-grey: #EFEFEF;
+  --offcanvas-grey: #E2E2E2;
   --grey: #A9A9A9;
   --dark-mode-body: #1D1D1D;
+  --offcanvas-dark: #1A1A1A;
   --watermelon-red: #FF3B3F;
   --watermelon-red-hovered: #D62F32;
 }
@@ -20,13 +22,30 @@ body {
   min-height: 100vh;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  flex: 1;
+
+}
+
 .App {
-  background-color: var(--light-grey)
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .AppDark {
   background-color: var(--dark-mode-body);
-  color: var(--grey)
+  color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .page-headings {
@@ -169,6 +188,18 @@ form svg:hover {
   border-color: var(--watermelon-red)
 }
 
+.offcanvas-header, .offcanvas-body {
+  background-color: var(--offcanvas-grey)
+}
+
+.offcanvas-header-dark, .offcanvas-body-dark {
+  background-color: var(--offcanvas-dark)
+}
+
+.offcanvas-title-dark {
+  color: var(--grey)
+}
+
 /* Details Page */
 
 #heartIcon {
@@ -178,6 +209,28 @@ form svg:hover {
 
 #heartIcon.active {
   color: #ff3b3f;
+}
+
+.editButton {
+  background-color: var(--watermelon-red);
+  border:none;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.cancel-btn {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  width: 20%;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: var(--watermelon-red-hovered);
+  color: #fff;
+  width: 20%;
+  margin-left: 10px;
 }
 
 /* Table */
@@ -222,6 +275,13 @@ form svg:hover {
 }
 
 /* Submission Form */
+
+.formSwitch {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
 
 form {
   background-color: #e2e2e2;
@@ -272,7 +332,7 @@ footer {
   bottom: 0;
   padding-top: 20px;
   background-color: var(--watermelon-red);
-  flex: 1;
+  flex-shrink: 0;
   margin-top: 30px;
 }
 

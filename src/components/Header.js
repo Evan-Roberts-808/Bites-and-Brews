@@ -29,7 +29,7 @@ function Header({ darkMode, updateDarkMode }) {
             <Nav.Link as={Link} to='recipes'>Recipes</Nav.Link>
             <Nav.Link as={Link} to='cocktails'>Cocktails</Nav.Link>
             <Nav.Link as={Link} to='favorites'>Favorites</Nav.Link>
-            <Nav.Link as={Link} to='submit'>Submit Your Recipe</Nav.Link>
+            <Nav.Link as={Link} to='submit'>Submit</Nav.Link>
             <button id="darkModeButton" onClick={updateDarkMode}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
           </Nav>
         </Navbar.Collapse>

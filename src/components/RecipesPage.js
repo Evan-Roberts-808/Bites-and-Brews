@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-function RecipesPage() {
+function RecipesPage({darkMode}) {
   const [allRecipes, setAllRecipes] = useState([]);
   const [form, setForm] = useState("");
   const [search, setSearch] = useState("");
@@ -173,10 +173,10 @@ function RecipesPage() {
   return (
     <Container>
       <Offcanvas show={show} onHide={handleClose} scroll backdrop={false}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Filter</Offcanvas.Title>
+        <Offcanvas.Header closeButton className={darkMode ? "offcanvas-header-dark" : ""}>
+          <Offcanvas.Title className={darkMode ? "offcanvas-title-dark" : ""}>Filter</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className={darkMode ? "offcanvas-header-dark" : ""}>
           <select name="cuisine" id="cuisine" onChange={handleCuisineFilter}>
             <option value="">Select by cuisine</option>
             <option value="japanese">Japanese</option>
