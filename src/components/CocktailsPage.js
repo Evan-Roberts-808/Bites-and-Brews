@@ -171,11 +171,11 @@ function CocktailsPage({darkMode}) {
   return (
     <Container>
       <Offcanvas show={show} onHide={handleClose} scroll backdrop={false}>
-      <Offcanvas.Header closeButton className={darkMode ? "offcanvas-header-dark d-flex justify-content-center" : "d-flex justify-content-center"}>
-        <Offcanvas.Title className={darkMode ? "offcanvas-title-dark" : ""}>Filter</Offcanvas.Title>
-      </Offcanvas.Header>
+        <Offcanvas.Header closeButton className={darkMode ? "offcanvas-header-dark" : ""}>
+          <Offcanvas.Title className={darkMode ? "offcanvas-title-dark" : ""}>Filter</Offcanvas.Title>
+        </Offcanvas.Header>
         <Offcanvas.Body className={darkMode ? "offcanvas-header-dark" : ""}>
-          <select name="alcohol" id="alcohol" onChange={(e) => handleAlcoholFilter(e)}>
+          <select className="custom-select" name="alcohol" id="alcohol" onChange={(e) => handleAlcoholFilter(e)}>
             <option value="">Filter by drink type</option>
             <option value="mojito">Mojito</option>
             <option value="margarita">Margarita</option>

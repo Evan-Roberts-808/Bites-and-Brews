@@ -200,6 +200,18 @@ form svg:hover {
   color: var(--grey)
 }
 
+.offcanvas-body {
+  padding: 0;
+}
+
+h5, .h5 {
+  font-size: 2rem;
+}
+
+.custom-select {
+  width: 100%;
+}
+
 /* Details Page */
 
 #heartIcon {
