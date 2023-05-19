@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 
 function SubmitRecipe() {
-  const initialForm = {
+  const initialRecipeForm = {
     name: "",
     description: "",
     image: "",
@@ -23,7 +23,32 @@ function SubmitRecipe() {
     contains: [],
   };
 
-  const [formData, setFormData] = useState(initialForm);
+  const initialCocktailForm = {
+    name: "",
+    description: "",
+    image: "",
+    source: "",
+    preptime: "",
+    waittime: "",
+    cooktime: "",
+    totaltime: "",
+    servings: 0,
+    comments: [],
+    likes: 0,
+    instructions: [],
+    ingredients: [],
+    "drink-type": "",
+    "alcohol-type": []
+  }
+
+  const [formData, setFormData] = useState(initialRecipeForm);
+  const [cocktailForm, setCocktailForm] = useState(initialCocktailForm)
+
+  const [whichForm, setWhichForm] = useState(true)
+
+  function handleSwitch(){
+    setWhichForm(prevWhichForm => !prevWhichForm)
+  }
 
   function handlePOST(e) {
     e.preventDefault();
@@ -53,7 +78,38 @@ function SubmitRecipe() {
         meat: formData.meat,
         contains: formData.contains,
       }),
-    });
+    })
+    .then(setFormData(initialRecipeForm))
+  }
+
+  function handleCocktailPOST(e) {
+    e.preventDefault();
+    fetch('http://localhost:3001/cocktails', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: cocktailForm.name,
+        type: "cocktail",
+        description: cocktailForm.description,
+        image: cocktailForm.image,
+        source: cocktailForm.source,
+        preptime: cocktailForm.preptime,
+        waittime: cocktailForm.waittime,
+        cooktime: cocktailForm.cooktime,
+        totaltime: cocktailForm.totaltime,
+        servings: cocktailForm.servings,
+        comments: [],
+        likes: 0,
+        instructions: cocktailForm.instructions,
+        ingredients: cocktailForm.ingredients,
+        "drink-type": cocktailForm["drink-type"],
+        "alcohol-type": cocktailForm["alcohol-type"]
+
+      })
+    })
+    .then(setCocktailForm(initialCocktailForm))
   }
 
   function handleChange(e) {
@@ -63,9 +119,19 @@ function SubmitRecipe() {
     });
   }
 
+  function handleCocktailChange(e) {
+    setCocktailForm({
+      ...cocktailForm,
+      [e.target.name]: e.target.value,
+    });
+  }
+
   return (
     <Container>
-    <h2 class="page-headings">Submit a Recipe</h2>
+    <button className="formSwitch" onClick={handleSwitch}>{whichForm ? "Show Cocktail Form" : "Show Recipe Form"}</button>
+    {whichForm ? (
+    <>
+    <h2 className="page-headings">Submit a Recipe</h2>
       <form className="row d-flex justify-content-center" onSubmit={handlePOST}>
         <div className="col-sm-3">
           <label htmlFor="name">Recipe Name:</label>
@@ -345,6 +411,241 @@ function SubmitRecipe() {
         </button>
         </div>
       </form>
+    </>
+      ) : (
+    <>
+    <h2 class="page-headings">Submit a Cocktail</h2>
+    <form className="row d-flex justify-content-center" onSubmit={handleCocktailPOST}>
+  <div className="col-sm-3">
+    <label htmlFor="name">Cocktail Name:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="name"
+      name="name"
+      value={cocktailForm.name}
+      onChange={handleCocktailChange}
+      placeholder="Enter cocktail name"
+    />
+    <label htmlFor="image">Image URL:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="image"
+      name="image"
+      value={cocktailForm.image}
+      onChange={handleCocktailChange}
+      placeholder="Enter image URL"
+    />
+    <label htmlFor="preptime">Prep Time:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="preptime"
+      name="preptime"
+      value={cocktailForm.preptime}
+      onChange={handleCocktailChange}
+      placeholder="Enter prep time"
+    />
+    <label htmlFor="cooktime">Cook Time:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="cooktime"
+      name="cooktime"
+      value={cocktailForm.cooktime}
+      onChange={handleCocktailChange}
+      placeholder="Enter cook time"
+    />
+    <div className="text-area-container">
+      <label htmlFor="description">Description:</label>
+      <textarea
+        className="form-control resizable"
+        id="description"
+        name="description"
+        value={cocktailForm.description}
+        onChange={handleCocktailChange}
+        placeholder="Enter cocktail description"
+      />
+    </div>
+  </div>
+
+  <div className="col-sm-3 offset-sm-1">
+    <label htmlFor="servings">Serving:</label>
+    <input
+      type="number"
+      className="form-control"
+      id="servings"
+      name="servings"
+      value={cocktailForm.servings}
+      onChange={handleCocktailChange}
+      placeholder="Enter servings"
+    />
+    <label htmlFor="waittime">Wait Time:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="waittime"
+      name="waittime"
+      value={cocktailForm.waittime}
+      onChange={handleCocktailChange}
+      placeholder="Enter wait time"
+    />
+    <label htmlFor="totaltime">Total Time:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="totaltime"
+      name="totaltime"
+      value={cocktailForm.totaltime}
+      onChange={handleCocktailChange}
+      placeholder="Enter total time"
+    />
+    <label htmlFor="source">Source:</label>
+    <input
+      type="text"
+      className="form-control"
+      id="source"
+      name="source"
+      value={cocktailForm.source}
+      onChange={handleCocktailChange}
+      placeholder="Enter source"
+    />
+    <label>Alcohol Type:</label>
+    <ul>
+      {cocktailForm["alcohol-type"].map((type, index) => (
+        <li key={index}>
+          <input
+            type="text"
+            className="form-control"
+            value={type}
+            onChange={(e) => {
+              const updatedAlcoholTypes = [...cocktailForm["alcohol-type"]];
+              updatedAlcoholTypes[index] = e.target.value;
+              setCocktailForm((prevForm) => ({
+                ...prevForm,
+                "alcohol-type": updatedAlcoholTypes,
+              }));
+            }}
+          />
+        </li>
+      ))}
+      <li>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() =>
+            setCocktailForm((prevForm) => ({
+              ...prevForm,
+              "alcohol-type": [...prevForm["alcohol-type"], ""],
+            }))
+          }
+        >
+          Add Alcohol Type
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div className="offset-sm-1 col-sm-3">
+    <label htmlFor="drink-type">Drink Type:</label>
+    <select
+      className="form-control"
+      id="drink-type"
+      name="drink-type"
+      value={cocktailForm["drink-type"]}
+      onChange={handleCocktailChange}
+    >
+      <option value="">Select a drink type</option>
+      <option value="mojito">Mojito</option>
+      <option value="margarita">Margarita</option>
+      <option value="martini">Martini</option>
+      <option value="daquiri">Daquiri</option>
+      <option value="cocktail">Cocktail</option>
+      <option value="cosmopolitan">Cosmopolitan</option>
+      <option value="hurricane">Hurricane</option>
+      <option value="negroni">Negroni</option>
+      <option value="bloody mary">Bloody mary</option>
+      <option value="bellini">Bellini</option>
+      <option value="sangria">Sangria</option>
+    </select>
+    <label>Ingredients:</label>
+    <ul>
+      {cocktailForm.ingredients.map((ingredient, index) => (
+        <li key={index}>
+          <input
+            type="text"
+            className="form-control"
+            value={ingredient}
+            onChange={(e) => {
+              const updatedIngredients = [...cocktailForm.ingredients];
+              updatedIngredients[index] = e.target.value;
+              setCocktailForm((prevForm) => ({
+                ...prevForm,
+                ingredients: updatedIngredients,
+              }));
+            }}
+          />
+        </li>
+      ))}
+      <li>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() =>
+            setCocktailForm((prevForm) => ({
+              ...prevForm,
+              ingredients: [...prevForm.ingredients, ""],
+            }))
+          }
+        >
+          Add Ingredient
+        </button>
+      </li>
+    </ul>
+    <label>Instructions:</label>
+    <ol>
+      {cocktailForm.instructions.map((instruction, index) => (
+        <li key={index}>
+          <input
+            type="text"
+            className="form-control"
+            value={instruction}
+            onChange={(e) => {
+              const updatedInstructions = [...cocktailForm.instructions];
+              updatedInstructions[index] = e.target.value;
+              setCocktailForm((prevForm) => ({
+                ...prevForm,
+                instructions: updatedInstructions,
+              }));
+            }}
+          />
+        </li>
+      ))}
+      <li>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() =>
+            setCocktailForm((prevForm) => ({
+              ...prevForm,
+              instructions: [...prevForm.instructions, ""],
+            }))
+          }
+        >
+          Add Instruction
+        </button>
+      </li>
+    </ol>
+  </div>
+  <div className="col-sm-12 text-center">
+    <button type="submit" className="btn submit-btn">
+      Submit
+    </button>
+  </div>
+    </form>
+    </>
+    )}
     </Container>
   );
 }

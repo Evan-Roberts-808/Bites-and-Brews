@@ -13403,49 +13403,6 @@
   ],
   "favorites": [
     {
-      "id": 5,
-      "type": "recipes",
-      "name": "Yakitori",
-      "description": "Flavorful Japanese skewered grilled chicken with a delicious glaze.",
-      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Yakitori.png",
-      "source": "",
-      "preptime": "15 minutes",
-      "waittime": "1 hour",
-      "cooktime": "10 minutes",
-      "totaltime": "1 hour 25 minutes",
-      "servings": 4,
-      "comments": [],
-      "likes": 0,
-      "instructions": [
-        "In a bowl, combine 1/4 cup soy sauce, 2 tablespoons mirin, 1 tablespoon sake, 1 tablespoon honey, and 1 minced garlic clove to make the yakitori sauce.",
-        "Cut 2 boneless, skinless chicken breasts into bite-sized pieces.",
-        "Place the chicken pieces in a bowl and pour the yakitori sauce over them. Mix well to ensure the chicken is coated evenly. Let it marinate in the refrigerator for at least 1 hour.",
-        "Preheat a grill or grill pan over medium heat.",
-        "Thread the marinated chicken pieces onto skewers, alternating with pieces of scallions or bell peppers if desired.",
-        "Grill the skewers for about 4-5 minutes per side, brushing them with the remaining yakitori sauce while cooking.",
-        "Continue grilling until the chicken is cooked through and has a nice char.",
-        "Serve the yakitori hot with steamed rice and a side of salad or pickles.",
-        "Enjoy the delicious skewered grilled chicken!"
-      ],
-      "ingredients": [
-        "1/4 cup soy sauce",
-        "2 tablespoons mirin",
-        "1 tablespoon sake",
-        "1 tablespoon honey",
-        "1 garlic clove, minced",
-        "2 boneless, skinless chicken breasts",
-        "Skewers (bamboo or metal)",
-        "Optional: scallions or bell peppers for skewering"
-      ],
-      "cuisine": "japanese",
-      "course": "main course",
-      "vegetarian": false,
-      "meat": [
-        "chicken"
-      ],
-      "contains": []
-    },
-    {
       "id": 6,
       "type": "cocktail",
       "name": "Dragon Fruit Mojito",
@@ -13475,7 +13432,53 @@
       "alcohol-type": [
         "rum"
       ]
-    }
+    },
+    {
+      "id": 23,
+      "type": "recipes",
+      "name": "Tiramisu",
+      "description": "Tiramisu is a classic Italian dessert that is loved for its layers of coffee-soaked ladyfingers and creamy mascarpone filling. This indulgent dessert is often dusted with cocoa powder on top, adding a rich and bittersweet flavor. Tiramisu is a delightful combination of textures and flavors, making it a favorite choice for a sweet ending to an Italian meal.",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/phase-2/master/.github/images/Recipes/Tiramisu.png",
+      "source": "",
+      "preptime": "30 minutes",
+      "waittime": "4 hours",
+      "cooktime": "0 minutes",
+      "totaltime": "4 hours 30 minutes",
+      "servings": 6,
+      "comments": [],
+      "likes": 0,
+      "instructions": [
+        "In a shallow bowl, combine 1 cup of strong brewed coffee and 2 tablespoons of coffee liqueur.",
+        "In a separate bowl, whisk together 3 egg yolks and ½ cup of granulated sugar until the mixture becomes thick and pale yellow in color.",
+        "Add 8 ounces of mascarpone cheese to the egg yolk mixture and whisk until well combined and smooth.",
+        "In another bowl, beat 1 cup of heavy cream until stiff peaks form.",
+        "Gently fold the whipped cream into the mascarpone mixture until fully incorporated.",
+        "Dip each ladyfinger into the coffee mixture, ensuring they are soaked but not overly saturated.",
+        "Arrange a layer of soaked ladyfingers in a dish or serving glasses.",
+        "Spread a layer of the mascarpone cream mixture over the ladyfingers.",
+        "Repeat the layers of soaked ladyfingers and mascarpone cream, finishing with a layer of cream on top.",
+        "Cover the dish or glasses with plastic wrap and refrigerate for at least 4 hours, or overnight if possible.",
+        "Before serving, dust the top of the Tiramisu with cocoa powder.",
+        "Slice and serve the Tiramisu chilled.",
+        "Enjoy your decadent Tiramisu!"
+      ],
+      "ingredients": [
+        "1 cup strong brewed coffee",
+        "2 tablespoons coffee liqueur",
+        "3 egg yolks",
+        "1/2 cup granulated sugar",
+        "8 ounces mascarpone cheese",
+        "1 cup heavy cream",
+        "24 ladyfingers",
+        "Cocoa powder, for dusting"
+      ],
+      "cuisine": "italian",
+      "course": "appetizer",
+      "vegetarian": true,
+      "meat": [],
+      "contains": [
+        "dairy"
       ]
-
+    }
+  ]
 }

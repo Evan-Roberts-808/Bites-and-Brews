@@ -17,7 +17,7 @@ function Footer() {
               <Link to="recipes"><li>Recipes</li></Link>
               <Link to="cocktails"><li>Cocktails</li></Link>
               <Link to="favorites"><li>Favorites</li></Link>
-              <Link to="submit"><li>Submit Yours</li></Link>
+              <Link to="submit"><li>Submit</li></Link>
             </ul>
           </div>
           <div className="col-sm-4">

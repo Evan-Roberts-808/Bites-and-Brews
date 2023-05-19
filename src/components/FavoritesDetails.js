@@ -13,6 +13,12 @@ function FavoritesDetails() {
   const [favoritesDetails, setFavoritesDetails] = useState([]);
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
+  const initialForm = {
+    ingredients: [],
+    instructions: [],
+  }
+  const [formData, setFormData] = useState(initialForm);
+  const [edit, setEdit] = useState(false)
 
   useEffect(() => {
     fetch(`http://localhost:3001/favorites/${id}`)
@@ -21,8 +27,12 @@ function FavoritesDetails() {
         setFavoritesDetails(data);
         setIngredients(data.ingredients);
         setInstructions(data.instructions);
+        setFormData({
+          ingredients: data.ingredients,
+          instructions: data.instructions, 
       });
-  }, [id]);
+    }
+  )}, [id]);
 
     //get <li> items for ingredients
     const mappedIngredients = ingredients.map((el) => {
@@ -34,8 +44,33 @@ function FavoritesDetails() {
       return <li>{el}</li>;
     });
 
+    function handleEditForm(e){
+      e.preventDefault();
+      fetch(`http://localhost:3001/favorites/${favoritesDetails.id}`, {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify(formData)
+      })
+      .then((response) => response.json())
+      .then((updatedData) => {
+      setIngredients(updatedData.ingredients);
+      setInstructions(updatedData.instructions);
+      setFormData({
+        ingredients: updatedData.ingredients,
+        instructions: updatedData.instructions,
+      });
+      setEdit(false);
+    });
+    }
+
+    function handleEditSwitch(){
+      setEdit(prevEdit => !prevEdit)
+    }
+
   return (
     <Container>
+    {!edit ? (
+      <>
     <div className="row">
         <Figure className="col-sm-5">
           <Figure.Image
@@ -51,6 +86,7 @@ function FavoritesDetails() {
               style={{ color: "#ff3b3f" }}
 
             />
+            <button onClick={handleEditSwitch} className="editButton" >Edit</button>
           </h2>
           <h4>{favoritesDetails.description}</h4>
           <Table striped className="custom-table">
@@ -83,6 +119,95 @@ function FavoritesDetails() {
           <ol>{mappedInstructions}</ol>
         </div>
       </div>
+      </>
+    ) : (
+      <>
+  <form className="row d-flex justify-content-center" onSubmit={handleEditForm}>
+  <div className="col-sm-6">
+    <label>Ingredients:</label>
+    <ul>
+      {formData.ingredients.map((ingredient, index) => (
+        <li key={index}>
+          <input
+            type="text"
+            className="form-control"
+            value={ingredient}
+            onChange={(e) => {
+              const updatedIngredients = [...formData.ingredients];
+              updatedIngredients[index] = e.target.value;
+              setFormData((prevForm) => ({
+                ...prevForm,
+                ingredients: updatedIngredients,
+              }));
+            }}
+          />
+        </li>
+      ))}
+      <li>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() =>
+            setFormData((prevForm) => ({
+              ...prevForm,
+              ingredients: [...prevForm.ingredients, ""],
+            }))
+          }
+        >
+          Add Ingredient
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div className="col-sm-6">
+    <label>Instructions:</label>
+    <ol>
+      {formData.instructions.map((instruction, index) => (
+        <li key={index}>
+          <input
+            type="text"
+            className="form-control"
+            value={instruction}
+            onChange={(e) => {
+              const updatedInstructions = [...formData.instructions];
+              updatedInstructions[index] = e.target.value;
+              setFormData((prevForm) => ({
+                ...prevForm,
+                instructions: updatedInstructions,
+              }));
+            }}
+          />
+        </li>
+      ))}
+      <li>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() =>
+            setFormData((prevForm) => ({
+              ...prevForm,
+              instructions: [...prevForm.instructions, ""],
+            }))
+          }
+        >
+          Add Instruction
+        </button>
+      </li>
+    </ol>
+  </div>
+
+  <div className="col-sm-12 text-center">
+    <button type="submit" className="btn submit-btn">
+      Submit
+    </button>
+    <button type="button" className="btn cancel-btn" onClick={handleEditSwitch}>
+      Cancel
+    </button>
+  </div>
+</form>
+</>
+)}
     </Container>
   )
 }

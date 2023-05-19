@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-function CocktailsPage() {
+function CocktailsPage({darkMode}) {
   const [allCocktails, setAllCocktails] = useState([]);
   const [form, setForm] = useState("");
   const [search, setSearch] = useState("");
@@ -170,11 +170,11 @@ function CocktailsPage() {
 
   return (
     <Container>
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Filter</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
+      <Offcanvas show={show} onHide={handleClose} scroll backdrop={false}>
+      <Offcanvas.Header closeButton className={darkMode ? "offcanvas-header-dark d-flex justify-content-center" : "d-flex justify-content-center"}>
+        <Offcanvas.Title className={darkMode ? "offcanvas-title-dark" : ""}>Filter</Offcanvas.Title>
+      </Offcanvas.Header>
+        <Offcanvas.Body className={darkMode ? "offcanvas-header-dark" : ""}>
           <select name="alcohol" id="alcohol" onChange={(e) => handleAlcoholFilter(e)}>
             <option value="">Filter by drink type</option>
             <option value="mojito">Mojito</option>
