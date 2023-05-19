@@ -191,7 +191,7 @@ function CocktailsPage({darkMode}) {
           </select>
         </Offcanvas.Body>
       </Offcanvas>
-        <h2>Cocktails</h2>
+        <h2>Brews</h2>
         <div className="row justify-content-center search-filter-row">
         <div className="col-sm-12 d-flex justify-content-center">
           {" "}

@@ -26,8 +26,8 @@ function Header({ darkMode, updateDarkMode }) {
             className="custom-header justify-content-end"
             style={{ width: "100%" }}
           >
-            <Nav.Link as={Link} to='recipes'>Recipes</Nav.Link>
-            <Nav.Link as={Link} to='cocktails'>Cocktails</Nav.Link>
+            <Nav.Link as={Link} to='recipes'>Bites</Nav.Link>
+            <Nav.Link as={Link} to='cocktails'>Brews</Nav.Link>
             <Nav.Link as={Link} to='favorites'>Favorites</Nav.Link>
             <Nav.Link as={Link} to='submit'>Submit</Nav.Link>
             <button id="darkModeButton" onClick={updateDarkMode}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
