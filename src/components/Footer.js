@@ -14,8 +14,8 @@ function Footer() {
             <h5>Links</h5>
             <ul className="list-unstyled">
               <Link to="/"><li>Home</li></Link>
-              <Link to="recipes"><li>Recipes</li></Link>
-              <Link to="cocktails"><li>Cocktails</li></Link>
+              <Link to="recipes"><li>Bites</li></Link>
+              <Link to="cocktails"><li>Brews</li></Link>
               <Link to="favorites"><li>Favorites</li></Link>
               <Link to="submit"><li>Submit</li></Link>
             </ul>

@@ -28,13 +28,13 @@ function Home() {
 
   return (
     <Container>
-    <h2 className="page-headings">Newest Recipes</h2>
+    <h2 className="page-headings">Newest Bites</h2>
     <Slideshow />
     <h2 className="page-headings">Our Picks</h2>
     <Cards data={ourPicks} />
-    <h2 className="page-headings">Popular Recipes</h2>
+    <h2 className="page-headings">Popular Bites</h2>
     <Cards data={popularRecipes} />
-    <h2 className="page-headings">Popular Cocktails</h2>
+    <h2 className="page-headings">Popular Brews</h2>
     <Cards data={popularCocktails} />
     </Container>
   )
