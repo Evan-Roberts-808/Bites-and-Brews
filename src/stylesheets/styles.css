@@ -212,6 +212,11 @@ h5, .h5 {
   width: 100%;
 }
 
+.searchButton {
+  background-color: transparent;
+  border: none;
+}
+
 /* Details Page */
 
 #heartIcon {

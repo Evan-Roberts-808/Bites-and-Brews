@@ -205,12 +205,14 @@ function RecipesPage({darkMode}) {
               onChange={(e) => handleChange(e)}
               className="form-control mr-2"
             />
+            <button className="searchButton">
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
               style={{ color: "#EFEFEF" }}
               type="submit"
               className="my-auto"
             />
+            </button>
           </form>
           <button className="filter-button ml-2" onClick={toggleShow}>
             Filter
