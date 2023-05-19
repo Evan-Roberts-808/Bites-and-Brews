@@ -177,7 +177,7 @@ function RecipesPage({darkMode}) {
           <Offcanvas.Title className={darkMode ? "offcanvas-title-dark" : ""}>Filter</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className={darkMode ? "offcanvas-header-dark" : ""}>
-          <select name="cuisine" id="cuisine" onChange={handleCuisineFilter}>
+          <select className="custom-select" name="cuisine" id="cuisine" onChange={handleCuisineFilter}>
             <option value="">Select by cuisine</option>
             <option value="japanese">Japanese</option>
             <option value="chinese">Chinese</option>
