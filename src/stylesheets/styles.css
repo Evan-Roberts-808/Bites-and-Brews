@@ -14,6 +14,7 @@
 
 * {
   font-family: "Nunito";
+  text-decoration: none;
 }
 
 body {
@@ -218,6 +219,20 @@ h5, .h5 {
 }
 
 /* Details Page */
+
+
+a {
+  text-decoration: none;
+}
+
+.recommended-link {
+  text-decoration: none;
+  color: var(--watermelon-red)
+}
+
+.recommended-link:hover {
+  color: var(--watermelon-red-hovered)
+}
 
 #heartIcon {
   transition: color 0.3s;

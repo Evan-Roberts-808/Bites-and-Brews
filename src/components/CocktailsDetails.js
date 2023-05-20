@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Figure from "react-bootstrap/Figure";
@@ -16,10 +16,10 @@ function CocktailsDetails() {
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
   const [likeCount, setLikeCount] = useState(0);
+  const [isFavorite, setIsFavorite] = useState(false)
 
   //**PAIRING**/
   const [recipeData, setRecipeData] = useState([]);
-  const [recipeCuisine, setRecipeCuisine] = useState("");
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
   const [recommendedBite, setRecommendedBite] = useState([]);
   useEffect(() => {
@@ -42,13 +42,13 @@ function CocktailsDetails() {
   }, [id]);
 
   //get <li> items for ingredients
-  const mappedIngredients = ingredients.map((el) => {
-    return <ListGroup.Item>{el}</ListGroup.Item>;
+  const mappedIngredients = ingredients.map((el, index) => {
+    return <ListGroup.Item key={index}><span>{el}</span></ListGroup.Item>;
   });
 
   //get <li> items for ingredients
-  const mappedInstructions = instructions.map((el) => {
-    return <li>{el}</li>;
+  const mappedInstructions = instructions.map((el, index) => {
+    return <li key={index}>{el}</li>;
   });
 
   const handleLikeClick = () => {
@@ -72,6 +72,7 @@ function CocktailsDetails() {
   };
 
   function handleFavorite() {
+    setIsFavorite(prevIsFavorite => !prevIsFavorite)
     fetch("http://localhost:3001/favorites", {
       method: "POST",
       headers: {
@@ -118,7 +119,15 @@ function CocktailsDetails() {
         recommendedRecipe = findRecipe("italian");
         break;
       case "daquiri":
-        recommendedRecipe = findRecipe("greek");
+        const daquiriCuisines = [
+          "greek",
+          "caribbean"
+        ]
+        const randomDaquiriIndex = Math.floor(
+          Math.random() * daquiriCuisines.length
+        )
+        const randomDaquiriCuisine = daquiriCuisines[randomDaquiriIndex]
+        recommendedRecipe = findRecipe(randomDaquiriCuisine);
         break;
       case "mojito":
         const mojitoCuisines = ["mediterranean", "spanish"];
@@ -131,10 +140,6 @@ function CocktailsDetails() {
       case "martini":
         recommendedRecipe = findRecipe("french");
         break;
-      case "daquiri":
-        recommendedRecipe = findRecipe("caribbean");
-        break;
-
       case "cosmopolitan":
         recommendedRecipe = findRecipe("american");
         break;
@@ -175,8 +180,9 @@ function CocktailsDetails() {
             {cocktailDetails.name + " "}{" "}
             <FontAwesomeIcon
               icon={faHeart}
-              style={{ color: "#ff3b3f" }}
+              style={{ color: isFavorite ? "#ff3b3f" : "#A9A9A9" }}
               onClick={handleFavorite}
+              className={isFavorite ? "active" : ""}
             />
           </h2>
           <h4>{cocktailDetails.description}</h4>
@@ -193,7 +199,7 @@ function CocktailsDetails() {
           </p>
           <button onClick={getRecipePairing}>Recommend a bite?</button>
           <Link to={url}>
-            <p display={displayRecommendation ? "" : "none"}>
+            <p className="recommended-link" display={displayRecommendation ? "" : "none"}>
               {recommendedBite.name}
             </p>
           </Link>
