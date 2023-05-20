@@ -13479,6 +13479,40 @@
       "contains": [
         "dairy"
       ]
+    },
+    {
+      "id": 2,
+      "type": "cocktail",
+      "name": "Strawberry Mojito",
+      "description": "Take your mojito game to the next level with this Strawberry Mojito recipe. Make a big batch for your next summer gathering and get ready to impress your guests!",
+      "image": "https://raw.githubusercontent.com/Evan-Roberts-808/Bites-and-Brews/master/.github/images/Cocktails/Strawberry-Mojito.png",
+      "source": "https://www.allrecipes.com/recipe/172777/strawberry-mojito/",
+      "preptime": "15 mins",
+      "waittime": "",
+      "cooktime": "",
+      "totaltime": "15 mins",
+      "servings": 8,
+      "comments": [],
+      "likes": 4,
+      "instructions": [
+        "Pour about 1/2 inch of sugar onto a small, shallow plate. Run a lime wedge around the rims of 8 cocktail glasses, then dip the rims into sugar to coat; set aside.",
+        "Squeeze all of the lime wedges into a sturdy glass pitcher. Toss juiced limes into the pitcher along with mint, strawberries, and 1 cup sugar. Crush with a muddler to release strawberry juice and mint oil. Stir in club soda and rum until sugar has dissolved.",
+        "Pour into the prepared glasses over ice cubes to serve."
+      ],
+      "ingredients": [
+        "white sugar, for rimming",
+        "2 large limes, quartered",
+        "1/2 bunch mint leaves",
+        "7 strawberries, quartered",
+        "1 cup white sugar",
+        "2 cups club soda",
+        "1 cup white rum",
+        "8 cups ice cubes"
+      ],
+      "drink-type": "mojito",
+      "alcohol-type": [
+        "rum"
+      ]
     }
   ]
 }

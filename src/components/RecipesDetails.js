@@ -20,7 +20,6 @@ function RecipesDetails() {
 
   //**COCKTAIL PAIRING */
   const [cocktailData, setCocktailData] = useState([]);
-  const [recipeCuisine, setRecipeCuisine] = useState("");
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
   const [recommendedBrew, setRecommendedBrew] = useState([]);
   useEffect(() => {
@@ -48,8 +47,8 @@ function RecipesDetails() {
   });
 
   //get <li> items for ingredients
-  const mappedInstructions = instructions.map((el) => {
-    return <li>{el}</li>;
+  const mappedInstructions = instructions.map((el, index) => {
+    return <li key={index}>{el}</li>;
   });
 
   const handleLikeClick = () => {
@@ -173,8 +172,8 @@ function RecipesDetails() {
             />{" "}
           </p>
           <button onClick={getCocktailPairing}>Recommend a brew?</button>
-          <Link to={url}>
-            <p display={displayRecommendation ? "" : "none"}>
+          <Link to={url} style={{textDecoration: "none !important"}}>
+            <p style={{textDecoration: "none !important"}} className="recommended-link" display={displayRecommendation ? "" : "none"}>
               {recommendedBrew.name}
             </p>
           </Link>
