@@ -10,7 +10,7 @@ function FavoritesPage() {
   const [search, setSearch] = useState("")
 
   useEffect(() => {
-    fetch('http://localhost:3001/favorites')
+    fetch('https://bitesandbrews.onrender.com/favorites')
     .then(response => response.json())
     .then((data) => setAllFavorites(data))
   }, [])

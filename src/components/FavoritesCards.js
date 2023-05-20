@@ -7,7 +7,7 @@ function FavoritesCards({ data, onDelete}) {
   const cards = data.map((data) => {
 
   function handleDelete(){
-    fetch(`http://localhost:3001/favorites/${data.id}`,{
+    fetch(`https://bitesandbrews.onrender.com/favorites/${data.id}`,{
       method: "DELETE"
     })
     .then(response => response.json())
