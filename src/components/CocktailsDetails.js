@@ -23,7 +23,7 @@ function CocktailsDetails() {
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
   const [recommendedBite, setRecommendedBite] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3001/recipes")
+    fetch("https://bitesandbrews.onrender.com/recipes")
       .then((r) => r.json())
       .then((data) => setRecipeData(data));
   }, []);
@@ -31,7 +31,7 @@ function CocktailsDetails() {
 
   // setting cocktailDetails state
   useEffect(() => {
-    fetch(`http://localhost:3001/cocktails/${id}`)
+    fetch(`https://bitesandbrews.onrender.com/cocktails/${id}`)
       .then((r) => r.json())
       .then((data) => {
         setcocktailDetails(data);
@@ -53,7 +53,7 @@ function CocktailsDetails() {
 
   const handleLikeClick = () => {
     // Make a PATCH request to update the like count on the server
-    fetch(`http://localhost:3001/cocktails/${id}`, {
+    fetch(`https://bitesandbrews.onrender.com/cocktails/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ function CocktailsDetails() {
 
   function handleFavorite() {
     setIsFavorite(prevIsFavorite => !prevIsFavorite)
-    fetch("http://localhost:3001/favorites", {
+    fetch("https://bitesandbrews.onrender.com/favorites", {
       method: "POST",
       headers: {
         Accept: "application/json",
