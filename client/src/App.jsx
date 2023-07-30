@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./stylesheets/styles.css";
 import Header from "./components/Header";
@@ -20,18 +20,20 @@ function App() {
 
   return (
     <div className={darkMode ? 'AppDark' : 'App'}>
-      <Header darkMode={darkMode} updateDarkMode={() => setDarkMode((prev) => !prev)}/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="recipes" element={<RecipesPage darkMode={darkMode}/>} />
-        <Route path="cocktails" element={<CocktailsPage darkMode={darkMode}/>} />
-        <Route path="favorites" element={<FavoritesPage />} />
-        <Route path="submit" element={<SubmitRecipe />} />
-        <Route path="recipes/:id" element={<RecipesDetails />} />
-        <Route path="cocktails/:id" element={<CocktailsDetails />} />
-        <Route path="favorites/:id" element={<FavoritesDetails />} />
-      </Routes>
-      <Footer />
+      <Router>
+        <Header darkMode={darkMode} updateDarkMode={() => setDarkMode((prev) => !prev)}/>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="recipes" element={<RecipesPage darkMode={darkMode}/>} />
+            <Route path="cocktails" element={<CocktailsPage darkMode={darkMode}/>} />
+            <Route path="favorites" element={<FavoritesPage />} />
+            <Route path="submit" element={<SubmitRecipe />} />
+            <Route path="recipes/:id" element={<RecipesDetails />} />
+            <Route path="cocktails/:id" element={<CocktailsDetails />} />
+            <Route path="favorites/:id" element={<FavoritesDetails />} />
+          </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
