@@ -4,6 +4,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./stylesheets/styles.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import ProfileDetails from "./components/ProfileDetails.jsx";
 import RecipesPage from "./components/RecipesPage";
 import CocktailsPage from "./components/CocktailsPage";
 import FavoritesPage from "./components/FavoritesPage";
@@ -38,6 +41,9 @@ function App() {
           <Header darkMode={darkMode} updateDarkMode={() => setDarkMode((prev) => !prev)}/>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/profile-details" element={<ProfileDetails />} />
               <Route path="recipes" element={<RecipesPage darkMode={darkMode}/>} />
               <Route path="cocktails" element={<CocktailsPage darkMode={darkMode}/>} />
               <Route path="favorites" element={<FavoritesPage />} />
