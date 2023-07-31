@@ -20,7 +20,7 @@ function CocktailsPage({darkMode}) {
   const toggleShow = () => setShow((s) => !s);
 
   useEffect(() => {
-    fetch("https://bitesandbrews.onrender.com/cocktails")
+    fetch("/api/cocktails")
       .then((response) => response.json())
       .then((data) => setAllCocktails(data));
   }, []);

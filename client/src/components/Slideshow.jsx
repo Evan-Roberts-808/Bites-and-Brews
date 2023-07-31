@@ -6,7 +6,7 @@ function Slideshow() {
   const [recipesArray, setRecipesArray] = useState([]);
 
   useEffect(() => {
-    fetch("https://bitesandbrews.onrender.com/recipes?_sort=id&_order=desc&_limit=5")
+    fetch("/api/newest_recipes?_sort=id&_order=desc&_limit=5")
       .then((r) => r.json())
       .then((data) => setRecipesArray(data));
   }, []);

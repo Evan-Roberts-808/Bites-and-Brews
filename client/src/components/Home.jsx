@@ -9,19 +9,19 @@ function Home() {
   const [popularCocktails, setPopularCocktails] = useState([])
 // Our Picks
   useEffect(() => {
-    fetch('https://bitesandbrews.onrender.com/ourPicks')
+    fetch('/api/our_picks')
     .then((response) => response.json())
     .then((data) => setOurPicks(data))
   }, [])
 // Popular Recipes
   useEffect(() => {
-    fetch('https://bitesandbrews.onrender.com/recipes?_sort=likes&_order=desc&_limit=3')
+    fetch('/api/popular_recipes?_sort=likes&_order=desc&_limit=3')
     .then((response) => response.json())
     .then((data) => setPopularRecipes(data))
   }, [])
 // Popular Cocktails
   useEffect(() => {
-    fetch('https://bitesandbrews.onrender.com/cocktails?_sort=likes&_order=desc&_limit=3')
+    fetch('/api/popular_cocktails?_sort=likes&_order=desc&_limit=3')
     .then((response) => response.json())
     .then((data) => setPopularCocktails(data))
   }, [])

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 
@@ -44,9 +45,12 @@ function Header({ darkMode, updateDarkMode }) {
           >
             <Nav.Link as={Link} to='recipes'>Bites</Nav.Link>
             <Nav.Link as={Link} to='cocktails'>Brews</Nav.Link>
-            <Nav.Link as={Link} to='favorites'>Favorites</Nav.Link>
-            <Nav.Link as={Link} to='submit'>Submit</Nav.Link>
-            <Nav.Link onClick={handleLogout} as={Link} to={"/"}>Logout</Nav.Link>
+            <NavDropdown title="Profile" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="profile-details">Profile</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="favorites">Favorites</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="submit">Submit Your Own</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/" onClick={handleLogout}>Logout</NavDropdown.Item>
+            </NavDropdown>
             <button id="darkModeButton" onClick={updateDarkMode}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
           </Nav>
         </Navbar.Collapse>
@@ -73,7 +77,6 @@ function Header({ darkMode, updateDarkMode }) {
           >
             <Nav.Link as={Link} to='recipes'>Bites</Nav.Link>
             <Nav.Link as={Link} to='cocktails'>Brews</Nav.Link>
-            <Nav.Link as={Link} to='submit'>Submit</Nav.Link>
             <Nav.Link as={Link} to='signup'>Sign Up</Nav.Link>
             <Nav.Link as={Link} to='login'>Login</Nav.Link>
             <button id="darkModeButton" onClick={updateDarkMode}>{darkMode ? "Light Mode" : "Dark Mode"}</button>

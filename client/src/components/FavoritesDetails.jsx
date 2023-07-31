@@ -21,7 +21,7 @@ function FavoritesDetails() {
   const [edit, setEdit] = useState(false)
 
   useEffect(() => {
-    fetch(`https://bitesandbrews.onrender.com/favorites/${id}`)
+    fetch(`/api/favorites/${id}`)
       .then((r) => r.json())
       .then((data) => {
         setFavoritesDetails(data);
@@ -46,7 +46,7 @@ function FavoritesDetails() {
 
     function handleEditForm(e){
       e.preventDefault();
-      fetch(`https://bitesandbrews.onrender.com/favorites/${favoritesDetails.id}`, {
+      fetch(`/api/users/favorites/${favoritesDetails.id}`, {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
         body: JSON.stringify(formData)

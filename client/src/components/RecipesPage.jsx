@@ -20,7 +20,7 @@ function RecipesPage({darkMode}) {
   const toggleShow = () => setShow((s) => !s);
 
   useEffect(() => {
-    fetch("https://bitesandbrews.onrender.com/recipes")
+    fetch("/api/recipes")
       .then((response) => response.json())
       .then((data) => setAllRecipes(data));
   }, []);

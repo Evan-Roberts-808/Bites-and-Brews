@@ -52,7 +52,7 @@ function SubmitRecipe() {
 
   function handlePOST(e) {
     e.preventDefault();
-    fetch("https://bitesandbrews.onrender.com/recipes", {
+    fetch("/api/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ function SubmitRecipe() {
 
   function handleCocktailPOST(e) {
     e.preventDefault();
-    fetch('https://bitesandbrews.onrender.com/cocktails', {
+    fetch('/api/cocktails', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"

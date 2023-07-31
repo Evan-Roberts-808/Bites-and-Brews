@@ -1,5 +1,5 @@
 from flask_migrate import Migrate
-from sqlalchemy import func
+from sqlalchemy import func, desc
 from flask import Flask, request, session, make_response, jsonify, redirect
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from flask_bcrypt import generate_password_hash
@@ -269,6 +269,56 @@ class RecipesById(Resource):
 
 api.add_resource(RecipesById, '/recipes/<int:id>')
 
+
+class PopularRecipes(Resource):
+    def get(self):
+        sort_by = request.args.get('_sort')
+        order = request.args.get('_order')
+        limit = request.args.get('_limit')
+
+        valid_sort_fields = ['likes']  # Add more fields if needed
+        if sort_by not in valid_sort_fields:
+            return {"error": "Invalid sort field"}, 400
+
+        if order == 'desc':
+            recipes = Recipe.query.order_by(
+                desc(getattr(Recipe, sort_by))).all()
+        else:
+            recipes = Recipe.query.order_by(getattr(Recipe, sort_by)).all()
+
+        if limit is not None and limit.isdigit():
+            recipes = recipes[:int(limit)]
+
+        return [recipe.to_dict() for recipe in recipes]
+
+
+api.add_resource(PopularRecipes, '/popular_recipes')
+
+
+class NewestRecipes(Resource):
+    def get(self):
+        sort_by = request.args.get('_sort')
+        order = request.args.get('_order')
+        limit = request.args.get('_limit')
+
+        valid_sort_fields = ['id']  # Add more fields if needed
+        if sort_by not in valid_sort_fields:
+            return {"error": "Invalid sort field"}, 400
+
+        if order == 'desc':
+            recipes = Recipe.query.order_by(
+                desc(getattr(Recipe, sort_by))).all()
+        else:
+            recipes = Recipe.query.order_by(getattr(Recipe, sort_by)).all()
+
+        if limit is not None and limit.isdigit():
+            recipes = recipes[:int(limit)]
+
+        return [recipe.to_dict() for recipe in recipes]
+
+
+api.add_resource(NewestRecipes, '/newest_recipes')
+
 # Cocktail Routes
 
 
@@ -327,6 +377,42 @@ class CocktailsById(Resource):
 
 
 api.add_resource(CocktailsById, '/cocktails/<int:id>')
+
+
+class PopularCocktails(Resource):
+    def get(self):
+        sort_by = request.args.get('_sort')
+        order = request.args.get('_order')
+        limit = request.args.get('_limit')
+
+        valid_sort_fields = ['likes']  # Add more fields if needed
+        if sort_by not in valid_sort_fields:
+            return {"error": "Invalid sort field"}, 400
+
+        if order == 'desc':
+            cocktails = Cocktail.query.order_by(
+                desc(getattr(Cocktail, sort_by))).all()
+        else:
+            cocktails = Cocktail.query.order_by(
+                getattr(Cocktail, sort_by)).all()
+
+        if limit is not None and limit.isdigit():
+            cocktails = cocktails[:int(limit)]
+
+        return [cocktail.to_dict() for cocktail in cocktails]
+
+
+api.add_resource(PopularCocktails, '/popular_cocktails')
+
+
+class OurPicks(Resource):
+
+    def get(self):
+        ourpicks = [pick.to_dict() for pick in OurPick.query.all()]
+        return ourpicks, 200
+
+
+api.add_resource(OurPicks, '/our_picks')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
