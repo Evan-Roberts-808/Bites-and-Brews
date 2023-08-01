@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+
+:root {
+  --light-grey: #EFEFEF;
+  --offcanvas-grey: #E2E2E2;
+  --grey: #A9A9A9;
+  --dark-mode-body: #1D1D1D;
+  --offcanvas-dark: #1A1A1A;
+  --watermelon-red: #FF3B3F;
+  --watermelon-red-hovered: #D62F32;
+}
+
+/* General */
+
+* {
+  font-family: "Nunito";
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  flex: 1;
+
+}
+
+.App {
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.AppDark {
+  background-color: var(--dark-mode-body);
+  color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-headings {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#darkModeButton {
+  background-color: transparent;
+  border: none;
+  color: var(--grey);
+}
+
+#darkModeButton:hover {
+  color: var(--watermelon-red-hovered)
+}
+
+/* Nav */
+
+.custom-header .nav-link {
+    color: var(--grey);
+}
+
+.custom-header .nav-link:hover {
+  color: var(--watermelon-red-hovered);
+}
+
+/* Carousel */
+
+.carousel {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  background-color: var(--watermelon-red);
+  width: 100%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  bottom: -0.75rem;
+}
+
+.carousel-caption p {
+  margin-bottom: 2rem;
+  width: 60%;
+  margin: 0 auto; 
+}
+
+.carousel-indicators {
+  border-bottom: 0px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: 95%;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+}
+
+/* Cards */
+
+.card {
+  margin-bottom: 20px;
+  border-radius:20px;
+  border: none;
+}
+
+.card-body {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+.card button {
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+
+/* Pages */
+
+form svg {
+  background-color: var(--watermelon-red);
+  border-radius: 100%;
+  padding: 10px;
+}
+
+form svg:hover {
+  background-color: var(--watermelon-red-hovered);
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.filter-button {
+  margin-left: 20px;
+  background-color: var(--watermelon-red);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+.filter-button:hover {
+  background-color: var(--watermelon-red-hovered);
+}
+
+.search-filter-row {
+  padding-bottom: 20px;
+}
+
+.page-link {
+  color: var(--watermelon-red);
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: var(--watermelon-red-hovered)
+}
+
+.page-link-active, .active > .page-link {
+  background-color: var(--watermelon-red);
+  border-color: var(--watermelon-red)
+}
+
+.offcanvas-header, .offcanvas-body {
+  background-color: var(--offcanvas-grey)
+}
+
+.offcanvas-header-dark, .offcanvas-body-dark {
+  background-color: var(--offcanvas-dark)
+}
+
+.offcanvas-title-dark {
+  color: var(--grey)
+}
+
+.offcanvas-body {
+  padding: 0;
+}
+
+h5, .h5 {
+  font-size: 2rem;
+}
+
+.custom-select {
+  width: 100%;
+}
+
+.searchButton {
+  background-color: transparent;
+  border: none;
+}
+
+/* Details Page */
+
+
+a {
+  text-decoration: none;
+}
+
+.recommended-link {
+  text-decoration: none;
+  color: var(--watermelon-red)
+}
+
+.recommended-link:hover {
+  color: var(--watermelon-red-hovered)
+}
+
+#heartIcon {
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+#heartIcon.active {
+  color: #ff3b3f;
+}
+
+.editButton {
+  background-color: var(--watermelon-red);
+  border:none;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.cancel-btn {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  width: 20%;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: var(--watermelon-red-hovered);
+  color: #fff;
+  width: 20%;
+  margin-left: 10px;
+}
+
+/* Table */
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.custom-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.custom-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.custom-table tbody td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.custom-table tbody td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.custom-table th {
+  background-color: var(--watermelon-red);
+  color: #fff;
+}
+
+/* Ingredients Card */
+
+#ingredients .card-header {
+  background-color: var(--watermelon-red);
+  color: #fff;
+}
+
+/* Submission Form */
+
+.formSwitch {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+form {
+  background-color: #e2e2e2;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.textarea-container {
+  position: relative;
+}
+
+.textarea-container textarea.resizable {
+  resize: vertical;
+  height: auto;
+  min-height: 38px;
+  overflow: hidden;
+}
+
+.textarea-container textarea.resizable:focus {
+  overflow: auto;
+}
+
+.submit-btn {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  width: 20%;
+}
+
+.submit-btn:hover {
+  background-color: var(--watermelon-red-hovered);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--watermelon-red);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--watermelon-red-hovered);
+
+}
+
+/* Footer */
+
+footer {
+  position: abosolute;
+  bottom: 0;
+  padding-top: 20px;
+  background-color: var(--watermelon-red);
+  flex-shrink: 0;
+  margin-top: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--light-grey)
+}
+
+footer .col-sm-4 {
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* Login */
+
+.signup-form, .login-form {
+  padding: 20px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.login-btn, .signup-button {
+  background-color: var(--watermelon-red);
+  color: #fff;
+  width: auto;
+  border:none;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.login-btn:hover {
+  background-color: var(--watermelon-red-hovered)
+}
