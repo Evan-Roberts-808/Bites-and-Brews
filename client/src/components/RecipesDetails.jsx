@@ -18,6 +18,8 @@ function RecipesDetails() {
   const [likeCount, setLikeCount] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false)
 
+  console.log(recipeDetails)
+
   //**COCKTAIL PAIRING */
   const [cocktailData, setCocktailData] = useState([]);
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
@@ -59,12 +61,12 @@ function RecipesDetails() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        likes: recipeDetails.likes + 1, // Increment like count by 1
+        likes: recipeDetails.likes + 1, 
       }),
     })
       .then((response) => response.json())
       .then((data) => {
-        setLikeCount(data.likes); // Update like count in state with the updated value from the server
+        setLikeCount(data.likes);
       })
       .catch((error) => {
         console.error("Error:", error);

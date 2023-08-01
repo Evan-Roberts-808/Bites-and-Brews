@@ -37,8 +37,8 @@ function SubmitRecipe() {
     likes: 0,
     instructions: [],
     ingredients: [],
-    "drink-type": "",
-    "alcohol-type": []
+    "drink_type": "",
+    "alcohol_type": []
   }
 
   const [formData, setFormData] = useState(initialRecipeForm);
@@ -104,8 +104,8 @@ function SubmitRecipe() {
         likes: 0,
         instructions: cocktailForm.instructions,
         ingredients: cocktailForm.ingredients,
-        "drink-type": cocktailForm["drink-type"],
-        "alcohol-type": cocktailForm["alcohol-type"]
+        "drink_type": cocktailForm["drink_type"],
+        "alcohol_type": cocktailForm["alcohol_type"]
 
       })
     })
@@ -414,7 +414,7 @@ function SubmitRecipe() {
     </>
       ) : (
     <>
-    <h2 class="page-headings">Submit a Cocktail</h2>
+    <h2 className="page-headings">Submit a Cocktail</h2>
     <form className="row d-flex justify-content-center" onSubmit={handleCocktailPOST}>
   <div className="col-sm-3">
     <label htmlFor="name">Cocktail Name:</label>
@@ -513,18 +513,18 @@ function SubmitRecipe() {
     />
     <label>Alcohol Type:</label>
     <ul>
-      {cocktailForm["alcohol-type"].map((type, index) => (
+      {cocktailForm["alcohol_type"].map((type, index) => (
         <li key={index}>
           <input
             type="text"
             className="form-control"
             value={type}
             onChange={(e) => {
-              const updatedAlcoholTypes = [...cocktailForm["alcohol-type"]];
+              const updatedAlcoholTypes = [...cocktailForm["alcohol_type"]];
               updatedAlcoholTypes[index] = e.target.value;
               setCocktailForm((prevForm) => ({
                 ...prevForm,
-                "alcohol-type": updatedAlcoholTypes,
+                "alcohol_type": updatedAlcoholTypes,
               }));
             }}
           />
@@ -537,7 +537,7 @@ function SubmitRecipe() {
           onClick={() =>
             setCocktailForm((prevForm) => ({
               ...prevForm,
-              "alcohol-type": [...prevForm["alcohol-type"], ""],
+              "alcohol_type": [...prevForm["alcohol_type"], ""],
             }))
           }
         >
@@ -548,12 +548,12 @@ function SubmitRecipe() {
   </div>
 
   <div className="offset-sm-1 col-sm-3">
-    <label htmlFor="drink-type">Drink Type:</label>
+    <label htmlFor="drink_type">Drink Type:</label>
     <select
       className="form-control"
-      id="drink-type"
-      name="drink-type"
-      value={cocktailForm["drink-type"]}
+      id="drink_type"
+      name="drink_type"
+      value={cocktailForm["drink_type"]}
       onChange={handleCocktailChange}
     >
       <option value="">Select a drink type</option>

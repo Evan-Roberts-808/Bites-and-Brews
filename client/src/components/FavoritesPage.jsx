@@ -8,12 +8,18 @@ function FavoritesPage() {
   const [allFavorites, setAllFavorites] = useState([])
   const [form, setForm] = useState("")
   const [search, setSearch] = useState("")
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('/api/users/favorites')
     .then(response => response.json())
-    .then((data) => setAllFavorites(data))
+    .then((data) => {
+      setAllFavorites(data)
+      setLoading(false)
+    })
   }, [])
+
+
 
   function handleChange(e) {
     setForm(e.target.value);
@@ -33,8 +39,12 @@ function FavoritesPage() {
     setAllFavorites(updatedFavorites)
   }
 
+  if (loading) {
+    return <div>Loading...</div>; // Show loading message or spinner while waiting
+  }
+
   const searchedFavorites = [...allFavorites].filter((el) => {
-    const searchMatch = el.name.toLowerCase().includes(search.toLowerCase());
+    const searchMatch = el.recipe.name.toLowerCase().includes(search.toLowerCase()) || el.cocktail.name.toLowerCase().includes(search.toLowerCase());
     return searchMatch;
   });
 

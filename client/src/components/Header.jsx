@@ -46,7 +46,7 @@ function Header({ darkMode, updateDarkMode }) {
             <Nav.Link as={Link} to='recipes'>Bites</Nav.Link>
             <Nav.Link as={Link} to='cocktails'>Brews</Nav.Link>
             <NavDropdown title="Profile" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="profile-details">Profile</NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="profile-details">Profile</NavDropdown.Item> */}
               <NavDropdown.Item as={Link} to="favorites">Favorites</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="submit">Submit Your Own</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/" onClick={handleLogout}>Logout</NavDropdown.Item>

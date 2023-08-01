@@ -12,7 +12,8 @@ function CocktailsPage({darkMode}) {
   const [search, setSearch] = useState("");
   const [alcoholFilter, setAlcoholFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [cocktailsPerPage] = useState(6); // Number of cocktails to display per page
+  const [cocktailsPerPage] = useState(6);
+  const [loading, setLoading] = useState(true); 
 
   //offCanvas states
   const [show, setShow] = useState(false);
@@ -22,8 +23,15 @@ function CocktailsPage({darkMode}) {
   useEffect(() => {
     fetch("/api/cocktails")
       .then((response) => response.json())
-      .then((data) => setAllCocktails(data));
+      .then((data) => {
+        setAllCocktails(data)
+        setLoading(false)
+      });
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>; // Show loading message or spinner while waiting
+  }
 
   function handleChange(e) {
     setForm(e.target.value);

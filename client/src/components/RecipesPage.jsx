@@ -13,6 +13,7 @@ function RecipesPage({darkMode}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [recipesPerPage] = useState(6);
   const [cuisineFilter, setCuisineFilter] = useState("");
+  const [loading, setLoading] = useState(true);
 
   //offCanvas states
   const [show, setShow] = useState(false);
@@ -22,8 +23,15 @@ function RecipesPage({darkMode}) {
   useEffect(() => {
     fetch("/api/recipes")
       .then((response) => response.json())
-      .then((data) => setAllRecipes(data));
+      .then((data) => {
+        setAllRecipes(data)
+        setLoading(false)
+      });
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   function handleChange(e) {
     setForm(e.target.value);

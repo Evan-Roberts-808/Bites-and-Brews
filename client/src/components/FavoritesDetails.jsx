@@ -19,33 +19,49 @@ function FavoritesDetails() {
   }
   const [formData, setFormData] = useState(initialForm);
   const [edit, setEdit] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`/api/favorites/${id}`)
+    setLoading(true)
+    fetch(`/api/users/favorites/${id}`)
       .then((r) => r.json())
       .then((data) => {
         setFavoritesDetails(data);
-        setIngredients(data.ingredients);
-        setInstructions(data.instructions);
+        const isRecipes = "recipe" in data;
         setFormData({
-          ingredients: data.ingredients,
-          instructions: data.instructions, 
+          ingredients: isRecipes ? data.recipe.ingredients : data.cocktail.ingredients,
+          instructions: isRecipes ? data.recipe.instructions : data.cocktail.instructions,
+        });
+        setLoading(false)
       });
-    }
-  )}, [id]);
+  }, [id]);
 
-    //get <li> items for ingredients
-    const mappedIngredients = ingredients.map((el) => {
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+    const isRecipe = "recipe" in favoritesDetails;
+    const image = isRecipe ? favoritesDetails.recipe.image : favoritesDetails.cocktail.image;
+    const name = isRecipe ? favoritesDetails.recipe.name : favoritesDetails.cocktail.name;
+    const description = isRecipe ? favoritesDetails.recipe.description : favoritesDetails.cocktail.description;
+    const ingredient = isRecipe ? favoritesDetails.recipe.ingredients : favoritesDetails.cocktail.ingredients;
+    const instruction = isRecipe ? favoritesDetails.recipe.instructions : favoritesDetails.cocktail.instructions;
+    const preptime = isRecipe ? favoritesDetails.recipe.preptime : favoritesDetails.cocktail.preptime;
+    const cooktime = isRecipe ? favoritesDetails.recipe.cooktime : favoritesDetails.cocktail.cooktime;
+    const waittime = isRecipe ? favoritesDetails.recipe.waittime : favoritesDetails.cocktail.waittime;
+    const totaltime = isRecipe ? favoritesDetails.recipe.totaltime : favoritesDetails.cocktail.totaltime;
+
+    const mappedIngredients = ingredient.map((el) => {
       return <ListGroup.Item>{el}</ListGroup.Item>;
     });
   
-    //get <li> items for ingredients
-    const mappedInstructions = instructions.map((el) => {
+    const mappedInstructions = instruction.map((el) => {
       return <li>{el}</li>;
     });
 
     function handleEditForm(e){
       e.preventDefault();
+      console.log("formData:", formData);
       fetch(`/api/users/favorites/${favoritesDetails.id}`, {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
@@ -74,21 +90,21 @@ function FavoritesDetails() {
     <div className="row">
         <Figure className="col-sm-5">
           <Figure.Image
-            src={favoritesDetails.image}
-            alt={favoritesDetails.name}
+            src={image}
+            alt={name}
           />
         </Figure>
         <div className="offset-sm-1 col-sm-5 my-auto">
           <h2>
-            {favoritesDetails.name + " "}{" "}
+            {name + " "}{" "}
             <FontAwesomeIcon
               icon={faHeart}
               style={{ color: "#ff3b3f" }}
 
             />
-            <button onClick={handleEditSwitch} className="editButton" >Edit</button>
+            {/* <button onClick={handleEditSwitch} className="editButton" >Edit</button> */}
           </h2>
-          <h4>{favoritesDetails.description}</h4>
+          <h4>{description}</h4>
           <Table striped className="custom-table">
             <thead>
               <tr>
@@ -100,10 +116,10 @@ function FavoritesDetails() {
             </thead>
             <tbody>
               <tr>
-                <td>{favoritesDetails.preptime}</td>
-                <td>{favoritesDetails.cooktime}</td>
-                <td>{favoritesDetails.waittime}</td>
-                <td>{favoritesDetails.totaltime}</td>
+                <td>{preptime}</td>
+                <td>{cooktime}</td>
+                <td>{waittime}</td>
+                <td>{totaltime}</td>
               </tr>
             </tbody>
           </Table>

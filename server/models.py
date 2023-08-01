@@ -26,7 +26,7 @@ class User(db.Model, SerializerMixin, UserMixin):
     # Relationships
 
     # Serialize Rules
-    # serialize_rules = ()
+    serialize_rules = ("-favorites",)
 
     # Validations
     @validates('email')
@@ -81,6 +81,9 @@ class Recipe(db.Model, SerializerMixin):
     meat = db.Column(db.ARRAY(db.String))
     contains = db.Column(db.ARRAY(db.String))
 
+    # Serialize Rules
+    serialize_rules = ("-favorited_by",)
+
 
 class Cocktail(db.Model, SerializerMixin):
     __tablename__ = 'cocktails'
@@ -102,6 +105,9 @@ class Cocktail(db.Model, SerializerMixin):
     ingredients = db.Column(db.ARRAY(db.Text))
     drink_type = db.Column(db.String)
     alcohol_type = db.Column(db.ARRAY(db.String))
+
+    # Serialize Rules
+    serialize_rules = ("-favorited_by",)
 
 
 class OurPick(db.Model, SerializerMixin):
@@ -130,7 +136,7 @@ class OurPick(db.Model, SerializerMixin):
     contains = db.Column(db.ARRAY(db.String))
 
 
-class Favorite(db.Model):
+class Favorite(db.Model, SerializerMixin):
     __tablename__ = 'favorites'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -138,10 +144,61 @@ class Favorite(db.Model):
     recipe_id = db.Column(db.Integer, db.ForeignKey('recipes.id'))
     cocktail_id = db.Column(db.Integer, db.ForeignKey('cocktails.id'))
 
-    # Define relationships with the User, Recipe, and Cocktail models
     user = db.relationship(
         'User', backref=db.backref('favorites', lazy='dynamic'))
     recipe = db.relationship('Recipe', backref=db.backref(
         'favorited_by', lazy='dynamic'))
     cocktail = db.relationship(
         'Cocktail', backref=db.backref('favorited_by', lazy='dynamic'))
+
+    def to_dict(self):
+        favorite_dict = {
+            "id": self.id,
+            # "user_id": self.user_id,
+        }
+
+        if self.recipe:
+            favorite_dict["recipe"] = {
+                "id": self.recipe.id,
+                "type": self.recipe.type,
+                "name": self.recipe.name,
+                "description": self.recipe.description,
+                "likes": self.recipe.likes,
+                "comments": self.recipe.comments,
+                "meat": self.recipe.meat,
+                "course": self.recipe.course,
+                "contains": self.recipe.contains,
+                "waittime": self.recipe.waittime,
+                "totaltime": self.recipe.totaltime,
+                "instructions": self.recipe.instructions,
+                "vegetarian": self.recipe.vegetarian,
+                "preptime": self.recipe.preptime,
+                "cooktime": self.recipe.cooktime,
+                "source": self.recipe.source,
+                "image": self.recipe.image,
+                "servings": self.recipe.servings,
+                "ingredients": self.recipe.ingredients,
+                "cuisine": self.recipe.cuisine
+            }
+
+        if self.cocktail:
+            favorite_dict["cocktail"] = {
+                "id": self.cocktail.id,
+                "type": self.cocktail.type,
+                "name": self.cocktail.name,
+                "totaltime": self.cocktail.totaltime,
+                "preptime": self.cocktail.preptime,
+                "comments": self.cocktail.comments,
+                "servings": self.cocktail.servings,
+                "image": self.cocktail.image,
+                "description": self.cocktail.description,
+                "source": self.cocktail.source,
+                "drink_type": self.cocktail.drink_type,
+                "instructions": self.cocktail.instructions,
+                "ingredients": self.cocktail.ingredients,
+                "alcohol_type": self.cocktail.alcohol_type,
+                "likes": self.cocktail.likes,
+                "waittime": self.cocktail.waittime
+            }
+
+        return favorite_dict

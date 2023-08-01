@@ -147,6 +147,34 @@ class UserFavorites(Resource):
         except Exception as e:
             return {"error": "An error occurred while fetching favorites", "message": str(e)}, 500
 
+    @login_required
+    def post(self):
+        try:
+            favorite_data = request.get_json()
+
+            favorite_type = favorite_data.get('type')
+
+            if favorite_type == 'recipes':
+                new_favorite = Favorite(
+                    user_id=current_user.id,
+                    recipe_id=favorite_data['id']
+                )
+            elif favorite_type == 'cocktail':
+                new_favorite = Favorite(
+                    user_id=current_user.id,
+                    cocktail_id=favorite_data['id']
+                )
+            else:
+                return {"error": "Invalid favorite type"}, 400
+
+            db.session.add(new_favorite)
+            db.session.commit()
+
+            return "Added to favorites", 201
+
+        except Exception as e:
+            return {"error": "Failed to create favorite", "message": str(e)}, 500
+
 
 class UserFavoritesById(Resource):
 
@@ -157,22 +185,6 @@ class UserFavoritesById(Resource):
             return favorite, 200
         except Exception as e:
             return {"error": "An error occurred while fetching favorite", "message": str(e)}, 500
-
-    @login_required
-    def post(self):
-        try:
-            favorite_data = request.get_json()
-
-            new_favorite = Favorite(**favorite_data)
-
-            db.session.add(new_favorite)
-
-            db.session.commit()
-
-            return new_favorite.to_dict(), 201
-
-        except Exception as e:
-            return {"error": "Failed to create favorite", "message": str(e)}, 500
 
     @login_required
     def patch(self, id):
