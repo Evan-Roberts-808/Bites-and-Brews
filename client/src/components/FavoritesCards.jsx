@@ -15,7 +15,7 @@ function FavoritesCards({ data, onDelete }) {
       : item.cocktail.description;
 
     function handleDelete() {
-      fetch(`/api/users/favorites/${id}`, {
+      fetch(`/users/favorites/${id}`, {
         method: "DELETE",
       })
         .then((response) => response.json())

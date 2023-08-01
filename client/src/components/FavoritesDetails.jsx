@@ -23,7 +23,7 @@ function FavoritesDetails() {
 
   useEffect(() => {
     setLoading(true)
-    fetch(`/api/users/favorites/${id}`)
+    fetch(`/users/favorites/${id}`)
       .then((r) => r.json())
       .then((data) => {
         setFavoritesDetails(data);
@@ -62,7 +62,7 @@ function FavoritesDetails() {
     function handleEditForm(e){
       e.preventDefault();
       console.log("formData:", formData);
-      fetch(`/api/users/favorites/${favoritesDetails.id}`, {
+      fetch(`/users/favorites/${favoritesDetails.id}`, {
         method: 'PATCH',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
         body: JSON.stringify(formData)

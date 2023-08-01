@@ -9,19 +9,19 @@ function Home() {
   const [popularCocktails, setPopularCocktails] = useState([])
 // Our Picks
   useEffect(() => {
-    fetch('/api/our_picks')
+    fetch('/our_picks')
     .then((response) => response.json())
     .then((data) => setOurPicks(data))
   }, [])
 // Popular Recipes
   useEffect(() => {
-    fetch('/api/popular_recipes?_sort=likes&_order=desc&_limit=3')
+    fetch('/popular_recipes?_sort=likes&_order=desc&_limit=3')
     .then((response) => response.json())
     .then((data) => setPopularRecipes(data))
   }, [])
 // Popular Cocktails
   useEffect(() => {
-    fetch('/api/popular_cocktails?_sort=likes&_order=desc&_limit=3')
+    fetch('/popular_cocktails?_sort=likes&_order=desc&_limit=3')
     .then((response) => response.json())
     .then((data) => setPopularCocktails(data))
   }, [])
