@@ -11,7 +11,7 @@ function FavoritesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/users/favorites')
+    fetch('/users/favorites')
     .then(response => response.json())
     .then((data) => {
       setAllFavorites(data)

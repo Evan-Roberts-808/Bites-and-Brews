@@ -21,7 +21,7 @@ function CocktailsPage({darkMode}) {
   const toggleShow = () => setShow((s) => !s);
 
   useEffect(() => {
-    fetch("/api/cocktails")
+    fetch("/cocktails")
       .then((response) => response.json())
       .then((data) => {
         setAllCocktails(data)

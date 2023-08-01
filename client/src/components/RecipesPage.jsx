@@ -21,7 +21,7 @@ function RecipesPage({darkMode}) {
   const toggleShow = () => setShow((s) => !s);
 
   useEffect(() => {
-    fetch("/api/recipes")
+    fetch("/recipes")
       .then((response) => response.json())
       .then((data) => {
         setAllRecipes(data)

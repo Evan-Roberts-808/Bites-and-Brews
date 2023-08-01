@@ -23,7 +23,7 @@ function CocktailsDetails() {
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
   const [recommendedBite, setRecommendedBite] = useState([]);
   useEffect(() => {
-    fetch("/api/recipes")
+    fetch("/recipes")
       .then((r) => r.json())
       .then((data) => setRecipeData(data));
   }, []);
@@ -31,7 +31,7 @@ function CocktailsDetails() {
 
   // setting cocktailDetails state
   useEffect(() => {
-    fetch(`/api/cocktails/${id}`)
+    fetch(`/cocktails/${id}`)
       .then((r) => r.json())
       .then((data) => {
         setcocktailDetails(data);
@@ -53,7 +53,7 @@ function CocktailsDetails() {
 
   const handleLikeClick = () => {
     // Make a PATCH request to update the like count on the server
-    fetch(`/api/cocktails/${id}`, {
+    fetch(`/cocktails/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ function CocktailsDetails() {
 
   function handleFavorite() {
     setIsFavorite(prevIsFavorite => !prevIsFavorite)
-    fetch("/api/users/favorites", {
+    fetch("/users/favorites", {
       method: "POST",
       headers: {
         Accept: "application/json",
