@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
 from flask_migrate import Migrate
@@ -9,9 +9,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-app = Flask(__name__)
-# app = Flask(__name__, static_url_path='',
-#             static_folder='../client/dist', template_folder='../client/dist')
+app = Flask(__name__, static_url_path='',
+            static_folder='../client/dist', template_folder='../client/dist')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
@@ -30,6 +29,20 @@ migrate = Migrate(app, db)
 db.init_app(app)
 
 bcrypt = Bcrypt(app)
+
+@app.route('/')
+@app.route('/login')
+@app.route('/signup')
+@app.route('/profile-details')
+@app.route('/recipes')
+@app.route('/cocktails')
+@app.route('/favorites')
+@app.route('/submit')
+@app.route('/recipes/:id')
+@app.route('/cocktails/:id')
+@app.route('/favorites/:id')
+def index(id=0):
+    return render_template("index.html")
 
 api = Api(app)
 CORS(app)
