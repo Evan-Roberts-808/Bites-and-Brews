@@ -30,19 +30,12 @@ db.init_app(app)
 
 bcrypt = Bcrypt(app)
 
-@app.route('/')
-@app.route('/login')
-@app.route('/signup')
-@app.route('/profile-details')
-@app.route('/recipes')
-@app.route('/cocktails')
-@app.route('/favorites')
-@app.route('/submit')
-@app.route('/recipes/:id')
-@app.route('/cocktails/:id')
-@app.route('/favorites/:id')
-def index(id=0):
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def index(path):
     return render_template("index.html")
+
 
 api = Api(app)
 CORS(app)
