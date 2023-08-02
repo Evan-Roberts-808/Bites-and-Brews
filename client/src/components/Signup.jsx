@@ -40,7 +40,7 @@ function Signup() {
         return;
       }
     
-      fetch("/signup", {
+      fetch("/signups", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
