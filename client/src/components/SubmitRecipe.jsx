@@ -52,7 +52,7 @@ function SubmitRecipe() {
 
   function handlePOST(e) {
     e.preventDefault();
-    fetch("/recipes", {
+    fetch("/recipe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ function SubmitRecipe() {
 
   function handleCocktailPOST(e) {
     e.preventDefault();
-    fetch('/cocktails', {
+    fetch('/cocktail', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"

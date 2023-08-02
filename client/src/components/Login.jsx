@@ -22,7 +22,7 @@ function Login() {
   });
 
   const handleSubmit = (values) => {
-    fetch("/login", {
+    fetch("/logins", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

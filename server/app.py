@@ -216,8 +216,8 @@ class UserFavoritesById(Resource):
             return {"error": "an error occurred while deleting the favorite"}, 500
 
 
-api.add_resource(Login, '/login')
-api.add_resource(Signup, '/signup')
+api.add_resource(Login, '/logins')
+api.add_resource(Signup, '/signups')
 api.add_resource(CheckSession, '/check_session')
 api.add_resource(Users, '/users')
 api.add_resource(UserFavorites, '/users/favorites')
@@ -251,7 +251,7 @@ class Recipes(Resource):
             return {"error": "Failed to create recipe", "message": str(e)}, 500
 
 
-api.add_resource(Recipes, '/recipes')
+api.add_resource(Recipes, '/recipe')
 
 
 class RecipesById(Resource):
@@ -279,7 +279,7 @@ class RecipesById(Resource):
             return {"error": "Failed to update recipe", "message": str(e)}, 500
 
 
-api.add_resource(RecipesById, '/recipes/<int:id>')
+api.add_resource(RecipesById, '/recipe/<int:id>')
 
 
 class PopularRecipes(Resource):
@@ -360,7 +360,7 @@ class Cocktails(Resource):
             return {"error": "Failed to create cocktail", "message": str(e)}, 500
 
 
-api.add_resource(Cocktails, '/cocktails')
+api.add_resource(Cocktails, '/cocktail')
 
 
 class CocktailsById(Resource):
@@ -388,7 +388,7 @@ class CocktailsById(Resource):
             return {"error": "Failed to update cocktail", "message": str(e)}, 500
 
 
-api.add_resource(CocktailsById, '/cocktails/<int:id>')
+api.add_resource(CocktailsById, '/cocktail/<int:id>')
 
 
 class PopularCocktails(Resource):

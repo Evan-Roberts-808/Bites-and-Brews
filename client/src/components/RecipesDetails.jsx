@@ -18,14 +18,12 @@ function RecipesDetails() {
   const [likeCount, setLikeCount] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false)
 
-  console.log(recipeDetails)
-
   //**COCKTAIL PAIRING */
   const [cocktailData, setCocktailData] = useState([]);
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
   const [recommendedBrew, setRecommendedBrew] = useState([]);
   useEffect(() => {
-    fetch("/cocktails")
+    fetch("/cocktail")
       .then((r) => r.json())
       .then((data) => setCocktailData(data));
   }, []);
@@ -33,7 +31,7 @@ function RecipesDetails() {
 
   // setting RecipeDetails state
   useEffect(() => {
-    fetch(`/recipes/${id}`)
+    fetch(`/recipe/${id}`)
       .then((r) => r.json())
       .then((data) => {
         setRecipeDetails(data);
@@ -55,7 +53,7 @@ function RecipesDetails() {
 
   const handleLikeClick = () => {
     // Make a PATCH request to update the like count on the server
-    fetch(`/recipes/${id}`, {
+    fetch(`/recipe/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
