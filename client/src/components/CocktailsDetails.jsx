@@ -96,7 +96,7 @@ function CocktailsDetails() {
   let recommendedRecipe = null;
 
   function getRecipePairing() {
-    const drinkType = cocktailDetails["drink-type"];
+    const drinkType = cocktailDetails["drink_type"];
     switch (drinkType) {
       case "margarita":
         recommendedRecipe = findRecipe("mexican");

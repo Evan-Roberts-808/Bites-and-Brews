@@ -22,6 +22,7 @@ function RecipesDetails() {
   const [cocktailData, setCocktailData] = useState([]);
   const [displayRecommendation, setDisplayRecommendation] = useState(false);
   const [recommendedBrew, setRecommendedBrew] = useState([]);
+
   useEffect(() => {
     fetch("/cocktail")
       .then((r) => r.json())
@@ -85,13 +86,12 @@ function RecipesDetails() {
 
   //***COCKTAIL PAIRING ***/
   function findCocktail(alcohol) {
-    const filteredCocktails = cocktailData.filter(
-      (el) => el["drink-type"] && el["drink-type"].includes(alcohol)
-    );
+    const filteredCocktails = cocktailData.filter((el) => el.drink_type && el.drink_type.includes(alcohol));
     const randomIndex = Math.floor(Math.random() * filteredCocktails.length);
     const randomCocktail = filteredCocktails[randomIndex];
     return randomCocktail ? randomCocktail : null;
   }
+
   let recommendedCocktail = null;
   function getCocktailPairing() {
     const cuisine = recipeDetails.cuisine;
@@ -136,9 +136,12 @@ function RecipesDetails() {
         console.log("no recommendation found");
         break;
     }
+    console.log(recommendedCocktail)
     setRecommendedBrew(recommendedCocktail);
-    setDisplayRecommendation((prev) => !prev);
+    // setDisplayRecommendation((prev) => !prev);
   }
+
+  console.log(recommendedBrew)
   const url = `/cocktails/${recommendedBrew.id}`;
   /**Cocktail Pairing */
 
