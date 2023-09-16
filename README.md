@@ -2,7 +2,7 @@
 
 ## An interactive way to discover new recipes and cocktails
 
-<h3>View Site At: https://main--splendorous-frangollo-74c2dd.netlify.app</h3>
+<h3>View Site At: https://bites-and-brews.vercel.app</h3>
 <h4>Note: We have a bandwidth limit per month, so if it doesn't load we've probably hit that limit</h4>
 
 <br />
